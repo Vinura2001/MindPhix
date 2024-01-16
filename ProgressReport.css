@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/*Side menue*/
+.SideBar{
+
+  background-color: #A6DAFF;
+  width: 22%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+
+
+}
+/* top logo*/
+.Logo{
+  width: 38%;
+  height: 20%;
+  position: absolute;
+  top: 1%;
+  left: 2%;
+}
+/*logo name*/
+.LogoName{
+  font-size: 250%;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 6%;
+  left: 34%;
+}
+/*Menue item 1*/
+.DashboardIcon_Black{
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+.SideBar_Item1{
+  font-size: 120%;
+  position: absolute;
+  top: 20.5%;
+  left: 30%;
+}
+
+/*Menue item 2*/
+.UserIcon_Black{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
+.SideBar_Item2{
+  font-size: 120%;
+  position: absolute;
+  top: 30.5%;
+  left: 30%;
+}
+
+/*Menue item 3*/
+.Chart_Line_Black{
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+.SideBar_Item3{
+  font-size: 120%;
+  position: absolute;
+  top: 40.5%;
+  left: 30%;
+}
+
+/*Menue item 4*/
+.MessageIcon_Black{
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+
+.SideBar_Item4{
+  font-size: 120%;
+  position: absolute;
+  top: 50.5%;
+  left: 30%;
+}
+
+/* side menue Sign out option*/
+.LogoutIcon{
+  position: absolute;
+  top: 90%;
+  left: 20%
+}
+
+.SignOutText{
+  font-size: 120%;
+  position: absolute;
+  top: 90.5%;
+  left: 30%;
+}
