@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Progress Report</title>
+        <link rel="stylesheet" href="ProgressReport.css">
+        
+    </head>
+
+    <body>
+
+        <!-- Side menu start -->
+        <div class="SideBar">
+            <!-- top logo -->
+            <img class="Logo" src="Figures/HalfLogo.png" alt="Logo">
+            <div class="LogoName">MindPhix</div>
+
+            <!-- option 1 -->
+            <a href="">
+                <div class="Dashboard_Option_Container">
+                    <img class="DashboardIcon_Black" src="Figures/DashboardIcon_Black.png" alt="DashboardIcon">
+                    <img class="DashboardIcon_White" src="Figures/DashboardIcon_White.png" alt="DashboardIcon">
+                    <div class="SideBar_Item1">Dashboard</div>
+                </div>
+            </a>
+
+            <!-- option 2 -->
+            <a href="">
+                <div class="Profile_Option_Container">
+                    <img class="UserIcon_Black" src="Figures/UserIcon_Black.png" alt="UserIcon">
+                    <img class="UserIcon_White" src="Figures/UserIcon_White.png" alt="UserIcon">
+                    <div class="SideBar_Item2">Profile</div>
+                </div>
+            </a>
+
+            <!-- option 3 -->
+            <a href="">
+                <div class="Progress_Option_Container">
+                    <img class="Chart_Line_Black" src="Figures/Chart_Line_Black.png" alt="Chart_Line_Black">
+                    <img class="Chart_Line_White" src="Figures/Chart_Line_White.png" alt="Chart_Line_White">
+                    <div class="SideBar_Item3">Progress Report</div>
+                </div>
+            </a>
+
+            <!-- option 4 -->
+            <a href="">
+                <div class="Chat_Option_Container">
+                    <img class="MessageIcon_Black" src="Figures/MessageIcon_Black.png" alt="ChatIcon">
+                    <img class="MessageIcon_White" src="Figures/MessageIcon_White.png" alt="ChatIcon">
+                    <div class="SideBar_Item4">Chat</div>
+                </div>
+            </a>
+
+            <!--Log out option-->
+            <a href="">
+                <div>
+                    <img class="LogoutIcon" src="Figures/LogoutIcon.png" alt="SignOutIcon">
+                    <div class="SignOutText">Sign Out</div>
+                </div> 
+            </a>
+
+        </div>
+        <!-- Side menu end -->
+
+
+        <!--Progress report content Start-->
+
+        <h1 class="Topic">Progress Report</h1>
+
+        <img class="TopUserIcon" src="Figures/TopUserIcon.png" alt="TopUserIcon">
+        <div class="TopUserContent1">Steven</div>
+        <div class="TopUserContent2">User</div>
+
+        <div class="TopBox">
+            <img class="TopBox_Image" src="Figures/TopBox_Image.png" alt="TopBox_Image">
+            <div class="Date">January 16, 2024</div>
+            <div class="Welcome_Text">Welcome back, Steven!</div>
+            <div class="Welcome_Text2">We keep track of your progress</div>
+        </div>
+
+        <!--Achievements start-->
+
+        <img class="AchievementsImage" src="Figures/AchievementsImage.png" alt="AchievementsImage">
+        <div class="Achievements">Achievements</div>
+
+        <!--Achievement box 1-->
+        <div class="AchievementBox1_Topic">Weekly Engagement</div>
+        <div class="AchievementBox1">
+            <div class="pie" style="--p1:60;--b:10px;--c:#0D5AC2;">3 Days</div>
+        </div>
+
+        <!--Achievement box 2-->
+        <div class="AchievementBox2_Topic">Completion of Activities</div>
+        <div class="AchievementBox2">
+            <div class="pie1" style="--p2:90;--b:10px;--c:#FB8C3B;">90 out of 100</div>
+        </div>
+
+        <!--Achievement box 3-->
+        <div class="AchievementBox3_Topic">Positive Mood Shift</div>
+
+        <img id="happy_face" src="Figures/1_happy_face.png" alt="happy_face">
+        <img id="smile_face" src="Figures/2_smile_face.png" alt="smile_face">
+        <img id="neutral_face" src="Figures/3_neutral_face.png" alt="neutral_face">
+        <img id="injured_face" src="Figures/4_injured_face.png" alt="injured_face">
+        <img id="sceptic_face" src="Figures/5_sceptic_face.png" alt="sceptic_face">
+        <img id="sad_face" src="Figures/6_sad_face.png" alt="sad_face">
+
+        <div class="AchievementBox3">
+            <canvas id="myChart" style="width:100%;max-width:350px; height:100%; max-height: 200px;"></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+            <script src="ProgressReport.js"></script>
+        </div>
+
+        <!--Achievements end-->
+
+        <hr class="ContentDivider">
+
+        <!--Analytics start-->
+
+        <img class="AnalyticsIcon" src="Figures/AnalyticsIcon.png" alt="AnalyticsIcon">
+        <div class="Analytics">Analytics</div>
+
+        <div class="NoLable">No</div>
+        <div class="MinimalLable">Minimal</div>
+        <div class="MildLable">Mild</div>
+        <div class="ModerateLable">Moderate</div>
+        <div class="Moderately_SevereLable">Moderately Severe</div>
+        <div class="SevereLable">Severe</div>
+
+        <div class="AnalyticsBox1">
+            <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+            <script src="ProgressReport1.js"></script>
+        </div>
+
+        <div class="AnalyticsBox2">
+            <div style="width: 100%; height: 100%; position: relative">
+                <div style="width: 326.46px; height: 12.40px; left: 0px; top: 50.21px; position: absolute; opacity: 0.30; background: #454459; border-radius: 30px"></div>
+                <div style="width: 219.55px; height: 12.69px; left: 0px; top: 50.28px; position: absolute; background: linear-gradient(180deg, #7AD3FF 0%, #4FBAF0 100%); border-radius: 30px; border: 0.50px white solid"></div>
+                <div style="width: 326.46px; height: 12.40px; left: 0px; top: 116.36px; position: absolute; opacity: 0.30; background: #454459; border-radius: 30px"></div>
+                <div style="width: 142.83px; height: 12.40px; left: 0px; top: 116.36px; position: absolute; background: linear-gradient(180deg, #B09FFF 0%, #8D79F6 100%); border-radius: 30px; border: 0.50px white solid"></div>
+                <div style="width: 326.46px; height: 12.40px; left: 0px; top: 182.52px; position: absolute; opacity: 0.30; background: #454459; border-radius: 30px"></div>
+                <div style="width: 107.46px; height: 12.40px; left: 0px; top: 182.52px; position: absolute; background: linear-gradient(180deg, #99FFA3 0%, #68EE76 100%); border-radius: 30px; border: 0.50px white solid"></div>
+                <div style="width: 326.46px; height: 12.40px; left: 0px; top: 83.29px; position: absolute; opacity: 0.30; background: #454459; border-radius: 30px"></div>
+                <div style="width: 261.85px; height: 12.40px; left: 0px; top: 83.29px; position: absolute; background: linear-gradient(180deg, #FF9364 0%, #F25F33 100%); border-radius: 30px; border: 0.50px white solid"></div>
+                <div style="width: 326.46px; height: 12.40px; left: 0px; top: 149.44px; position: absolute; opacity: 0.30; background: #454459; border-radius: 30px"></div>
+                <div style="width: 191.12px; height: 12.40px; left: 0px; top: 149.44px; position: absolute; background: linear-gradient(180deg, #FE6C6C 0%, #FE464B 100%); border-radius: 30px; border: 0.50px white solid"></div>
+                <div style="width: 326.46px; height: 12.40px; left: 0px; top: 215.60px; position: absolute; opacity: 0.30; background: #454459; border-radius: 30px"></div>
+                <div style="width: 236.01px; height: 12.40px; left: 0px; top: 215.60px; position: absolute; background: linear-gradient(180deg, #FFD572 0%, #FEBD38 100%); border-radius: 30px; border: 0.50px white solid"></div>
+                <div style="width: 2.04px; height: 4.13px; left: 253.01px; top: 87.42px; position: absolute; background: white; border-radius: 20px"></div>
+                <div style="width: 2.04px; height: 4.13px; left: 133.99px; top: 120.50px; position: absolute; background: white; border-radius: 20px"></div>
+                <div style="width: 2.04px; height: 4.13px; left: 182.28px; top: 153.58px; position: absolute; background: white; border-radius: 20px"></div>
+                <div style="width: 2.04px; height: 4.13px; left: 98.62px; top: 186.65px; position: absolute; background: white; border-radius: 20px"></div>
+                <div style="width: 2.04px; height: 4.13px; left: 227.16px; top: 219.73px; position: absolute; background: white; border-radius: 20px"></div>
+                <div style="width: 2.04px; height: 4.13px; left: 205.40px; top: 54.34px; position: absolute; background: white; border-radius: 20px"></div>
+                <div style="width: 121.23px; height: 19.04px; left: 5.73px; top: 36px; position: absolute; color: black; font-size: 12px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Sports/Games</div>
+                <div style="width: 89.78px; height: 2.48px; left: 226.48px; top: 55.17px; position: absolute">
+                    <div style="width: 4.08px; height: 2.48px; left: 0px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 14.28px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 28.57px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 42.85px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 57.13px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 71.41px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 85.70px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                </div>
+                <div style="width: 75.49px; height: 2.48px; left: 240.77px; top: 220.56px; position: absolute">
+                    <div style="width: 4.08px; height: 2.48px; left: 0px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 14.28px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 28.57px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 42.85px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 57.13px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 71.41px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                </div>
+                <div style="width: 46.93px; height: 2.48px; left: 269.33px; top: 88.25px; position: absolute">
+                    <div style="width: 4.08px; height: 2.48px; left: 0px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 14.28px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 28.57px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 42.85px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                </div>
+                <div style="width: 161.19px; height: 2.48px; left: 155.07px; top: 121.32px; position: absolute">
+                    <div style="width: 4.08px; height: 2.48px; left: 0px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 99.98px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 14.28px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 114.26px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 28.57px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 128.54px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 42.85px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 142.83px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 57.13px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 157.11px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 71.41px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 85.70px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                </div>
+                <div style="width: 204.04px; height: 2.48px; left: 112.22px; top: 187.48px; position: absolute">
+                    <div style="width: 4.08px; height: 2.48px; left: 42.85px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 0px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 142.83px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 57.13px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 14.28px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 157.11px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 71.41px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 28.57px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 171.39px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 85.70px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 185.68px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 99.98px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 199.96px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 114.26px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 128.54px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                </div>
+                <div style="width: 118.34px; height: 2.48px; left: 197.92px; top: 154.40px; position: absolute">
+                    <div style="width: 4.08px; height: 2.48px; left: 57.13px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 71.41px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 85.70px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 0px; top: 0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 99.98px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 14.28px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 114.26px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 28.57px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                    <div style="width: 4.08px; height: 2.48px; left: 42.85px; top: -0px; position: absolute; opacity: 0.40; background: #454459; border-radius: 9999px"></div>
+                </div>
+                <div style="width: 102.14px; height: 19.04px; left: 5.73px; top: 68.53px; position: absolute; color: black; font-size: 12px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Movies/Dramas</div>
+                <div style="width: 94.50px; height: 19.04px; left: 5.73px; top: 101.06px; position: absolute; color: black; font-size: 12px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Music Therapy</div>
+                <div style="width: 82.19px; height: 18.86px; left: 5.73px; top: 132px; position: absolute; color: black; font-size: 12px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Exercises</div>
+                <div style="width: 82.19px; height: 18.86px; left: 5.73px; top: 167.70px; position: absolute; color: black; font-size: 12px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Meditation</div>
+                <div style="width: 82.19px; height: 18.86px; left: 5.73px; top: 198.64px; position: absolute; color: black; font-size: 12px; font-family: Poppins; font-weight: 400; word-wrap: break-word">Therapy</div>
+                <div style="left: 0px; top: 0px; position: absolute; color: black; font-size: 15px; font-family: Poppins; font-weight: 500; word-wrap: break-word">Recommendations Analytics </div>
+            </div>
+        </div>
+
+        
+
+        <!--Analytics end-->
+        
+
+    </body>
+</html>

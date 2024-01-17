@@ -1,0 +1,628 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/*Side menue start*/
+
+.SideBar{
+
+  background-color: #A6DAFF;
+  width: 22%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+
+
+}
+/* top logo*/
+.Logo{
+  width: 38%;
+  height: 20%;
+  position: absolute;
+  top: 1%;
+  left: 2%;
+}
+/*logo name*/
+.LogoName{
+  font-size: 250%;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 6%;
+  left: 34%;
+}
+
+/*Menue item 1*/
+/*Menue item1 container*/
+.Dashboard_Option_Container{
+  width: 50%;
+  height: 5%;
+  border-radius: 16px;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+.Dashboard_Option_Container:hover{
+  background-color: #0D5AC2;
+}
+
+.Dashboard_Option_Container:hover .DashboardIcon_White{
+  opacity: 1;
+}
+
+.Dashboard_Option_Container:hover .DashboardIcon_Black{
+  opacity: 0;
+}
+
+.Dashboard_Option_Container:hover .SideBar_Item1{
+  color: white;
+}
+
+.DashboardIcon_Black{
+  position: relative;
+  top: 18%;
+  left: 8%;
+}
+
+.DashboardIcon_White{
+  position: relative;
+  top: 18%;
+  left: -9%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.SideBar_Item1{
+  font-size: 120%;
+  position: relative;
+  top: -39%;
+  left: 30%;
+}
+
+/*Menue item 2*/
+/*Menue item2 container*/
+.Profile_Option_Container{
+  width: 50%;
+  height: 5%;
+  border-radius: 16px;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.Profile_Option_Container:hover{
+  background-color: #0D5AC2;
+}
+
+.Profile_Option_Container:hover .UserIcon_White{
+  opacity: 1;
+}
+
+.Profile_Option_Container:hover .UserIcon_Black{
+  opacity: 0;
+}
+
+.Profile_Option_Container:hover .SideBar_Item2{
+  color: white;
+}
+
+.UserIcon_Black{
+  position: relative;
+  top: 18%;
+  left: 8%;
+}
+
+.UserIcon_White{
+  position: relative;
+  top: 20%;
+  left: -8.5%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.SideBar_Item2{
+  font-size: 120%;
+  position: absolute;
+  top: 30.5%;
+  left: 30%;
+}
+
+/*Menue item 3*/
+/*Menue item2 container*/
+.Progress_Option_Container{
+  width: 50%;
+  height: 5%;
+  border-radius: 16px;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+.Progress_Option_Container:hover{
+  background-color: #0D5AC2;
+}
+
+.Progress_Option_Container:hover .Chart_Line_White{
+  opacity: 1;
+}
+
+.Progress_Option_Container:hover .Chart_Line_Black{
+  opacity: 0;
+}
+
+.Progress_Option_Container:hover .SideBar_Item3{
+  color: white;
+}
+
+.Chart_Line_Black{
+  position: relative;
+  top: 18%;
+  left: 8%;
+}
+
+.Chart_Line_White{
+  position: relative;
+  top: 20%;
+  left: -8.5%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.SideBar_Item3{
+  font-size: 120%;
+  position: absolute;
+  top: 38%;
+  left: 30%;
+}
+
+/*Menue item 4*/
+/*Menue item2 container*/
+.Chat_Option_Container{
+  width: 50%;
+  height: 5%;
+  border-radius: 16px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+}
+
+.Chat_Option_Container:hover{
+  background-color: #0D5AC2;
+}
+
+.Chat_Option_Container:hover .MessageIcon_White{
+  opacity: 1;
+}
+
+.Chat_Option_Container:hover .MessageIcon_Black{
+  opacity: 0;
+}
+
+.Chat_Option_Container:hover .SideBar_Item4{
+  color: white;
+}
+
+.MessageIcon_Black{
+  position: relative;
+  top: 18%;
+  left: 8%;
+}
+
+.MessageIcon_White{
+  position: relative;
+  top: 20%;
+  left: -8.5%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.SideBar_Item4{
+  font-size: 120%;
+  position: absolute;
+  top: 28%;
+  left: 30%;
+}
+
+/* side menue Sign out option*/
+.LogoutIcon{
+  position: absolute;
+  top: 90%;
+  left: 20%
+}
+
+.SignOutText{
+  font-size: 120%;
+  position: absolute;
+  top: 90.5%;
+  left: 30%;
+}
+
+/*Side menu  end*/
+
+
+/*Content Start*/
+
+.Topic{
+  position: absolute;
+  top: 2%;
+  left: 25%;
+}
+
+.TopUserIcon{
+  position: absolute;
+  top: 3.5%;
+  left: 90%;
+}
+
+.TopUserContent1{
+  font-family:  'Poppins', sans-serif;
+  position: absolute;
+  top: 4.5%;
+  left: 93%;
+}
+
+.TopUserContent2{
+  font-family:  'Poppins', sans-serif;
+  font-size: small;
+  position: absolute;
+  top: 6.3%;
+  left: 93%;
+}
+
+/*Top box Start*/
+.TopBox{
+  width: 73%;
+  height: 20%;
+  background-color: #A6DAFF;
+  border-radius: 20px;
+  position: absolute;
+  top: 10%;
+  left: 24%;
+}
+
+.TopBox_Image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+
+.Date{
+  font-family:  'Poppins', sans-serif;
+  font-weight: bolder;
+  position: relative;
+  top: -80.5%;
+  left: 4.5%;
+}
+
+.Welcome_Text{
+  font-family:  'Poppins', sans-serif;
+  font-size: 180%;
+  font-weight: bolder;
+  position: relative;
+  top: -55%;
+  left: 4.2%;
+}
+
+.Welcome_Text2{
+  font-family:  'Poppins', sans-serif;
+  position: relative;
+  top: -54%;
+  left: 4.5%;
+}
+
+/*Top Box end*/
+
+/*Achievements start*/
+
+.AchievementsImage{
+  width: 2.5%;
+  height: 4%;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+}
+
+.Achievements{
+  font-family:  'Poppins', sans-serif;
+  font-weight: bolder;
+  font-size: 125%;
+  position: absolute;
+  top: 35.5%;
+  left: 28%;
+}
+
+.AchievementBox1{
+  width: 20%;
+  height: 24%;
+  background-color: rgba(247.20, 247.20, 247.20, 0.12);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.AchievementBox2{
+  width: 20%;
+  height: 24%;
+  background-color: rgba(247.20, 247.20, 247.20, 0.12);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.AchievementBox3{
+  width: 20%;
+  height: 24%;
+  background-color: rgba(247.20, 247.20, 247.20, 0.12);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 40%;
+  left: 75%;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.AchievementBox1_Topic{
+  font-family:  'Poppins', sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 26%;
+}
+
+.AchievementBox2_Topic{
+  font-family:  'Poppins', sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 51%;
+}
+
+.AchievementBox3_Topic{
+  font-family:  'Poppins', sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 76%;
+}
+
+/*Graph pie chart start*/
+
+@property --p{
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0;
+}
+
+/*Graph 1*/
+.pie {
+	--p:60;
+	--b:22px;
+	--c:darkred;
+	--w:150px;
+
+	width:var(--w);
+	aspect-ratio:1;
+	position:relative;
+	display:inline-grid;
+	place-content:center;
+	font-size:25px;
+	font-weight:bold;
+	font-family:sans-serif;
+}
+
+/*Graph 2*/
+.pie1 {
+	--p:90;
+	--b:22px;
+	--c:darkred;
+	--w:150px;
+
+	width:var(--w);
+	aspect-ratio:1;
+	position:relative;
+	display:inline-grid;
+	place-content:center;
+	font-size:15px;
+	font-weight:bold;
+	font-family:sans-serif;
+}
+
+.pie:before,
+.pie:after,
+.pie1:before,
+.pie1:after {
+	content:"";
+	position:absolute;
+	border-radius:50%;
+}
+
+.pie:before,
+.pie1:before {
+	inset:0;
+	background:
+		radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+		conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+	-webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+	mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+}
+
+.pie:after
+.pie1:after {
+	inset:calc(50% - var(--b)/2);
+	background:var(--c);
+	transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+
+.animate {
+	animation:p 1s .5s both;
+}
+
+.no-round:before {
+	background-size:0 0,auto;
+}
+
+.no-round:after {
+	content:none;
+}
+
+@keyframes p {
+	from{--p:0}
+}
+
+/*Graph pie chart end*/
+
+/*Graph line chart start*/
+
+#myChart{
+  position: relative;
+  top: 9%;
+}
+
+#happy_face{
+  position: absolute;
+  top: 43.4%;
+  left: 77%;
+}
+
+#smile_face{
+  position: absolute;
+  top: 46%;
+  left: 77%;
+}
+
+#neutral_face{
+  position: absolute;
+  top: 49%;
+  left: 77%;
+}
+
+#injured_face{
+  position: absolute;
+  top: 51.9%;
+  left: 77%;
+}
+
+#sceptic_face{
+  position: absolute;
+  top: 54.8%;
+  left: 77%;
+}
+
+#sad_face{
+  position: absolute;
+  top: 57.6%;
+  left: 77%;
+}
+
+/*Graph line chart end*/
+
+/*Achievements end*/
+
+.ContentDivider{
+  width: 70%;
+  border-color: #D0D0D0;
+  position: absolute;
+  top: 65%;
+  left: 25%;
+}
+
+/*Analytics start*/
+
+.AnalyticsIcon{
+  width: 2.5%;
+  height: 4%;
+  position: absolute;
+  top: 68%;
+  left: 25%;
+}
+
+.Analytics{
+  font-family:  'Poppins', sans-serif;
+  font-weight: bolder;
+  font-size: 125%;
+  position: absolute;
+  top: 68.5%;
+  left: 28%;
+}
+
+.AnalyticsBox1{
+  width: 20%;
+  height: 24%;
+  position: absolute;
+  top: 73%;
+  left: 35%;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.AnalyticsBox2{
+  width: 20%;
+  height: 24%;
+  background-color: rgba(247.20, 247.20, 247.20, 0.12);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 73%;
+  left: 65%;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#myChart1{
+  width: 50%;
+  height: 80%;
+}
+
+.NoLable{
+  position: absolute;
+  top: 91%;
+  left: 33.3%;
+}
+
+.MinimalLable{
+  position: absolute;
+  top: 87.8%;
+  left: 31.5%;
+}
+
+.MildLable{
+  position: absolute;
+  top: 84.7%;
+  left: 32.6%;
+}
+
+.ModerateLable{
+  position: absolute;
+  top: 81.3%;
+  left: 31.2%;
+}
+
+.Moderately_SevereLable{
+  position: absolute;
+  top: 78%;
+  left: 28%;
+}
+
+.SevereLable{
+  position: absolute;
+  top: 75%;
+  left: 32%;
+}
+
+/*Analytics end*/
+
+
+
+
+/*Content end*/
