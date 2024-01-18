@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <title>Dashboard</title>
         <link rel="icon" href="Figures/TitleLogo.png" type="image/png">
-        <link rel="stylesheet" href="Dashboard.css">
+        <link rel="stylesheet" href="UserProfile.css">
     </head>
 
     <body>
@@ -64,50 +64,52 @@
         <!-- Side menu end -->
 
 
-        <!--Dash Board content Start-->
+        <!--User Profile content Start-->
 
-        <h1 class="Topic">Dashboard</h1>
-
-        <img class="TopUserIcon" src="Figures/TopUserIcon.png" alt="TopUserIcon">
-        <div class="TopUserContent1">Steven</div>
-        <div class="TopUserContent2">User</div>
+        <h1 class="Topic">User Profile</h1>
 
         <div class="TopBox">
-            <img class="TopBox_Image" src="Figures/DashBoard_TopBoxImage.png" alt="TopBox_Image">
-            <div class="Date">January 16, 2024</div>
-            <div class="Welcome_Text">Welcome back, Steven!</div>
-            <div class="Welcome_Text2">We keep track of your progress</div>
+            <img class="TopBox_Image" src="Figures/UserProfileTopBoxImage.png" alt="TopBox_Image">
+            <div class="Name">Steven Watson</div>
+
+            <div class="TopBoxUserImage">
+                <img class="UserImage_TopBox" src="Figures/UserImage_TopBox.png" alt="UserImage">
+            </div>
+
+            <button class="EditCoverPhoto_Button">Edit Cover Photo</button>
+            <button class="EditProfile_Button">Edit Profile</button>
+
         </div>
 
-        <div class="ApprovedBox">
-            <div class="ApprovedBoxTopic">Approved</div>
-            <div class="ApprovedBoxText1">36</div>
+        <!--Personal Information Start-->
+        <div class="PersonalInformationBox">
+            <div class="PersonalInformation_Topic">Personal Information</div>
 
-            <img class="ApprovedBoxArrow" src="Figures/ApprovedBoxArrow.png" alt="Arrow">
-            <div class="ApprovedBoxText2">Since Last month</div>
+            <div class="FirstName_heading">First Name</div>
+            <div class="FirstName">Steven</div>
+
+            <div class="LastName_heading">Last Name</div>
+            <div class="LastName">Watson</div>
+
+            <div class="UserName_heading">User Name</div>
+            <div class="UserName">StevenWatson</div>
+
+            <div class="DOB_heading">Date of Birth</div>
+            <div class="DOB">1999/05/10</div>
+
+            <div class="Gender_heading">Gender</div>
+            <div class="Gender">Male</div>
+
+            <div class="EmailAddress_heading">Email Address</div>
+            <div class="EmailAddress">stevenwatson99@gmail.com</div>
+
+            <div class="PhoneNumber_heading">Phone Number</div>
+            <div class="PhoneNumber">+94 770975126</div>
+
+            <div class="Status_heading">Status</div>
+            <div class="Status">Active</div>
         </div>
 
-        <div class="UserBox">
-            <div class="UserBoxTopic">User</div>
-
-            <div class="UserBoxText1">Active <span id="UserBoxText1_value">74%</span></div>
-            <div class="UserBoxText2">New <span id="UserBoxText2_value">18%</span></div>
-            <div class="UserBoxText3">Inactive <span id="UserBoxText3_value">8%</span></div>
-
-            <div class="UserBoxText1_ColorBox"></div>
-            <div class="UserBoxText2_ColorBox"></div>
-            <div class="UserBoxText3_ColorBox"></div>
-
-            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-            <script src="Dashboard.js"></script>
-        </div>
-
-        <!--Resource 1-->
-        <iframe class="Frame1" src="https://www.pinerest.org/newsroom/articles/mental-health-awareness-blog/"></iframe>
-        
-        <!--Resource 2-->
-        <iframe class="Frame2" src="https://www.today.com/video/how-to-develop-and-attract-deeper-connections-with-others-199161413847"></iframe>
 
         
     </body>
