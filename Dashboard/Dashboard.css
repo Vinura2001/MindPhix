@@ -1,0 +1,479 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/*Side menue start*/
+
+.SideBar{
+
+  background-color: #A6DAFF;
+  width: 22%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+
+
+}
+/* top logo*/
+.Logo{
+  width: 38%;
+  height: 20%;
+  position: absolute;
+  top: 1%;
+  left: 2%;
+}
+/*logo name*/
+.LogoName{
+  font-size: 250%;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 6%;
+  left: 34%;
+}
+
+/*Menue item 1*/
+/*Menue item1 container*/
+.Dashboard_Option_Container{
+  width: 50%;
+  height: 5%;
+  border-radius: 16px;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+.Dashboard_Option_Container:hover{
+  background-color: #0D5AC2;
+}
+
+.Dashboard_Option_Container:hover .DashboardIcon_White{
+  opacity: 1;
+}
+
+.Dashboard_Option_Container:hover .DashboardIcon_Black{
+  opacity: 0;
+}
+
+.Dashboard_Option_Container:hover .SideBar_Item1{
+  color: white;
+}
+
+.DashboardIcon_Black{
+  position: relative;
+  top: 18%;
+  left: 8%;
+}
+
+.DashboardIcon_White{
+  position: relative;
+  top: 18%;
+  left: -9%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.SideBar_Item1{
+  font-size: 120%;
+  position: relative;
+  top: -39%;
+  left: 30%;
+}
+
+/*Menue item 2*/
+/*Menue item2 container*/
+.Profile_Option_Container{
+  width: 50%;
+  height: 5%;
+  border-radius: 16px;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.Profile_Option_Container:hover{
+  background-color: #0D5AC2;
+}
+
+.Profile_Option_Container:hover .UserIcon_White{
+  opacity: 1;
+}
+
+.Profile_Option_Container:hover .UserIcon_Black{
+  opacity: 0;
+}
+
+.Profile_Option_Container:hover .SideBar_Item2{
+  color: white;
+}
+
+.UserIcon_Black{
+  position: relative;
+  top: 18%;
+  left: 8%;
+}
+
+.UserIcon_White{
+  position: relative;
+  top: 20%;
+  left: -8.5%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.SideBar_Item2{
+  font-size: 120%;
+  position: absolute;
+  top: 30.5%;
+  left: 30%;
+}
+
+/*Menue item 3*/
+/*Menue item2 container*/
+.Progress_Option_Container{
+  width: 50%;
+  height: 5%;
+  border-radius: 16px;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+.Progress_Option_Container:hover{
+  background-color: #0D5AC2;
+}
+
+.Progress_Option_Container:hover .Chart_Line_White{
+  opacity: 1;
+}
+
+.Progress_Option_Container:hover .Chart_Line_Black{
+  opacity: 0;
+}
+
+.Progress_Option_Container:hover .SideBar_Item3{
+  color: white;
+}
+
+.Chart_Line_Black{
+  position: relative;
+  top: 18%;
+  left: 8%;
+}
+
+.Chart_Line_White{
+  position: relative;
+  top: 20%;
+  left: -8.5%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.SideBar_Item3{
+  font-size: 120%;
+  position: absolute;
+  top: 38%;
+  left: 30%;
+}
+
+/*Menue item 4*/
+/*Menue item2 container*/
+.Chat_Option_Container{
+  width: 50%;
+  height: 5%;
+  border-radius: 16px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+}
+
+.Chat_Option_Container:hover{
+  background-color: #0D5AC2;
+}
+
+.Chat_Option_Container:hover .MessageIcon_White{
+  opacity: 1;
+}
+
+.Chat_Option_Container:hover .MessageIcon_Black{
+  opacity: 0;
+}
+
+.Chat_Option_Container:hover .SideBar_Item4{
+  color: white;
+}
+
+.MessageIcon_Black{
+  position: relative;
+  top: 18%;
+  left: 8%;
+}
+
+.MessageIcon_White{
+  position: relative;
+  top: 20%;
+  left: -8.5%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.SideBar_Item4{
+  font-size: 120%;
+  position: absolute;
+  top: 28%;
+  left: 30%;
+}
+
+/* side menue Sign out option*/
+.LogoutIcon{
+  position: absolute;
+  top: 90%;
+  left: 20%
+}
+
+.SignOutText{
+  font-size: 120%;
+  position: absolute;
+  top: 90.5%;
+  left: 30%;
+}
+
+/*Side menu  end*/
+
+
+/*Content Start*/
+
+.Topic{
+  position: absolute;
+  top: 2%;
+  left: 25%;
+}
+
+.TopUserIcon{
+  position: absolute;
+  top: 3.5%;
+  left: 90%;
+}
+
+.TopUserContent1{
+  font-family:  'Poppins', sans-serif;
+  position: absolute;
+  top: 4.5%;
+  left: 93%;
+}
+
+.TopUserContent2{
+  font-family:  'Poppins', sans-serif;
+  font-size: small;
+  position: absolute;
+  top: 6.3%;
+  left: 93%;
+}
+
+/*Top box Start*/
+.TopBox{
+  width: 73%;
+  height: 20%;
+  background: linear-gradient(98deg, #5FA3E2 0%, #DFCFF7 100%);
+  border-radius: 20px;
+  position: absolute;
+  top: 10%;
+  left: 24%;
+}
+
+.TopBox_Image{
+  width: 20%;
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+  top: 0%;
+  left: 65%;
+}
+
+.Date{
+  font-family:  'Poppins', sans-serif;
+  font-weight: bolder;
+  color: white;
+  position: relative;
+  top: -80.5%;
+  left: 4.5%;
+}
+
+.Welcome_Text{
+  font-family:  'Poppins', sans-serif;
+  font-size: 180%;
+  font-weight: bolder;
+  color: white;
+  position: relative;
+  top: -59%;
+  left: 4.2%;
+}
+
+.Welcome_Text2{
+  font-family:  'Poppins', sans-serif;
+  color: white;
+  position: relative;
+  top: -64%;
+  left: 4.5%;
+}
+
+/*Top Box end*/
+
+/*ApprovedBox start*/
+
+.ApprovedBox{
+  width: 15%;
+  height: 15%;
+  background-color: #EFEFEF;
+  border-radius: 30px;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+}
+
+.ApprovedBoxTopic{
+  font-family:  'Poppins', sans-serif;
+  font-size: 120%;
+  font-weight: 600;
+  position: relative;
+  top: 8%;
+  left: 8%;
+}
+
+.ApprovedBoxText1{
+  font-family:  'Poppins', sans-serif;
+  font-size: 200%;
+  font-weight: 600;
+  position: relative;
+  top: 18%;
+  left: 8%;
+}
+
+.ApprovedBoxText2{
+  font-family:  'Poppins', sans-serif;
+  font-size: 100%;
+  font-weight: lighter;
+  color: #32D738;
+  position: relative;
+  top: 13%;
+  left: 15%;
+}
+
+.ApprovedBoxArrow{
+  position: relative;
+  top: 28%;
+  left: 8%;
+}
+
+/*ApprovedBox end*/
+
+/*UserdBox start*/
+
+.UserBox{
+  width: 20%;
+  height: 22%;
+  background-color: #EFEFEF;
+  border-radius: 30px;
+  position: absolute;
+  top: 35%;
+  left: 60%;
+}
+
+.UserBoxTopic{
+  font-family:  'Poppins', sans-serif;
+  font-size: 120%;
+  font-weight: 600;
+  position: relative;
+  top: 8%;
+  left: 8%;
+}
+
+.UserBoxText1{
+  font-family:  'Poppins', sans-serif;
+  position: relative;
+  top: 32%;
+  left: 15%;
+}
+
+.UserBoxText2{
+  font-family:  'Poppins', sans-serif;
+  position: relative;
+  top: 34%;
+  left: 15%;
+}
+
+.UserBoxText3{
+  font-family:  'Poppins', sans-serif;
+  position: relative;
+  top: 34%;
+  left: 15%;
+}
+
+#UserBoxText1_value{
+  font-weight: bolder;
+}
+
+#UserBoxText2_value{
+  font-weight: bolder;
+}
+
+#UserBoxText3_value{
+  font-weight: bolder;
+}
+
+.UserBoxText1_ColorBox{
+  width: 5%;
+  height: 6%;
+  border-radius: 30px;
+  background-color: #B09FFF;
+  position: relative;
+  top: 0%;
+  left: 8%;
+}
+
+.UserBoxText2_ColorBox{
+  width: 5%;
+  height: 6%;
+  border-radius: 30px;
+  background-color: #FFD572;
+  position: relative;
+  top: 8%;
+  left: 8%;
+}
+
+.UserBoxText3_ColorBox{
+  width: 5%;
+  height: 6%;
+  border-radius: 30px;
+  background-color: #a8a49c;
+  position: relative;
+  top: 14%;
+  left: 8%;
+}
+
+/*Donut chart*/
+#myChart{
+  position: relative;
+  top: -60%;
+  left: 20%;
+}
+
+/*UserBox end*/
+
+/*Content end*/
+
+.Frame1{
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  top: 65%;
+  left: 28%;
+}
+
+.Frame2{
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  top: 65%;
+  left: 65%;
+}
