@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Dashboard</title>
+        <link rel="icon" href="Figures/TitleLogo.png" type="image/png">
+        <link rel="stylesheet" href="Dashboard.css">
+    </head>
+
+    <body>
+
+        <!-- Side menu start -->
+        <div class="SideBar">
+            <!-- top logo -->
+            <img class="Logo" src="Figures/HalfLogo.png" alt="Logo">
+            <div class="LogoName">MindPhix</div>
+
+            <!-- option 1 -->
+            <a href="">
+                <div class="Dashboard_Option_Container">
+                    <img class="DashboardIcon_Black" src="Figures/DashboardIcon_Black.png" alt="DashboardIcon">
+                    <img class="DashboardIcon_White" src="Figures/DashboardIcon_White.png" alt="DashboardIcon">
+                    <div class="SideBar_Item1">Dashboard</div>
+                </div>
+            </a>
+
+            <!-- option 2 -->
+            <a href="/../UserProfile/UserProfile.html">
+                <div class="Profile_Option_Container">
+                    <img class="UserIcon_Black" src="Figures/UserIcon_Black.png" alt="UserIcon">
+                    <img class="UserIcon_White" src="Figures/UserIcon_White.png" alt="UserIcon">
+                    <div class="SideBar_Item2">Profile</div>
+                </div>
+            </a>
+
+            <!-- option 3 -->
+            <a href="">
+                <div class="Progress_Option_Container">
+                    <img class="Chart_Line_Black" src="Figures/Chart_Line_Black.png" alt="Chart_Line_Black">
+                    <img class="Chart_Line_White" src="Figures/Chart_Line_White.png" alt="Chart_Line_White">
+                    <div class="SideBar_Item3">Progress Report</div>
+                </div>
+            </a>
+
+            <!-- option 4 -->
+            <a href="">
+                <div class="Chat_Option_Container">
+                    <img class="MessageIcon_Black" src="Figures/MessageIcon_Black.png" alt="ChatIcon">
+                    <img class="MessageIcon_White" src="Figures/MessageIcon_White.png" alt="ChatIcon">
+                    <div class="SideBar_Item4">Chat</div>
+                </div>
+            </a>
+
+            <!--Log out option-->
+            <a href="">
+                <div>
+                    <img class="LogoutIcon" src="Figures/LogoutIcon.png" alt="SignOutIcon">
+                    <div class="SignOutText">Sign Out</div>
+                </div> 
+            </a>
+
+        </div>
+        <!-- Side menu end -->
+
+
+        <!--Dash Board content Start-->
+
+        <h1 class="Topic">Dashboard</h1>
+
+        <img class="TopUserIcon" src="Figures/TopUserIcon.png" alt="TopUserIcon">
+        <div class="TopUserContent1">Steven</div>
+        <div class="TopUserContent2">User</div>
+
+        <div class="TopBox">
+            <img class="TopBox_Image" src="Figures/DashBoard_TopBoxImage.png" alt="TopBox_Image">
+            <div class="Date">January 16, 2024</div>
+            <div class="Welcome_Text">Welcome back, Steven!</div>
+            <div class="Welcome_Text2">We keep track of your progress</div>
+        </div>
+
+        <div class="ApprovedBox">
+            <div class="ApprovedBoxTopic">Approved</div>
+            <div class="ApprovedBoxText1">36</div>
+
+            <img class="ApprovedBoxArrow" src="Figures/ApprovedBoxArrow.png" alt="Arrow">
+            <div class="ApprovedBoxText2">Since Last month</div>
+        </div>
+
+        <div class="UserBox">
+            <div class="UserBoxTopic">User</div>
+
+            <div class="UserBoxText1">Active <span id="UserBoxText1_value">74%</span></div>
+            <div class="UserBoxText2">New <span id="UserBoxText2_value">18%</span></div>
+            <div class="UserBoxText3">Inactive <span id="UserBoxText3_value">8%</span></div>
+
+            <div class="UserBoxText1_ColorBox"></div>
+            <div class="UserBoxText2_ColorBox"></div>
+            <div class="UserBoxText3_ColorBox"></div>
+
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+            <script src="Dashboard.js"></script>
+        </div>
+
+        <!--Resource 1-->
+        <iframe class="Frame1" src="https://www.pinerest.org/newsroom/articles/mental-health-awareness-blog/"></iframe>
+        
+        <!--Resource 2-->
+        <iframe class="Frame2" src="https://www.today.com/video/how-to-develop-and-attract-deeper-connections-with-others-199161413847"></iframe>
+
+        
+    </body>
+</html>
