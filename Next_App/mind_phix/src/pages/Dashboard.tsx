@@ -1,8 +1,7 @@
 import BaseLayout from "@/components/BaseLayout";
+import React from 'react';
 
-import React from 'react'
-
-const Dashboard = () => {
+const Dashboard: React.FC = () => {
   return (
     <BaseLayout>
       <div>
@@ -51,7 +50,7 @@ const Dashboard = () => {
         <iframe className="Frame2" src="https://www.today.com/video/how-to-develop-and-attract-deeper-connections-with-others-199161413847"></iframe>
       </div>
     </BaseLayout>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

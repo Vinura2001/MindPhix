@@ -14,7 +14,13 @@ import { useContext } from "react";
 import { SidebarContext } from "@/context/SidebarContext";
 import { useRouter } from "next/router";
 
-const sidebarItems = [
+interface SidebarItem {
+  name: string;
+  href: string;
+  icon: React.ComponentType;
+}
+
+const sidebarItems: SidebarItem[] = [
   {
     name: "Dashboard",
     href: "/Dashboard",
@@ -39,11 +45,11 @@ const sidebarItems = [
 
 const Sidebar = () => {
   const router = useRouter();
-  const { isCollapsed, toggleSidebarcollapse } = useContext(SidebarContext);
+  const { isCollapsed, toggleSidebarCollapse } = useContext(SidebarContext);
 
   return (
     <div className="sidebar__wrapper">
-      <button className="btn" onClick={toggleSidebarcollapse}>
+      <button className="btn" onClick={toggleSidebarCollapse}>
         {isCollapsed ? <MdKeyboardArrowRight /> : <MdKeyboardArrowLeft />}
       </button>
       <aside className="sidebar" data-collapse={isCollapsed}>
@@ -76,7 +82,6 @@ const Sidebar = () => {
             );
           })}
 
-
           {/* Display "Exit" button at the bottom of the sidebar */}
           <li id="exit_btn" className="sidebar__item" key="Exit">
             <Link
@@ -91,8 +96,6 @@ const Sidebar = () => {
               <span className="sidebar__name">Exit</span>
             </Link>
           </li>
-
-
         </ul>
       </aside>
     </div>

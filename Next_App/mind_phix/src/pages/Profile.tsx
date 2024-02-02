@@ -1,6 +1,7 @@
 import BaseLayout from "@/components/BaseLayout";
+import React from 'react';
 
-const About = () => {
+const About: React.FC = () => {
   return <BaseLayout>Profile Page</BaseLayout>;
 };
 
