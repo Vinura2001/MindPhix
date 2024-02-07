@@ -16,12 +16,12 @@ export default function Dashboard() {
         {/* Dashboard content Start */}
         <h1 className="Topic">Dashboard</h1>
 
-        <img className="TopUserIcon" src="Figures/TopUserIcon.png" alt="TopUserIcon" />
+        <img className="TopUserIcon" src="/Figures/TopUserIcon.png" alt="TopUserIcon" />
         <div className="TopUserContent1">Steven</div>
         <div className="TopUserContent2">User</div>
 
         <div className="TopBox">
-          <img className="TopBox_Image" src="@/Figures/DashBoard_TopBoxImage.png" alt="TopBox_Image" />
+          <img className="TopBox_Image" src="/Figures/DashBoard_TopBoxImage.png" alt="TopBox_Image" />
           <div className="Date">January 16, 2024</div>
           <div className="Welcome_Text">Welcome back, Steven!</div>
           <div className="Welcome_Text2">We keep track of your progress</div>
@@ -31,7 +31,7 @@ export default function Dashboard() {
           <div className="ApprovedBoxTopic">Approved</div>
           <div className="ApprovedBoxText1">36</div>
 
-          <img className="ApprovedBoxArrow" src="Figures/ApprovedBoxArrow.png" alt="Arrow" />
+          <img className="ApprovedBoxArrow" src="/Figures/ApprovedBoxArrow.png" alt="Arrow" />
           <div className="ApprovedBoxText2">Since Last month</div>
         </div>
 
