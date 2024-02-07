@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { FaBars, FaXmark } from "react-icons/fa6";
+import { FaBars,FaXmark } from "react-icons/fa6";
 import { Link as ScrollLink } from "react-scroll/modules";
 import Link from "next/link";
 
@@ -60,17 +60,15 @@ export default function Navbar() {
           </div>
           {/* Signin and Signup Buttons*/}
           <div className="space-x-7 hidden md:flex items-center">
-            <Link href="/sign-in">
+          
               <Button className="bg-blue-800 py-2 px-4 transition-all duration-300  hover:bg-blue-900">
-                Sign in
+              <Link href="/sign-in">Sign in </Link>
               </Button>
-            </Link>
-
-            <Link href="/sign-up">
+           
               <Button className="bg-blue-800 py-2 px-4 transition-all duration-300  hover:bg-blue-900">
-                Sign up
+              <Link href="/sign-up">Sign up </Link>
               </Button>
-            </Link>
+            
           </div>
           {/* Menu button only display on mobile*/}
           <div className="md:hidden">

@@ -1,11 +1,15 @@
 import React from 'react'
+import Sidebar from './Sidebar'
 
-export default function page() {
+const page = () => {
   return (
     <div>
-      Dashboard
+      <Sidebar />
     </div>
   )
 }
+
+export default page
+
 
 

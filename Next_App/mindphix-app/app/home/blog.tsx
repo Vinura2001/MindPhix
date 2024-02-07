@@ -18,7 +18,7 @@ function Blog() {
         title="Personalised Reccomendations"
         description="Experience a tailored path to well-being with our Personalized Recommendations feature. Our intelligent chatbot goes beyond generic advice, understanding your unique journey and needs. Through comprehensive analysis of your interactions, the chatbot provides personalized recommendations for coping with depression and enhancing overall mental health."
         imageUrl="/home-assets/blog-assets/reccomendations.jpg"
-        isImageOnRight={false} // Change this prop to control the layout
+        isImageOnRight={true} // Change this prop to control the layout
         imageHeight={400}
         imageWidth={400}
       />
@@ -34,7 +34,7 @@ function Blog() {
         title="Spread Depression Awareness"
         description="This feature empowers users to explore and understand various aspects of depression, from symptoms and causes to available treatments and support options. Designed to be an accessible resource, the chatbot offers a safe space for users to ask questions and receive reliable information, fostering awareness and education about depression."
         imageUrl="/home-assets/blog-assets/information.jpg"
-        isImageOnRight={false} // Change this prop to control the layout
+        isImageOnRight={true} // Change this prop to control the layout
         imageHeight={400}
         imageWidth={400}
       />

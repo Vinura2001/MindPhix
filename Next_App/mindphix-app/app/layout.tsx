@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
 import "./styles/Home.css";
+import './styles/SideMenu.css';
+import './styles/Dashboard.css';
 
 export const metadata: Metadata = {
   title: "MindPhix"
