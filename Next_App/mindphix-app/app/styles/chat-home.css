@@ -3,77 +3,91 @@ body{
 }
 
 .header{
-    width: 1250px;
-    height: 280px;
-    margin-top: 20px;
-    margin-left:30px;
-    margin-right: 20px;
-    font-size: 30px;
     background-color: white;
+    padding: 10px;
     border-radius: 10px;
-    box-shadow: 6px 5px 30px rgba(3, 3, 3, 0.1);
-
+    height: 280px;
+    width: 1400px;
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    box-shadow: 6px 5px 30px rgba(3, 3, 3, 0);
 }
 
 .header-img{
-    margin-right: 30px;
+    float: right;
     width: 100%;
     display: block;
-    margin-top: 0px;
     max-width: 350px;
-    float: right;
-    border-radius: 10px;
+    margin-left: 60px; 
+    border-radius: 10px; 
 }
 
 .header-text{
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
-    margin-left: 40px;
+    margin-left: 30px;  
+    margin-right: 0px;  
 }
 
 .text-1{
     color: #0D5AC2;
     padding-top: 30px;
-    font-size: 20px;
-    margin-left: 40px;
+    font-size: 25px;
+    margin-left: 30px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
 }
 
 .text-2{
-    font-size: 15px;
+    font-size: 20px;
     color: #686969;
     font-family: 'Poppins', sans-serif;
     padding-bottom: 40px;
-    margin-left: 40px;
+    margin-left: 30px;
     font-weight: 200;
-
+    padding-top: 15px;
 }
 
 .content{
-    width: 550px;
-    height: 280px;
-    margin-top: 100px;
-    margin-left:30px;
-    margin-right: 780px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: rgb(255, 255, 255);
+    width: 400px;
+    position: absolute;  
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 6px 5px 30px rgba(3, 3, 3, 0.1);
+    box-shadow: 6px 5px 30px rgba(3,3,3,0.1);
+    height: 260px;
+    margin-top: 400px;
+    margin-left: 315px;
+    padding-bottom: 10px;
+    padding-left: 5px;
 }
 
 .content-heading{
     color: #020202;
     font-size: 20px;
     margin-bottom: 30px;
-    margin-left: 40px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
+    margin-left: 30px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif; 
+    margin-top: 20px;
 }
+   
+.container-1, .container-2, .container-3{
+    background-color: rgb(225, 237, 247);
+    padding-top: 35px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 200px;
+    color: rgb(0, 0, 0);
+    border-radius: 25px;
+    box-shadow: 6px 5px 30px rgba(3, 3, 3, 0.1);
+    width: 310px;
+}
+
 .heart-icon{
     width:35px;
-    margin-left: -10px;
+    margin-left: 0px;
     margin-bottom: 20px;
     margin-top: -35px;
 }
@@ -85,69 +99,196 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
 }
-.container-1, .container-2, .container-3{
-    background-color: rgb(225, 237, 247);
-    padding-top: 35px;
-    margin-bottom: 0px;
-    margin-left: 40px;
-    margin-right: 100px;
-    color: rgb(0, 0, 0);
-    border-radius: 25px;
-    box-shadow: 6px 5px 30px rgba(3, 3, 3, 0.1);
-}
 
 .content-2{
-    width: 500px;
-    height: 240px;
-    margin-top: -242px;
-    margin-left: 780px;
-    padding-bottom: 42px;
-    margin-right: 45px;
-    padding-top: 20px;
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 1080px;
+    height: 260px;
+    width: 360px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 6px 5px 30px rgba(3, 3, 3, 0.1);
+    padding-left: 5px;
 }
 
 .content-heading-2{
-    color: #000000;
-    font-size: 30px;
+    color: #020202;
+    font-size: 20px;
+    font-weight: 400;
     margin-bottom: 20px;
-    margin-left: 40px;
-    margin-top: -1px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif; 
 }
 
 .text-3{
-    font-size: 14px;
+    font-size: 15px;
     color: #363535;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-bottom: 10px;
-    margin-left: 40px;
+    margin-left: 30px;
     font-weight: 400;
     margin-right: 30px;
 }
 
 .talk-btn{
-    margin-left: 140px;
-    padding: 10px;
-    margin-top: 9px;
-    margin-bottom: -15px;
     background-color: #088cde;
     color: white;
     border: 1px solid white;
     border-radius: 5px;
+    margin-left: 100px;
+    padding: 10px;
+    margin-top: 9px;
 }
 
-.chatlink{
-    text-decoration: none;
-    color: white;
-}
 
 .talk-btn:hover{
     background-color: #0f4080;
     cursor: pointer;
 }
+
+/* For screens up to 320px */
+@media only screen and (max-width: 320px) {
+    .header {
+      width: 100%;
+      margin: 10px auto;
+      padding: 5px;
+      text-align: center;
+      height: auto;
+    }
+    .header-img {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .header-text {
+      font-size: 30px;
+    }
+    .text-1 {
+      font-size: 18px;
+      margin-left: 0;
+      padding-top: 10px;
+    }
+    .text-2 {
+      font-size: 14px;
+      margin-left: 0;
+    }
+    .content,
+    .content-2 {
+      width: 90%;
+      margin: 10px auto;
+    }
+    .content-heading,
+    .content-heading-2 {
+      font-size: 18px;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+    .benifit-text-1,
+    .benifit-text-2,
+    .benifit-text-3 {
+      font-size: 12px;
+      margin-left: 40px;
+      margin-top: -40px;
+      margin-bottom: 10px;
+    }
+    .heart-icon {
+      margin-top: -25px;
+    }
+    .talk-btn {
+      margin-left: 30%;
+    }
+  }
+  
+  /* For screens from 321px to 375px */
+  @media only screen and (min-width: 321px) and (max-width: 375px) {
+    @media only screen and (min-width: 321px) and (max-width: 375px) {
+        .header {
+          width: 90%;
+          margin: 10px auto;
+          padding: 5px;
+          text-align: center;
+          height: auto;
+        }
+        .header-text {
+          font-size: 25px;
+        }
+        .text-1 {
+          font-size: 16px;
+          padding-top: 8px;
+        }
+        .text-2 {
+          font-size: 12px;
+        }
+        .content,
+        .content-2 {
+          width: 90%;
+          margin: 10px auto;
+        }
+        .content-heading,
+        .content-heading-2 {
+          font-size: 16px;
+          margin-top: 8px;
+        }
+        .benifit-text-1,
+        .benifit-text-2,
+        .benifit-text-3 {
+          font-size: 10px;
+          margin-left: 30px;
+          margin-top: -30px;
+          margin-bottom: 5px;
+        }
+        .talk-btn {
+          margin-left: 30%;
+        }
+      }
+  }
+  
+  /* For screens from 426px to 768px */
+  @media only screen and (min-width: 426px) and (max-width: 768px) {
+    .header {
+      width: 80%;
+      margin: 20px auto;
+    }
+    .content,
+    .content-2 {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .header-img {
+      width: 80%;
+      margin-left: 10%;
+    }
+    .header-text {
+      font-size: 40px;
+    }
+    .text-1 {
+      font-size: 22px;
+      padding-top: 20px;
+    }
+    .text-2 {
+      font-size: 18px;
+    }
+    .content-heading,
+    .content-heading-2 {
+      font-size: 22px;
+    }
+    .benifit-text-1,
+    .benifit-text-2,
+    .benifit-text-3 {
+      font-size: 16px;
+      margin-left: 60px;
+      margin-top: -40px;
+      margin-bottom: 10px;
+    }
+    .talk-btn {
+      margin-left: 35%;
+    }
+  }
+  
+  
+  
+  
 
 

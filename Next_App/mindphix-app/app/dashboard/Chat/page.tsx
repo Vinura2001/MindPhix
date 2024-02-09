@@ -1,18 +1,23 @@
 import Link from "next/link";
 import BaseLayout from "../BaseLayout";
+import Head from 'next/head';
 
 export default function Chat() {
   return(
     <BaseLayout>
       <>
-  <div className="header">
+      <Head>
+        <meta name="description" content="Your page description" />
+      </Head>
+  <div className="header" >
     <img className="header-img" src="/Figures/wallpaper.jpg" alt="wallpaper" />
     <p className="text-1">MindPhix</p>
-    <h1 className="header-text">Make Your Mental Health A Priority</h1>
-    <p className="text-2"> Mental health support thats right for you.</p>
+    <h1 className="header-text"> <b>Make Your Mental Health A Priority </b></h1>
+    <p className="text-2"> Mental health support thats right for you . . . </p>
   </div>
+
   <div className="content">
-    <h1 className="content-heading">MindPhix Provides</h1>
+    <h1 className="content-heading"><b>MindPhix Provides</b></h1>
     <div className="container-1">
       <img className="heart-icon" src="/Figures/circle.png" alt="heart-icon" />
       <p className="benifit-text-1">Depression Detection</p>
@@ -27,7 +32,7 @@ export default function Chat() {
     </div>
   </div>
   <div className="content-2">
-    <h1 className="content-heading-2"> Meet MindPhix </h1>
+    <h1 className="content-heading-2"> <b>Meet MindPhix </b></h1>
     <p className="text-3">
       Your Compassionate Companion in Depression Detection and Intervention.
       <br />

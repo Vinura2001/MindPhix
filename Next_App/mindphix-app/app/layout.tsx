@@ -4,8 +4,7 @@ import "./styles/Home.css";
 import './styles/SideMenu.css';
 import './styles/Dashboard.css';
 import './styles/chat-home.css';
-import './styles/chat-interface.css';
-
+import './styles/chat_interface.css';
 
 export const metadata: Metadata = {
   title: "MindPhix"

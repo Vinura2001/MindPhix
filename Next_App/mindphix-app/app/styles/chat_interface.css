@@ -1,18 +1,18 @@
 .SideBar {
+  position: absolute;
   background-color: #a6daff;
   width: 25%;
   height: 100%;
-  position: absolute;
   left: 0%;
   top: 0%;
   border: 1px #032f9f solid;
 }
 
 .NewChatBar {
-  position: relative; /* Add this line to establish a positioning context for absolute positioning */
+  position: relative; 
   background: #eff8ff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 395px;
+  width: 330px;
   height: 45px;
   margin-top: 40px;
   margin-left: 25px;
@@ -29,7 +29,7 @@
   width: 50px;
   height: 50px;
   margin-left: -10px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .new-chat-text {
@@ -37,7 +37,7 @@
   margin-left: 88px;
   margin-top: -30.5px;
   color: black;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Inter";
   font-weight: 400;
   word-wrap: break-word;
@@ -53,8 +53,8 @@
 
 .new-chat-logo {
   position: absolute;
-  top: 6%; /* Adjust this value to vertically center the logo */
-  left: 83%; /* Adjust this value to horizontally position the logo */
+  top: 60px;               /* Adjust this value to vertically center the logo */
+  margin-left: 322px;           /* Adjust this value to horizontally position the logo */
   transform: translate(-50%, -50%);
   width: 30px;
   height: 30px;
@@ -62,7 +62,7 @@
 
 .previous-session-text {
   color: #4f4848;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 50px;
   margin-left: 25px;
   font-family: "Inter";
@@ -84,35 +84,38 @@
 .session-text {
   position: absolute;
   margin-top: -22px;
-  margin-left: 165px;
+  margin-left: 130px;
   font-family: "Inter";
   font-size: 14px;
   font-weight: 600;
 }
 
 .exit-button {
-  background: #21a1fd;
+  position: absolute;
+  background: rgb(91, 190, 223);
   border-radius: 30px;
-  margin-top: 590px;
-  margin-left: 20px;
+  margin-top: 340px;
+  margin-left: 10px;
+  width: 100px;
 }
 
 .exit-icon {
-  margin-top: 5px;
-  width: 16px;
-  margin-left: -40px;
+  position: relative;
+  margin-top: 7px;
+  width: 18px;
+  margin-left: 15px;
 }
 
 .exit-text {
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Inter";
   font-weight: 600;
   word-wrap: break-word;
-  margin-left: 40px;
+  margin-left: 24px;
   margin-bottom: 5px;
   margin-right: 20px;
-  margin-top: -19px;
+  margin-top: -20px;
 }
 
 .exit-button:hover {
@@ -121,49 +124,51 @@
 
 .user-profile {
   position: absolute;
-  width: 48%;
+  width: 160px;
   height: 5%;
-  background: #dbf0ff;
+  background: rgb(91, 190, 223);
   border-radius: 6px;
-  margin-left: 198px;
-  margin-top: -37px;
+  margin-left: 180px;
+  margin-top: 337px;
 }
 
 .user-profile-circle {
-  position: relative;
+  position: absolute;
   background-color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 9999px;
-  width: 35px;
-  height: 35px;
+  width: 26px;
+  height: 26px;
   margin-left: 6px;
-  margin-top: 7px;
+  margin-top: 4px;
 }
 
 .user-profile-icon {
   width: 20px;
   height: 20px;
-  margin-left: 8px;
-  margin-top: 8px;
+  margin-left: 3px;
+  margin-top: 4px;
 }
 
 .user-name-text {
-  color: black;
-  font-size: 12px;
+  color: white;
+  font-size: 15px;
   font-family: "Inter";
   font-weight: 400;
   word-wrap: break-word;
   margin-left: 50px;
-  margin-top: -23px;
+  margin-top: 4px;
 }
 
 .text-box-container {
   position: absolute;
-  width: 76%;
-  height: 7.9%;
-  background-color: #a6daff;
-  margin-top: 907px;
-  margin-left: 470px;
+  width: 75%;
+  height: 7%;
+  background-color: lightblue;
+  margin-bottom: 0px;
+  margin-top: 658px;
+  margin-left: 372px;
+  border: 22px;
 }
 
 #message-box {
@@ -177,14 +182,14 @@
 }
 
 .send-button-circle {
-  position: relative;
-  margin-left: 1370px;
-  background-color: #ffffff;
+  position: absolute;
+  margin-left: 1050px;
+  background-color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 9999px;
   width: 35px;
   height: 35px;
-  margin-top: -36px;
+  margin-top: -31px;
 }
 
 .send-icon {
@@ -195,7 +200,9 @@
 
 .container{
   box-sizing: border-box;
-
 }
+
+
+
 
 
