@@ -2,6 +2,8 @@
 
 body{
     font-family: 'Sarala', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 nav{

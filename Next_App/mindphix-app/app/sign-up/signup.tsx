@@ -80,8 +80,8 @@ export default function Signup() {
             className="rounded-tr-2xl rounded-br-2xl w-3/4"
             src={background}
             alt="background image"
-            width={200}
-            height={1000}
+            width={400}
+            height={500}
           />
 
           {/*Signin section*/}
