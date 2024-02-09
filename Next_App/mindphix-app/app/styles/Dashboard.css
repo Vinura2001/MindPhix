@@ -6,6 +6,8 @@
   position: absolute;
   top: 2%;
   left: 25%;
+  font-size: 190%;
+  font-weight: 900;
 }
 
 .TopUserIcon{
@@ -18,14 +20,6 @@
   font-family:  'Poppins', sans-serif;
   position: absolute;
   top: 4.5%;
-  left: 93%;
-}
-
-.TopUserContent2{
-  font-family:  'Poppins', sans-serif;
-  font-size: small;
-  position: absolute;
-  top: 6.3%;
   left: 93%;
 }
 

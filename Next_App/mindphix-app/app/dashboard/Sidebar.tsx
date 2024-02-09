@@ -69,6 +69,16 @@ export default function Sidebar(){
               </Link>
             </li>
           ))}
+
+          {/* Display "Exit" button at the bottom of the sidebar */}
+          <li id="exit_btn" className="sidebar__item" key="Exit">
+            <Link href="/" className="sidebar__link">
+              <span className="sidebar__icon">
+                <RxExit />
+              </span>
+              <span className="sidebar__name">Exit</span>
+            </Link>
+          </li>
         </ul>
       </aside>
     </div>
