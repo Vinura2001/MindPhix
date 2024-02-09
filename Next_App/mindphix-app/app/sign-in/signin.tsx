@@ -6,8 +6,8 @@ import {
   FaLinkedinIn,
   FaGoogle,
   FaRegEnvelope,
-} from "react-icons/fa";
-import { MdLockOutline } from "react-icons/md";
+} from 'react-icons/fa';
+import { MdLockOutline } from 'react-icons/md';
 import Link from "next/link";
 
 export default function Signin() {
