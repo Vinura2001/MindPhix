@@ -24,8 +24,8 @@ export default function Dashboard() {
         {/* Dashboard content Start */}
         <h1 className="Dashboard_Topic">Dashboard</h1>
 
-        <img className="TopUserIcon" src="/Figures/TopUserIcon.png" alt="TopUserIcon" />
-        <div className="TopUserContent1">Steven</div>
+        <img className="Dashboard_TopUserIcon" src="/Figures/TopUserIcon.png" alt="TopUserIcon" />
+        <div className="Dashboard_TopUserContent1">Steven</div>
 
         <div className="Dashboard_TopBox">
           <img className="Dashboard_TopBox_Image" src="/Figures/DashBoard_TopBoxImage.png" alt="TopBox_Image" />
@@ -45,7 +45,9 @@ export default function Dashboard() {
         <div className="UserBox">
           <div className="UserBoxTopic">User</div>
           
-          <User_DoughnutChat />
+          <div className="UserChart">
+            <User_DoughnutChat />
+          </div>
 
         </div>
 
