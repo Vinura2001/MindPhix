@@ -5,6 +5,8 @@ import './styles/SideMenu.css';
 import './styles/Dashboard.css';
 import './styles/chat-home.css';
 import './styles/chat_interface.css';
+import './styles/ProgressReport.css';
+import './styles/UserProfile.css';
 
 
 export const metadata: Metadata = {
@@ -18,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/Figures/TitleLogo.png" /> {/* Add the icon */}
+      </head>
       <body>{children}</body>
     </html>
   );
