@@ -2,10 +2,16 @@
 
 /*Content Start*/
 
-.Topic{
+.Dashboard_Topic{
   position: absolute;
   top: 2%;
+<<<<<<< Updated upstream
   left: 25%;
+=======
+  left: 20%;
+  font-size: 190%;
+  font-weight: 900;
+>>>>>>> Stashed changes
 }
 
 .TopUserIcon{
@@ -30,17 +36,17 @@
 }
 
 /*Top box Start*/
-.TopBox{
+.Dashboard_TopBox{
   width: 73%;
   height: 20%;
   background: linear-gradient(98deg, #5FA3E2 0%, #DFCFF7 100%);
   border-radius: 20px;
   position: absolute;
   top: 10%;
-  left: 24%;
+  left: 20%;
 }
 
-.TopBox_Image{
+.Dashboard_TopBox_Image{
   width: 20%;
   height: 100%;
   border-radius: 20px;
@@ -49,7 +55,7 @@
   left: 65%;
 }
 
-.Date{
+.Dashboard_Date{
   font-family:  'Poppins', sans-serif;
   font-weight: bolder;
   color: white;
@@ -58,7 +64,7 @@
   left: 4.5%;
 }
 
-.Welcome_Text{
+.Dashboard_Welcome_Text{
   font-family:  'Poppins', sans-serif;
   font-size: 180%;
   font-weight: bolder;
@@ -68,7 +74,7 @@
   left: 4.2%;
 }
 
-.Welcome_Text2{
+.Dashboard_Welcome_Text2{
   font-family:  'Poppins', sans-serif;
   color: white;
   position: relative;
@@ -83,11 +89,11 @@
 .ApprovedBox{
   width: 15%;
   height: 15%;
-  background-color: #EFEFEF;
+  background-color: white;
   border-radius: 30px;
   position: absolute;
   top: 35%;
-  left: 40%;
+  left: 30%;
 }
 
 .ApprovedBoxTopic{
@@ -131,7 +137,7 @@
 .UserBox{
   width: 20%;
   height: 22%;
-  background-color: #EFEFEF;
+  background-color: white;
   border-radius: 30px;
   position: absolute;
   top: 35%;
@@ -147,74 +153,12 @@
   left: 8%;
 }
 
-.UserBoxText1{
-  font-family:  'Poppins', sans-serif;
-  position: relative;
-  top: 32%;
-  left: 15%;
-}
 
-.UserBoxText2{
-  font-family:  'Poppins', sans-serif;
-  position: relative;
-  top: 34%;
-  left: 15%;
-}
-
-.UserBoxText3{
-  font-family:  'Poppins', sans-serif;
-  position: relative;
-  top: 34%;
-  left: 15%;
-}
-
-#UserBoxText1_value{
-  font-weight: bolder;
-}
-
-#UserBoxText2_value{
-  font-weight: bolder;
-}
-
-#UserBoxText3_value{
-  font-weight: bolder;
-}
-
-.UserBoxText1_ColorBox{
-  width: 5%;
-  height: 6%;
-  border-radius: 30px;
-  background-color: #B09FFF;
-  position: relative;
-  top: 0%;
-  left: 8%;
-}
-
-.UserBoxText2_ColorBox{
-  width: 5%;
-  height: 6%;
-  border-radius: 30px;
-  background-color: #FFD572;
-  position: relative;
-  top: 8%;
-  left: 8%;
-}
-
-.UserBoxText3_ColorBox{
-  width: 5%;
-  height: 6%;
-  border-radius: 30px;
-  background-color: #a8a49c;
-  position: relative;
-  top: 14%;
-  left: 8%;
-}
 
 /*Donut chart*/
-#myChart{
+.UserChart{
   position: relative;
-  top: -60%;
-  left: 20%;
+  top: 5%;
 }
 
 /*UserBox end*/
@@ -224,15 +168,18 @@
 .Frame1{
   width: 30%;
   height: 30%;
+  border-radius: 30px;
   position: absolute;
   top: 65%;
-  left: 28%;
+  left: 22%;
 }
 
 .Frame2{
   width: 30%;
   height: 30%;
+  border-radius: 30px;
   position: absolute;
   top: 65%;
-  left: 65%;
+  left: 60%;
 }
+
