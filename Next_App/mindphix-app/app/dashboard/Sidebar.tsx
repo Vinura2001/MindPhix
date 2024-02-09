@@ -36,7 +36,16 @@ const sidebarItems = [
 
 export default function Sidebar(){
 
-  const [isCollapsedSidebar,setIsCollapsedSidebar] = useState <Boolean>(false);
+  let CollapsState;
+  
+  if (window.innerWidth <= 768) {
+    CollapsState =true;
+  } else {
+    CollapsState =false;
+  }
+  
+
+  const [isCollapsedSidebar,setIsCollapsedSidebar] = useState <Boolean>(CollapsState);
 
   const toggleSidebarCollapseHandler = () =>{
     setIsCollapsedSidebar((prev) => !prev)
