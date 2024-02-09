@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import background from "@/public/login-assets/Signup.jpg";
-import { FaRegEnvelope, FaRegUser } from "react-icons/fa";
-import { MdLockOutline } from "react-icons/md";
+import { FaRegEnvelope, FaRegUser } from 'react-icons/fa';
+import { MdLockOutline } from 'react-icons/md';
 import Link from "next/link";
 
 export default function Signup() {
