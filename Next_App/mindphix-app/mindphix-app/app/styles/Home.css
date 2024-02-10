@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap');
+
+body{
+    font-family: 'Sarala', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+nav{
+    z-index:10001;
+}
+
+.gradient-backgorund{
+    background:linear-gradient(99deg,#111111 0%,#0D5AC2 45%,#EEF5FF 80%);
+}
+
+.activeLink {
+    color: #0D5AC2;
+  }
+
+
+

@@ -1,0 +1,226 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/*Side menue start*/
+
+
+/*Content Start*/
+
+.UserProfile_Topic{
+  position: absolute;
+  top: 2%;
+  left: 20%;
+  font-size: 190%;
+  font-weight: 900;
+}
+
+.TopUserIcon{
+  position: absolute;
+  top: 3.5%;
+  left: 90%;
+}
+
+.TopUserContent1{
+  font-family:  'Poppins', sans-serif;
+  position: absolute;
+  top: 4.5%;
+  left: 93%;
+}
+
+.TopUserContent2{
+  font-family:  'Poppins', sans-serif;
+  font-size: small;
+  position: absolute;
+  top: 6.3%;
+  left: 93%;
+}
+
+/*Top box Start*/
+.UserProfile_TopBox{
+  width: 73%;
+  height: 22%;
+  background-color: rgba(247.20, 247.20, 247.20, 0.12);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+}
+
+.UserProfile_TopBox_Image{
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+
+.Name{
+  font-family:  'Poppins', sans-serif;
+  font-size: 180%;
+  font-weight: lighter;
+  color: #0D5AC2;
+  position: relative;
+  top: 0%;
+  left: 15%;
+}
+
+.TopBoxUserImage{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #FBB03B;
+  position: relative;
+  top: -50%;
+  left: 7%;
+}
+
+.UserImage_TopBox{
+  position: relative;
+  top: 2%;
+  left: 0%;
+}
+
+.EditProfile_Button{
+  width: 8%;
+  height: 12%;
+  border-radius: 8px;
+  background-color: #0D5AC2;
+  color: white;
+  position: absolute;
+  top: 80%;
+  left: 91%;
+}
+
+/*Top Box end*/
+
+/*Personal Information start*/
+
+div{
+  font-family: 'Poppins', sans-serif;
+}
+
+.FirstName_heading,.LastName_heading,.UserName_heading,.DOB_heading,.Gender_heading,.EmailAddress_heading,.PhoneNumber_heading,.Status_heading{
+  color: #384D6C;
+  font-weight: bold;
+}
+
+.PersonalInformationBox{
+  width: 63%;
+  height: 55%;
+  background-color: rgba(247.20, 247.20, 247.20, 0.12);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 40%;
+  left: 24%;
+}
+
+.PersonalInformation_Topic{
+  font-size: medium;
+  font-weight: bold;
+  font-family:  'Poppins', sans-serif;
+  position: relative;
+  top: 5%;
+  left: 5%;
+}
+
+.FirstName_heading{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.FirstName{
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+.LastName_heading{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+.LastName{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+}
+
+.UserName_heading{
+  position: absolute;
+  top: 35%;
+  left: 10%;
+}
+
+.UserName{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+
+.DOB_heading{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+}
+
+.DOB{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+
+.Gender_heading{
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.Gender{
+  position: absolute;
+  top: 55%;
+  left: 10%;
+}
+
+.EmailAddress_heading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.EmailAddress{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+}
+
+.PhoneNumber_heading{
+  position: absolute;
+  top: 65%;
+  left: 10%;
+}
+
+.PhoneNumber{
+  position: absolute;
+  top: 70%;
+  left: 10%;
+}
+
+.Status_heading{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+}
+
+.Status{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+}
+
+/*Personal Information end*/
+
+/*Content end*/
