@@ -1,41 +1,11 @@
-"use client";
 import Head from "next/head";
 import Image from "next/image";
 import background from "@/public/login-assets/Signup.jpg";
-import { FaRegEnvelope, FaRegUser } from "react-icons/fa";
-import { MdLockOutline } from "react-icons/md";
+import { FaRegEnvelope, FaRegUser } from 'react-icons/fa';
+import { MdLockOutline } from 'react-icons/md';
 import Link from "next/link";
-import { useState } from "react";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { auth } from "@/app/firebase/config";
-import { useRouter } from "next/navigation";
-import React from "react";
 
 export default function Signup() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const router = useRouter();
-  const [emailError, setEmailError] = React.useState("");
-  const [passwordError, setPasswordError] = React.useState("");
-  const [confirmPasswordError, setConfirmPasswordError] = React.useState("");
-
-  const [createUserWithEmailAndPassword] =
-    useCreateUserWithEmailAndPassword(auth);
-
-  const handleSignUp = async () => {
-    try {
-      // Firebase createUserWithEmailAndPassword
-      const res = await createUserWithEmailAndPassword(email, password);
-
-      // Redirect upon successful signup
-      if (res) {
-        router.push("/dashboard/Dashboard");
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  };
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
       <Head>
@@ -58,14 +28,21 @@ export default function Signup() {
               </p>
               <div className="flex flex-col items-center">
                 <div className="bg-gray-100 w-full sm:w-64 p-2 flex items-center mb-3">
+                  <FaRegUser className="text-gray-400 mr-2" />
+                  <input
+                    type="username"
+                    name="username"
+                    placeholder="Username"
+                    className="bg-gray-100 outline-none text-sm flex-1"
+                  />
+                </div>
+                <div className="bg-gray-100 w-full sm:w-64 p-2 flex items-center mb-3">
                   <FaRegEnvelope className="text-gray-400 mr-2" />
                   <input
                     type="email"
                     name="email"
                     placeholder="Email address"
                     className="bg-gray-100 outline-none text-sm flex-1"
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
                   />
                 </div>
                 <div className="bg-gray-100 w-full sm:w-64 p-2 flex items-center mb-3">
@@ -75,8 +52,6 @@ export default function Signup() {
                     name="password"
                     placeholder="Password"
                     className="bg-gray-100 outline-none text-sm flex-1"
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
                   />
                 </div>
                 <div className="bg-gray-100 w-full sm:w-64 p-2 flex items-center mb-3">
@@ -86,16 +61,14 @@ export default function Signup() {
                     name="cpassword"
                     placeholder="Confirm Password"
                     className="bg-gray-100 outline-none text-sm flex-1"
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    value={confirmPassword}
                   />
                 </div>
-                <button
-                  onClick={handleSignUp}
+                <Link
+                  href="/dashboard/Dashboard"
                   className=" border-2 border-blue-400 font-semibold text-blue-500 rounded-full px-12 mt-2 py-2 inline-block hover:bg-blue-400 hover:text-white mb-5"
                 >
                   Signup
-                </button>
+                </Link>
                 <Link href="/sign-in" className=" text-sm font-bold">
                   Already have an account ? Sign in here.{" "}
                 </Link>
