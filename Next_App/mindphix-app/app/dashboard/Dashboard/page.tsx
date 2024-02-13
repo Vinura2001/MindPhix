@@ -2,21 +2,11 @@
 import User_DoughnutChat from "@/components/ui/User_DoughnutChart";
 import BaseLayout from "../BaseLayout";
 
+import {get, ref,} from 'firebase/database';
+import { useState, useEffect } from 'react';
+import { database } from "@/app/firebase/config";
+
 export default function Dashboard() {
-
-  const data = {
-    labels: ['Active', 'New', 'Inactive'],
-    datasets: [{
-      label: 'poll',
-      data: [6, 4, 2],
-      backgroundColor: ['#B09FFF', '#FFD572', '#EFEFEF'],
-      borderColor: ['#B09FFF', '#FFD572', '#EFEFEF'],
-    }] 
-  }
-
-  const options = {
-    aspectRatio: 2.5
-  };
 
   return(
     <BaseLayout>
