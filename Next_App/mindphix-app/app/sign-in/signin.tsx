@@ -1,3 +1,4 @@
+"use client";
 import Head from "next/head";
 import Image from "next/image";
 import background from "@/public/login-assets/Login.jpg";
@@ -6,11 +7,40 @@ import {
   FaLinkedinIn,
   FaGoogle,
   FaRegEnvelope,
-} from 'react-icons/fa';
-import { MdLockOutline } from 'react-icons/md';
+} from "react-icons/fa";
+import { MdLockOutline } from "react-icons/md";
 import Link from "next/link";
+import { useState } from "react";
+import { auth } from "@/app/firebase/config";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function Signin() {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+
+  const handleSignIn = async () => {
+    try {
+      // Firebase createUserWithEmailAndPassword
+      const res = await signInWithEmailAndPassword(email, password);
+      setEmail("");
+      setPassword("");
+
+      // Redirect upon successful signup
+      if (res) {
+        router.push("/dashboard/Dashboard");
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
       <Head>
@@ -59,6 +89,9 @@ export default function Signin() {
                     name="email"
                     placeholder="Email address"
                     className="bg-gray-100 outline-none text-sm flex-1"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                    required
                   />
                 </div>
                 <div className="bg-gray-100 w-64 p-2 flex items-center mb-3">
@@ -68,6 +101,9 @@ export default function Signin() {
                     name="password"
                     placeholder="Password"
                     className="bg-gray-100 outline-none text-sm flex-1"
+                    onChange={(e) => setPassword(e.target.value)}
+                    value={password}
+                    required
                   />
                 </div>
                 <div className="flex justify-between w-64 mb-5">
@@ -82,12 +118,14 @@ export default function Signin() {
                     Forgot Password?
                   </Link>
                 </div>
-                <Link
-                  href="/dashboard/Dashboard"
+
+                <button
                   className=" border-2 border-blue-400 font-semibold text-blue-500 rounded-full px-12 py-2 inline-block hover:bg-blue-400 hover:text-white mb-5"
+                  onClick={handleSignIn}
                 >
                   Login
-                </Link>
+                </button>
+
                 <Link href="/sign-up" className=" text-sm font-bold">
                   Start your journey with us ! Sign up today.
                 </Link>
