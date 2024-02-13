@@ -3,13 +3,10 @@ import "./styles/globals.css";
 import "./styles/Home.css";
 import './styles/SideMenu.css';
 import './styles/Dashboard.css';
-<<<<<<< Updated upstream
-=======
 import './styles/chat-home.css';
 import './styles/chat_interface.css';
 import './styles/ProgressReport.css';
 import './styles/UserProfile.css';
->>>>>>> Stashed changes
 
 
 export const metadata: Metadata = {
@@ -30,4 +27,3 @@ export default function RootLayout({
     </html>
   );
 }
-

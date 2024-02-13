@@ -36,7 +36,16 @@ const sidebarItems = [
 
 export default function Sidebar(){
 
-  const [isCollapsedSidebar,setIsCollapsedSidebar] = useState <Boolean>(false);
+  let CollapsState;
+  
+  if (window.innerWidth <= 768) {
+    CollapsState =true;
+  } else {
+    CollapsState =false;
+  }
+  
+
+  const [isCollapsedSidebar,setIsCollapsedSidebar] = useState <Boolean>(CollapsState);
 
   const toggleSidebarCollapseHandler = () =>{
     setIsCollapsedSidebar((prev) => !prev)
@@ -69,6 +78,16 @@ export default function Sidebar(){
               </Link>
             </li>
           ))}
+
+          {/* Display "Exit" button at the bottom of the sidebar */}
+          <li id="exit_btn" className="sidebar__item" key="Exit">
+            <Link href="/" className="sidebar__link">
+              <span className="sidebar__icon">
+                <RxExit />
+              </span>
+              <span className="sidebar__name">Exit</span>
+            </Link>
+          </li>
         </ul>
       </aside>
     </div>
