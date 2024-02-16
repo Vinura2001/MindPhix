@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 import { LineChart } from '@mui/x-charts/LineChart';
 import React, { useState, useEffect } from 'react';
 import { ref, child, get } from "firebase/database";
-import { database } from "@/app/Firebase/config";
+import { database } from "@/app/firebase/config";
 
 export default function MoodChart() {
 

@@ -3,7 +3,7 @@ import { PieChart } from '@mui/x-charts/PieChart';
 import { useDrawingArea } from '@mui/x-charts/hooks';
 import { styled } from '@mui/material/styles';
 import { ref, child, get } from "firebase/database";
-import { database } from "@/app/Firebase/config";
+import { database } from "@/app/firebase/config";
 
 const size = {
   width: 400,
