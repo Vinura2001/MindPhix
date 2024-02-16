@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Doughnut } from 'react-chartjs-2';
-import { database } from '@/app/Firebase/config';
+import { database } from '@/app/firebase/config';
 import { ref, onValue, off, DataSnapshot } from 'firebase/database';
 import { Chart, ArcElement, Tooltip, Legend } from 'chart.js';
 
