@@ -11,7 +11,6 @@ export default function User_DoughnutChat() {
 
     useEffect(() => {
         const usersRef = ref(database, `users`);
-        
 
         const handleData = (snapshot: DataSnapshot) => {
           let active = 0;
@@ -19,6 +18,7 @@ export default function User_DoughnutChat() {
           let inactive = 0;
             
             snapshot.forEach((childSnapshot: DataSnapshot) => {
+                const status = childSnapshot.val().Status;
                 console.log(status);
                 if (status === 'Active') {
                     active++;
