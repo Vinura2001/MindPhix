@@ -5,16 +5,14 @@ import CompletionActivity from "@/components/ui/CompletionActivity_Chart";
 import MoodChart from "@/components/ui/MoodChart";
 import DepressionChart from "@/components/ui/Depression_Chart";
 import RecomendationChart from "@/components/ui/RecomondationChart";
+import Logout from "../Dashboard/logout";
 
 
 export default function ProgressReport() {
   return(
     <BaseLayout>
       <div>
-      <h1 className="ProgressReport_Topic">Progress Report</h1>
-
-      <img className="TopUserIcon" src="/Figures/TopUserIcon.png" alt="TopUserIcon" />
-      <div className="TopUserContent1">Steven</div>
+      <Logout/>
 
       <div className="ProgressReport_TopBox">
         <img className="ProgressReport_TopBox_Image" src="/Figures/TopBox_Image.png" alt="TopBox_Image" />
