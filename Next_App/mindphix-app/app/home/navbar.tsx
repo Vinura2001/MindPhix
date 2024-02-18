@@ -30,7 +30,7 @@ export default function Navbar() {
 
   const navigationLinks = [
     { to: "home", label: "Home" },
-    { to: "blog", label: "Blog" },
+    { to: "features", label: "Features" },
     { to: "aboutus", label: "About" },
     { to: "contact", label: "Contact" },
   ];

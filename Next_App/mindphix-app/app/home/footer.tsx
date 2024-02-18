@@ -24,7 +24,7 @@ const generateFooterLinks = (links: any[]) => {
 export default function Footer() {
     const footerLinks = [
       { to: "home", label: "Home" },
-      { to: "blog", label: "Blog" },
+      { to: "features", label: "Features" },
       { to: "aboutus", label: "About" },
       { to: "contact", label: "Contact" },
     ];
