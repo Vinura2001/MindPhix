@@ -1,0 +1,26 @@
+/* Custom CSS */
+#df-messenger {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+  
+/* Change chatbot header color */
+.df-messenger-header {
+    background-color: #3498db;
+}
+  
+/* Change chatbot header title color */
+.df-messenger-title {
+    color: white;
+}
+  
+/* Change chat bubbles background color */
+.df-messenger-message {
+    background-color: #f1f1f1;
+}
+  
+/* Change text color in chat bubbles */
+.df-messenger-message-text {
+    color: #333;
+}
+  
