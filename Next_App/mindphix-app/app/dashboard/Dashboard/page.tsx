@@ -11,8 +11,10 @@ export default function Dashboard() {
     <BaseLayout>
       <div>
         {/* Dashboard content Start */}
-      <Logout/>
-       
+        <div className="Profile_MenuIcon">
+          <Logout />
+        </div>
+      
         <div className="Dashboard_TopBox">
           <img
             className="Dashboard_TopBox_Image"
