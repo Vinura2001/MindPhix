@@ -56,7 +56,9 @@ export default function Profile() {
       {user && (
         <div>
           {/* User Profile content Start */}
+          <div className="Profile_MenuIcon">
           <Logout />
+          </div>
           
           <div className="UserProfile_TopBox bg-white">
             <img

@@ -6,33 +6,10 @@
 
 /*Content Start*/
 
-.UserProfile_Topic{
+.Profile_MenuIcon{
   position: absolute;
-  top: 2%;
-  left: 20%;
-  font-size: 190%;
-  font-weight: 900;
-}
-
-.TopUserIcon{
-  position: absolute;
-  top: 3.5%;
-  left: 90%;
-}
-
-.TopUserContent1{
-  font-family:  'Poppins', sans-serif;
-  position: absolute;
-  top: 4.5%;
-  left: 93%;
-}
-
-.TopUserContent2{
-  font-family:  'Poppins', sans-serif;
-  font-size: small;
-  position: absolute;
-  top: 6.3%;
-  left: 93%;
+  top: 0%;
+  left: 60%;
 }
 
 /*Top box Start*/
