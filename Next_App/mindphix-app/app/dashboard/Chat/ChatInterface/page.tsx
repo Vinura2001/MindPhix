@@ -2,35 +2,29 @@
 import React, { useEffect } from 'react';
 import ChatLayout from '../../ChatLayout';
 
-// Declare df-messenger as a custom element
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'df-messenger': any;
-    }
-  }
-}
-
-export default function ChatInterface() {
+const BotComponent = () => {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1';
-    script.async = true;
-    document.body.appendChild(script);
+    // Check if the bot script is already loaded
+    if (!document.getElementById('botcopy-script')) {
+      const script = document.createElement('script');
+      script.id = 'botcopy-script';
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = 'https://widget.botcopy.com/js/injection.js';
 
-    return () => {
-      document.body.removeChild(script);
-    };
+      document.body.appendChild(script);
+    }
+
+   
   }, []);
 
   return (
     <ChatLayout>
-      <df-messenger
-        intent="WELCOME"
-        chat-title="MindPhix-bot"
-        agent-id="65846227-e7da-486f-8775-d186aa5a1a52"
-        language-code="en"
-      ></df-messenger>
+      <div id="botcopy-embedder-d7lcfheammjct" className="botcopy-embedder-d7lcfheammjct" data-botId="65d8ceb3fbfad10008b063fd">
+        
+      </div>
     </ChatLayout>
   );
-}
+};
+
+export default BotComponent;
