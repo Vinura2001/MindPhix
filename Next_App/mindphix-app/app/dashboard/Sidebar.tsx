@@ -1,15 +1,12 @@
-"use client";
 import Image from "next/image";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { MdDashboard } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { GiProgression } from "react-icons/gi";
 import { BsChatLeftDots } from "react-icons/bs";
 import { RxExit } from "react-icons/rx";
 import Link from "next/link";
-import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const sidebarItems = [
   {
@@ -34,41 +31,53 @@ const sidebarItems = [
   },
 ];
 
-export default function Sidebar(){
+export default function Sidebar() {
+  const [isCollapsedSidebar, setIsCollapsedSidebar] = useState(false);
 
-  let CollapsState;
-  
-  if (window.innerWidth <= 768) {
-    CollapsState =true;
-  } else {
-    CollapsState =false;
-  }
-  
+  useEffect(() => {
+    // Check if window is available (client-side)
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        if (window.innerWidth <= 968) {
+          setIsCollapsedSidebar(true);
+        } else {
+          setIsCollapsedSidebar(false);
+        }
+      };
 
-  const [isCollapsedSidebar,setIsCollapsedSidebar] = useState <Boolean>(CollapsState);
+      // Add event listener to window resize
+      window.addEventListener("resize", handleResize);
 
-  const toggleSidebarCollapseHandler = () =>{
-    setIsCollapsedSidebar((prev) => !prev)
-  }
+      // Initial call to handleResize to set the initial state
+      handleResize();
 
-  return(
+      // Remove event listener on component unmount
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  const toggleSidebarCollapseHandler = () => {
+    setIsCollapsedSidebar((prev) => !prev);
+  };
+
+  return (
     <div className="sidebar__wrapper">
-      <button className="btn" onClick={(toggleSidebarCollapseHandler)}>
+      <button className="btn" onClick={toggleSidebarCollapseHandler}>
         <MdOutlineKeyboardArrowLeft />
-        </button>
+      </button>
       <aside className="sidebar" data-collapse={isCollapsedSidebar}>
         <div className="sidebar__top">
-          <Image 
-            src="/HalfLogo.png" 
-            width={80} 
-            height={80} 
-            className="sidebar__logo" 
+          <Image
+            src="/HalfLogo.png"
+            width={80}
+            height={80}
+            className="sidebar__logo"
             alt="logo"
           />
           <p className="sidebar__logo-name">MindPhix</p>
         </div>
         <ul className="sidebar__list">
-          {sidebarItems.map(({name, href, icon: Icon}) => (
+          {sidebarItems.map(({ name, href, icon: Icon }) => (
             <li className="sidebar__item" key={name}>
               <Link href={href} className="sidebar__link">
                 <span className="sidebar_icon">
