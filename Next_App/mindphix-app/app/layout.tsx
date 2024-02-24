@@ -8,6 +8,7 @@ import './styles/chat_interface.css';
 import './styles/ProgressReport.css';
 import './styles/UserProfile.css';
 import './styles/ChatBot.css';
+import '@/app/styles/Responsive.css';
 
 
 export const metadata: Metadata = {
