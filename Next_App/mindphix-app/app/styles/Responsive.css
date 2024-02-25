@@ -1,207 +1,6 @@
-@media (max-width: 2560px) {
+@media (max-width: 2560px){
     
-    /*Dashboard*/
-    .Dashboard_TopUserIcon{
-      position: absolute;
-      top: 3%;
-      left: 88%;
-    }
-    
-    .Dashboard_TopUserContent1{
-      font-family:  'Poppins', sans-serif;
-      position: absolute;
-      top: 4.5%;
-      left: 91%;
-    }
-  
-    .Dashboard_Topic{
-      position: absolute;
-      top: 2%;
-      left: 20%;
-      font-size: 190%;
-      font-weight: 900;
-    }
-  
-    .Dashboard_TopBox{
-      width: 75%;
-      height: 20%;
-      top: 10%;
-      left: 20%;
-    }
-  
-    .ApprovedBox{
-      width: 20%;
-      height: 20%;
-      top: 35%;
-      left: 30%;
-    }
-  
-    .ApprovedBoxArrow{
-      position: relative;
-      top: 25%;
-      left: 8%;
-    }
-
-    .ApprovedBoxText2{
-        position: relative;
-        top: 17%;
-        left: 15%;
-      }
-  
-    .UserBox{
-      width: 20%;
-      height: 20%;
-      top: 35%;
-      left: 60%;
-    }
-  
-    .UserChart{
-      position: relative;
-      top: 5%;
-      left: 2%;
-      width: 90%;
-      height: 100%;
-    }
-  
-    .Frame1{
-      width: 30%;
-      height: 30%;
-      border-radius: 30px;
-      position: absolute;
-      top: 65%;
-      left: 20%;
-    }
-    
-    .Frame2{
-      width: 30%;
-      height: 30%;
-      border-radius: 30px;
-      position: absolute;
-      top: 65%;
-      left: 65%;
-    }
-
-    /*Proressreport*/
-
-    .ProgressReport_TopBox{
-      width: 75%;
-      height: 20%;
-      position: absolute;
-      top: 10%;
-      left: 20%;
-    }
-
-    .AchievementsImage{
-      position: absolute;
-      top: 35%;
-      left: 20%;
-    }
-    
-    .Achievements{
-      position: absolute;
-      top: 35.5%;
-      left: 23%;
-    }
-    
-    .AchievementBox1{
-      width: 20%;
-      height: 26%;
-      position: absolute;
-      top: 40%;
-      left: 20%;
-    }
-    
-    .AchievementBox2{
-      width: 20%;
-      height: 26%;  
-      position: absolute;
-      top: 40%;
-      left: 48%;
-    }
-    
-    .AchievementBox3{
-      width: 20%;
-      height: 26%;
-      position: absolute;
-      top: 40%;
-      left: 75%;
-    }
-
-    .AchievementBox1_Topic{
-      position: absolute;
-      top: 40%;
-      left: 21%;
-    }
-    
-    .AchievementBox2_Topic{
-      position: absolute;
-      top: 40%;
-      left: 49%;
-    }
-    
-    .AchievementBox3_Topic{
-      position: absolute;
-      top: 40%;
-      left: 76%;
-    }
-
-    .ContentDivider{
-      width: 75%;
-      border-color: #D0D0D0;
-      position: absolute;
-      top: 67.5%;
-      left: 20%;
-    }
-
-    .AnalyticsIcon{
-      width: 2.5%;
-      height: 4%;
-      position: absolute;
-      top: 68%;
-      left: 20%;
-    }
-    
-    .Analytics{
-      font-family:  'Poppins', sans-serif;
-      font-weight: bolder;
-      font-size: 125%;
-      position: absolute;
-      top: 68.5%;
-      left: 23%;
-    }
-
-    .AnalyticsBox1{
-      width: 25%;
-      height: 24%;
-      position: absolute;
-      top: 73%;
-      left: 33%;
-    }
-
-    .AnalyticsBox2{
-      width: 43%;
-      height: 29%;
-      position: absolute;
-      top: 70%;
-      left: 58%;
-    }
-
-    .AnalyticsBox1_Topic{
-      position: absolute;
-      top: 70%;
-      left: 34%;
-    }
-    
-    .DepressionLabel_box{
-      position: absolute;
-      top: 80%;
-      left: 20%;
-    }
-}
-
-
-@media (max-width: 1440px) {
-
+  /*Dashboard*/
   .Dashboard_TopUserIcon{
     position: absolute;
     top: 3%;
@@ -212,7 +11,7 @@
     font-family:  'Poppins', sans-serif;
     position: absolute;
     top: 4.5%;
-    left: 94%;
+    left: 91%;
   }
 
   .Dashboard_Topic{
@@ -224,17 +23,17 @@
   }
 
   .Dashboard_TopBox{
-    width: 78%;
+    width: 75%;
     height: 20%;
     top: 10%;
     left: 20%;
   }
 
   .ApprovedBox{
-    width: 24%;
-    height: 22%;
+    width: 20%;
+    height: 20%;
     top: 35%;
-    left: 25%;
+    left: 30%;
   }
 
   .ApprovedBoxArrow{
@@ -243,17 +42,25 @@
     left: 8%;
   }
 
+  .ApprovedBoxText2{
+      position: relative;
+      top: 17%;
+      left: 15%;
+    }
+
   .UserBox{
-    width: 28%;
-    height: 22%;
+    width: 20%;
+    height: 20%;
     top: 35%;
     left: 60%;
   }
 
   .UserChart{
     position: relative;
-    top: 2%;
-    left: 1%;
+    top: 5%;
+    left: 2%;
+    width: 90%;
+    height: 100%;
   }
 
   .Frame1{
@@ -262,7 +69,7 @@
     border-radius: 30px;
     position: absolute;
     top: 65%;
-    left: 23%;
+    left: 20%;
   }
   
   .Frame2{
@@ -274,16 +81,10 @@
     left: 65%;
   }
 
-   /*Proressreport*/
-
-   .ProgressReport__MenuIcon{
-    position: absolute;
-    top: 2%;
-    left: 50%;
-  }
+  /*Proressreport*/
 
   .ProgressReport_TopBox{
-    width: 79%;
+    width: 75%;
     height: 20%;
     position: absolute;
     top: 10%;
@@ -315,33 +116,33 @@
     height: 26%;  
     position: absolute;
     top: 40%;
-    left: 45%;
+    left: 48%;
   }
   
   .AchievementBox3{
-    width: 25%;
+    width: 20%;
     height: 26%;
     position: absolute;
     top: 40%;
-    left: 70%;
+    left: 75%;
   }
 
   .AchievementBox1_Topic{
     position: absolute;
     top: 40%;
-    left: 24%;
+    left: 21%;
   }
   
   .AchievementBox2_Topic{
     position: absolute;
     top: 40%;
-    left: 48%;
+    left: 49%;
   }
   
   .AchievementBox3_Topic{
     position: absolute;
     top: 40%;
-    left: 78%;
+    left: 76%;
   }
 
   .ContentDivider{
@@ -382,7 +183,7 @@
     height: 29%;
     position: absolute;
     top: 70%;
-    left: 56%;
+    left: 58%;
   }
 
   .AnalyticsBox1_Topic{
@@ -391,6 +192,204 @@
     left: 34%;
   }
   
+  .DepressionLabel_box{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+  }
+}
+
+@media (max-width: 1440px) {
+
+  .Dashboard_TopUserIcon{
+    position: absolute;
+    top: 3%;
+    left: 88%;
+  }
+
+  .Dashboard_TopUserContent1{
+    font-family:  'Poppins', sans-serif;
+    position: absolute;
+    top: 4.5%;
+    left: 94%;
+  }
+
+  .Dashboard_Topic{
+    position: absolute;
+    top: 2%;
+    left: 20%;
+    font-size: 190%;
+    font-weight: 900;
+  }
+
+  .Dashboard_TopBox{
+    width: 78%;
+    height: 20%;
+    top: 10%;
+    left: 20%;
+  }
+
+  .ApprovedBox{
+    width: 24%;
+    height: 22%;
+    top: 35%;
+    left: 25%;
+  }
+
+  .ApprovedBoxArrow{
+    position: relative;
+    top: 25%;
+    left: 8%;
+  }
+
+  .UserBox{
+    width: 28%;
+    height: 22%;
+    top: 35%;
+    left: 60%;
+  }
+
+  .UserChart{
+    position: relative;
+    top: 2%;
+    left: 1%;
+  }
+
+  .Frame1{
+    width: 30%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 65%;
+    left: 23%;
+  }
+
+  .Frame2{
+    width: 30%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 65%;
+    left: 65%;
+  }
+
+  /*Proressreport*/
+
+  .ProgressReport__MenuIcon{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+  }
+
+  .ProgressReport_TopBox{
+    width: 79%;
+    height: 20%;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+  }
+
+  .AchievementsImage{
+    position: absolute;
+    top: 35%;
+    left: 20%;
+  }
+
+  .Achievements{
+    position: absolute;
+    top: 35.5%;
+    left: 23%;
+  }
+
+  .AchievementBox1{
+    width: 20%;
+    height: 26%;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+  }
+
+  .AchievementBox2{
+    width: 20%;
+    height: 26%;  
+    position: absolute;
+    top: 40%;
+    left: 45%;
+  }
+
+  .AchievementBox3{
+    width: 25%;
+    height: 26%;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+  }
+
+  .AchievementBox1_Topic{
+    position: absolute;
+    top: 40%;
+    left: 24%;
+  }
+
+  .AchievementBox2_Topic{
+    position: absolute;
+    top: 40%;
+    left: 48%;
+  }
+
+  .AchievementBox3_Topic{
+    position: absolute;
+    top: 40%;
+    left: 78%;
+  }
+
+  .ContentDivider{
+    width: 75%;
+    border-color: #D0D0D0;
+    position: absolute;
+    top: 67.5%;
+    left: 20%;
+  }
+
+  .AnalyticsIcon{
+    width: 2.5%;
+    height: 4%;
+    position: absolute;
+    top: 68%;
+    left: 20%;
+  }
+
+  .Analytics{
+    font-family:  'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 125%;
+    position: absolute;
+    top: 68.5%;
+    left: 23%;
+  }
+
+  .AnalyticsBox1{
+    width: 25%;
+    height: 24%;
+    position: absolute;
+    top: 73%;
+    left: 33%;
+  }
+
+  .AnalyticsBox2{
+    width: 43%;
+    height: 29%;
+    position: absolute;
+    top: 70%;
+    left: 56%;
+  }
+
+  .AnalyticsBox1_Topic{
+    position: absolute;
+    top: 70%;
+    left: 34%;
+  }
+
   .DepressionLabel_box{
     position: absolute;
     top: 80%;
@@ -406,7 +405,7 @@
     top: 3%;
     left: 88%;
   }
-  
+
   .Dashboard_TopUserContent1{
     font-family:  'Poppins', sans-serif;
     position: absolute;
@@ -463,7 +462,7 @@
     top: 65%;
     left: 30%;
   }
-  
+
   .Frame2{
     width: 30%;
     height: 30%;
@@ -494,13 +493,13 @@
     top: 35%;
     left: 28%;
   }
-  
+
   .Achievements{
     position: absolute;
     top: 35.5%;
     left: 31%;
   }
-  
+
   .AchievementBox1{
     width: 30%;
     height: 26%;
@@ -508,7 +507,7 @@
     top: 40%;
     left: 30%;
   }
-  
+
   .AchievementBox2{
     width: 30%;
     height: 26%;  
@@ -516,7 +515,7 @@
     top: 40%;
     left: 65%;
   }
-  
+
   .AchievementBox3{
     width: 40%;
     height: 26%;
@@ -530,13 +529,13 @@
     top: 40%;
     left: 36%;
   }
-  
+
   .AchievementBox2_Topic{
     position: absolute;
     top: 40%;
     left: 69%;
   }
-  
+
   .AchievementBox3_Topic{
     position: absolute;
     top: 70%;
@@ -558,7 +557,7 @@
     top: 100%;
     left: 28%;
   }
-  
+
   .Analytics{
     font-family:  'Poppins', sans-serif;
     font-weight: bolder;
@@ -589,7 +588,7 @@
     top: 107%;
     left: 55%;
   }
-  
+
   .DepressionLabel_box{
     position: absolute;
     top: 115%;
@@ -603,7 +602,7 @@
     top: 3%;
     left: 86%;
   }
-  
+
   .Dashboard_TopUserContent1{
     font-family:  'Poppins', sans-serif;
     position: absolute;
@@ -638,7 +637,7 @@
     top: 25%;
     left: 8%;
   }
-  
+
   .ApprovedBoxText2{
     font-family:  'Poppins', sans-serif;
     font-size: 100%;
@@ -671,7 +670,7 @@
     top: 65%;
     left: 20%;
   }
-  
+
   .Frame2{
     width: 35%;
     height: 30%;
@@ -704,13 +703,13 @@
     top: 35%;
     left: 16%;
   }
-  
+
   .Achievements{
     position: absolute;
     top: 35.5%;
     left: 20%;
   }
-  
+
   .AchievementBox1{
     width: 40%;
     height: 26%;
@@ -718,7 +717,7 @@
     top: 42%;
     left: 17%;
   }
-  
+
   .AchievementBox2{
     width: 40%;
     height: 26%;  
@@ -726,7 +725,7 @@
     top: 42%;
     left: 58%;
   }
-  
+
   .AchievementBox3{
     width: 40%;
     height: 26%;
@@ -740,13 +739,13 @@
     top: 42%;
     left: 27%;
   }
-  
+
   .AchievementBox2_Topic{
     position: absolute;
     top: 42%;
     left: 66%;
   }
-  
+
   .AchievementBox3_Topic{
     position: absolute;
     top: 70%;
@@ -768,7 +767,7 @@
     top: 100%;
     left: 18%;
   }
-  
+
   .Analytics{
     font-family:  'Poppins', sans-serif;
     font-weight: bolder;
@@ -799,7 +798,7 @@
     top: 107%;
     left: 49%;
   }
-  
+
   .DepressionLabel_box{
     position: absolute;
     top: 115%;
@@ -815,7 +814,7 @@
     top: 2%;
     left: 78%;
   }
-  
+
   .Dashboard_TopUserContent1{
     font-family:  'Poppins', sans-serif;
     position: absolute;
@@ -845,20 +844,20 @@
     left: 4.5%;
     font-size: 70%;
   }
-  
+
   .Dashboard_Welcome_Text{
     position: relative;
     top: -59%;
     left: 4.2%;
     font-size: 70%;
   }
-  
+
   .Dashboard_Welcome_Text2{
     top: -60%;
     left: 4.5%;
     font-size: 50%;
   }
-  
+
 
   .ApprovedBox{
     width: 44%;
@@ -894,7 +893,7 @@
     top: 110%;
     left: 28%;
   }
-  
+
   .Frame2{
     width: 70%;
     height: 30%;
@@ -928,7 +927,7 @@
     left: 4.5%;
     color: black;
   }
-  
+
   .ProgressReport_Welcome_Text{
     font-family:  'Poppins', sans-serif;
     font-size: 160%;
@@ -938,7 +937,7 @@
     left: 4.2%;
     color: black;
   }
-  
+
   .ProgressReport_Welcome_Text2{
     font-family:  'Poppins', sans-serif;
     position: relative;
@@ -954,13 +953,13 @@
     top: 35%;
     left: 23%;
   }
-  
+
   .Achievements{
     position: absolute;
     top: 35.5%;
     left: 30%;
   }
-  
+
   .AchievementBox1{
     width: 70%;
     height: 26%;
@@ -968,7 +967,7 @@
     top: 42%;
     left: 25%;
   }
-  
+
   .AchievementBox2{
     width: 70%;
     height: 26%;  
@@ -976,7 +975,7 @@
     top: 74%;
     left: 25%;
   }
-  
+
   .AchievementBox3{
     width: 70%;
     height: 26%;
@@ -990,13 +989,13 @@
     top: 42%;
     left: 37%;
   }
-  
+
   .AchievementBox2_Topic{
     position: absolute;
     top: 74%;
     left: 38%;
   }
-  
+
   .AchievementBox3_Topic{
     position: absolute;
     top: 105%;
@@ -1018,7 +1017,7 @@
     top: 135%;
     left: 23%;
   }
-  
+
   .Analytics{
     font-family:  'Poppins', sans-serif;
     font-weight: bolder;
@@ -1056,7 +1055,7 @@
     top: 0%;
     left: 13%;
   }
-  
+
   .DepressionLabel_box{
     position: absolute;
     top: 150%;
@@ -1064,14 +1063,21 @@
   }
 }
 
-@media (max-height: 830px) {
+
+
+
+
+
+//1024 heights
+
+@media (max-height: 830px) and (max-width: 1024px) {
 
   .Dashboard_TopUserIcon{
     position: absolute;
     top: 3%;
     left: 88%;
   }
-  
+
   .Dashboard_TopUserContent1{
     font-family:  'Poppins', sans-serif;
     position: absolute;
@@ -1082,23 +1088,23 @@
   .Dashboard_Topic{
     position: absolute;
     top: 2%;
-    left: 20%;
+    left: 30%;
     font-size: 190%;
     font-weight: 900;
   }
 
   .Dashboard_TopBox{
-    width: 78%;
+    width: 68%;
     height: 20%;
     top: 10%;
-    left: 20%;
+    left: 30%;
   }
 
   .ApprovedBox{
     width: 24%;
     height: 22%;
     top: 35%;
-    left: 25%;
+    left: 30%;
   }
 
   .ApprovedBoxArrow{
@@ -1116,7 +1122,7 @@
 
   .UserChart{
     position: relative;
-    top: 2%;
+    top: 8%;
     left: 1%;
   }
 
@@ -1126,9 +1132,9 @@
     border-radius: 30px;
     position: absolute;
     top: 65%;
-    left: 23%;
+    left: 30%;
   }
-  
+
   .Frame2{
     width: 30%;
     height: 30%;
@@ -1138,139 +1144,139 @@
     left: 65%;
   }
 
-   /*Proressreport*/
+  /*Proressreport*/
 
-   .ProgressReport__MenuIcon{
+  .ProgressReport__MenuIcon{
     position: absolute;
     top: 2%;
-    left: 50%;
+    left: 30%;
   }
 
   .ProgressReport_TopBox{
-    width: 79%;
+    width: 70%;
     height: 20%;
     position: absolute;
     top: 10%;
-    left: 20%;
+    left: 28%;
   }
 
   .AchievementsImage{
     position: absolute;
     top: 35%;
-    left: 20%;
+    left: 28%;
   }
-  
+
   .Achievements{
     position: absolute;
     top: 35.5%;
-    left: 23%;
+    left: 31%;
   }
-  
+
   .AchievementBox1{
-    width: 20%;
-    height: 30%;
+    width: 30%;
+    height: 26%;
     position: absolute;
     top: 40%;
-    left: 20%;
+    left: 30%;
   }
-  
+
   .AchievementBox2{
-    width: 20%;
-    height: 30%;  
+    width: 30%;
+    height: 26%;  
     position: absolute;
     top: 40%;
-    left: 45%;
+    left: 65%;
   }
-  
+
   .AchievementBox3{
-    width: 25%;
-    height: 30%;
+    width: 40%;
+    height: 26%;
     position: absolute;
-    top: 40%;
-    left: 70%;
+    top: 70%;
+    left: 40%;
   }
 
   .AchievementBox1_Topic{
     position: absolute;
     top: 40%;
-    left: 24%;
+    left: 36%;
   }
-  
+
   .AchievementBox2_Topic{
     position: absolute;
     top: 40%;
-    left: 48%;
+    left: 69%;
   }
-  
+
   .AchievementBox3_Topic{
     position: absolute;
-    top: 40%;
-    left: 78%;
+    top: 70%;
+    left: 53%;
   }
 
   .ContentDivider{
-    width: 75%;
+    width: 70%;
     border-color: #D0D0D0;
     position: absolute;
-    top: 72.5%;
-    left: 20%;
+    top: 97.5%;
+    left: 28%;
   }
 
   .AnalyticsIcon{
     width: 2.5%;
     height: 4%;
     position: absolute;
-    top: 74%;
-    left: 20%;
+    top: 100%;
+    left: 28%;
   }
-  
+
   .Analytics{
     font-family:  'Poppins', sans-serif;
     font-weight: bolder;
     font-size: 125%;
     position: absolute;
-    top: 74.5%;
-    left: 23%;
+    top: 100.5%;
+    left: 31%;
   }
 
   .AnalyticsBox1{
-    width: 25%;
+    width: 55%;
     height: 24%;
     position: absolute;
-    top: 76%;
-    left: 33%;
+    top: 110%;
+    left: 43%;
   }
 
   .AnalyticsBox2{
-    width: 43%;
-    height: 26%;
+    width: 59%;
+    height: 29%;
     position: absolute;
-    top: 74%;
-    left: 56%;
+    top: 147%;
+    left: 30%;
   }
 
   .AnalyticsBox1_Topic{
     position: absolute;
-    top: 74%;
-    left: 34%;
+    top: 107%;
+    left: 55%;
   }
-  
+
   .DepressionLabel_box{
     position: absolute;
-    top: 83%;
-    left: 20%;
+    top: 115%;
+    left: 30%;
   }
 
 }
 
-@media (max-height: 750px) {
+@media (max-height: 750px) and (max-width: 1024px) {
 
   .Dashboard_TopUserIcon{
     position: absolute;
     top: 3%;
     left: 88%;
   }
-  
+
   .Dashboard_TopUserContent1{
     font-family:  'Poppins', sans-serif;
     position: absolute;
@@ -1281,23 +1287,23 @@
   .Dashboard_Topic{
     position: absolute;
     top: 2%;
-    left: 20%;
+    left: 30%;
     font-size: 190%;
     font-weight: 900;
   }
 
   .Dashboard_TopBox{
-    width: 78%;
+    width: 68%;
     height: 20%;
     top: 10%;
-    left: 20%;
+    left: 30%;
   }
 
   .ApprovedBox{
     width: 24%;
     height: 22%;
     top: 35%;
-    left: 25%;
+    left: 30%;
   }
 
   .ApprovedBoxArrow{
@@ -1315,7 +1321,7 @@
 
   .UserChart{
     position: relative;
-    top: 2%;
+    top: 8%;
     left: 1%;
   }
 
@@ -1325,9 +1331,9 @@
     border-radius: 30px;
     position: absolute;
     top: 65%;
-    left: 23%;
+    left: 30%;
   }
-  
+
   .Frame2{
     width: 30%;
     height: 30%;
@@ -1337,139 +1343,139 @@
     left: 65%;
   }
 
-   /*Proressreport*/
+  /*Proressreport*/
 
-   .ProgressReport__MenuIcon{
+  .ProgressReport__MenuIcon{
     position: absolute;
     top: 2%;
-    left: 50%;
+    left: 30%;
   }
 
   .ProgressReport_TopBox{
-    width: 79%;
+    width: 70%;
     height: 20%;
     position: absolute;
     top: 10%;
-    left: 20%;
+    left: 28%;
   }
 
   .AchievementsImage{
     position: absolute;
     top: 35%;
-    left: 20%;
+    left: 28%;
   }
-  
+
   .Achievements{
     position: absolute;
     top: 35.5%;
-    left: 23%;
+    left: 31%;
   }
-  
+
   .AchievementBox1{
-    width: 20%;
+    width: 30%;
     height: 32%;
     position: absolute;
     top: 40%;
-    left: 20%;
+    left: 30%;
   }
-  
+
   .AchievementBox2{
-    width: 20%;
+    width: 30%;
     height: 32%;  
     position: absolute;
     top: 40%;
-    left: 45%;
+    left: 65%;
   }
-  
+
   .AchievementBox3{
-    width: 25%;
-    height: 32%;
+    width: 40%;
+    height: 26%;
     position: absolute;
-    top: 40%;
-    left: 70%;
+    top: 75%;
+    left: 40%;
   }
 
   .AchievementBox1_Topic{
     position: absolute;
     top: 40%;
-    left: 24%;
+    left: 36%;
   }
-  
+
   .AchievementBox2_Topic{
     position: absolute;
     top: 40%;
-    left: 48%;
+    left: 69%;
   }
-  
+
   .AchievementBox3_Topic{
     position: absolute;
-    top: 40%;
-    left: 78%;
+    top: 75%;
+    left: 53%;
   }
 
   .ContentDivider{
-    width: 75%;
+    width: 70%;
     border-color: #D0D0D0;
     position: absolute;
-    top: 73.5%;
-    left: 20%;
+    top: 103.5%;
+    left: 28%;
   }
 
   .AnalyticsIcon{
     width: 2.5%;
     height: 4%;
     position: absolute;
-    top: 75%;
-    left: 20%;
+    top: 106%;
+    left: 28%;
   }
-  
+
   .Analytics{
     font-family:  'Poppins', sans-serif;
     font-weight: bolder;
     font-size: 125%;
     position: absolute;
-    top: 75.5%;
-    left: 23%;
+    top: 106.5%;
+    left: 31%;
   }
 
   .AnalyticsBox1{
-    width: 25%;
+    width: 55%;
     height: 24%;
     position: absolute;
-    top: 79%;
-    left: 33%;
+    top: 120%;
+    left: 43%;
   }
 
   .AnalyticsBox2{
-    width: 43%;
-    height: 30%;
+    width: 59%;
+    height: 35%;
     position: absolute;
-    top: 77%;
-    left: 56%;
+    top: 157%;
+    left: 30%;
   }
 
   .AnalyticsBox1_Topic{
     position: absolute;
-    top: 77%;
-    left: 34%;
+    top: 112%;
+    left: 55%;
   }
-  
+
   .DepressionLabel_box{
     position: absolute;
-    top: 83%;
-    left: 20%;
+    top: 125%;
+    left: 30%;
   }
 
 }
 
-@media (max-height: 636px) {
+@media (max-height: 636px) and (max-width: 1024px) {
 
   .Dashboard_TopUserIcon{
     position: absolute;
     top: 3%;
     left: 88%;
   }
-  
+
   .Dashboard_TopUserContent1{
     font-family:  'Poppins', sans-serif;
     position: absolute;
@@ -1480,23 +1486,23 @@
   .Dashboard_Topic{
     position: absolute;
     top: 2%;
-    left: 20%;
+    left: 30%;
     font-size: 190%;
     font-weight: 900;
   }
 
   .Dashboard_TopBox{
-    width: 78%;
+    width: 68%;
     height: 20%;
     top: 10%;
-    left: 20%;
+    left: 30%;
   }
 
   .ApprovedBox{
     width: 24%;
     height: 22%;
     top: 35%;
-    left: 25%;
+    left: 30%;
   }
 
   .ApprovedBoxArrow{
@@ -1514,7 +1520,7 @@
 
   .UserChart{
     position: relative;
-    top: 2%;
+    top: 8%;
     left: 1%;
   }
 
@@ -1524,9 +1530,9 @@
     border-radius: 30px;
     position: absolute;
     top: 65%;
-    left: 23%;
+    left: 30%;
   }
-  
+
   .Frame2{
     width: 30%;
     height: 30%;
@@ -1541,130 +1547,1527 @@
   .ProgressReport__MenuIcon{
     position: absolute;
     top: 1%;
-    left: 50%;
+    left: 30%;
   }
 
   .ProgressReport_TopBox{
-    width: 79%;
-    height: 23.5%;
+    width: 70%;
+    height: 23%;
     position: absolute;
     top: 10%;
-    left: 20%;
+    left: 28%;
   }
 
   .AchievementsImage{
-    width: 2.5%;
-    height: 5%;
     position: absolute;
     top: 35%;
-    left: 20%;
+    left: 28%;
   }
-  
+
   .Achievements{
     position: absolute;
     top: 35.5%;
-    left: 23%;
+    left: 31%;
   }
-  
+
   .AchievementBox1{
-    width: 20%;
-    height: 36%;
+    width: 30%;
+    height: 38%;
     position: absolute;
-    top: 40%;
-    left: 20%;
+    top: 43%;
+    left: 30%;
   }
-  
+
   .AchievementBox2{
-    width: 20%;
-    height: 36%;  
+    width: 30%;
+    height: 38%;  
     position: absolute;
-    top: 40%;
-    left: 45%;
+    top: 43%;
+    left: 65%;
   }
-  
+
   .AchievementBox3{
-    width: 25%;
-    height: 36%;
+    width: 40%;
+    height: 38%;
     position: absolute;
-    top: 40%;
-    left: 70%;
+    top: 87%;
+    left: 40%;
   }
 
   .AchievementBox1_Topic{
     position: absolute;
-    top: 40%;
-    left: 24%;
+    top: 43%;
+    left: 36%;
   }
-  
+
   .AchievementBox2_Topic{
     position: absolute;
-    top: 40%;
-    left: 48%;
+    top: 43%;
+    left: 69%;
   }
-  
+
   .AchievementBox3_Topic{
     position: absolute;
-    top: 40%;
+    top: 88%;
+    left: 53%;
+  }
+
+  .ContentDivider{
+    width: 70%;
+    border-color: #D0D0D0;
+    position: absolute;
+    top: 128.5%;
+    left: 28%;
+  }
+
+  .AnalyticsIcon{
+    width: 2.5%;
+    height: 4%;
+    position: absolute;
+    top: 131%;
+    left: 28%;
+  }
+
+  .Analytics{
+    font-family:  'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 125%;
+    position: absolute;
+    top: 131.5%;
+    left: 31%;
+  }
+
+  .AnalyticsBox1{
+    width: 55%;
+    height: 24%;
+    position: absolute;
+    top: 150%;
+    left: 43%;
+  }
+
+  .AnalyticsBox2{
+    width: 59%;
+    height: 40%;
+    position: absolute;
+    top: 190%;
+    left: 30%;
+  }
+
+  .AnalyticsBox1_Topic{
+    position: absolute;
+    top: 140%;
+    left: 55%;
+  }
+
+  .DepressionLabel_box{
+    position: absolute;
+    top: 153%;
+    left: 30%;
+  }
+
+}
+
+//768 heights
+
+@media (max-height: 830px) and (max-width: 768px) {
+  .Dashboard_TopUserIcon{
+    position: absolute;
+    top: 3%;
+    left: 86%;
+  }
+
+  .Dashboard_TopUserContent1{
+    font-family:  'Poppins', sans-serif;
+    position: absolute;
+    top: 4.5%;
+    left: 94%;
+  }
+
+  .Dashboard_Topic{
+    position: absolute;
+    top: 2%;
+    left: 15%;
+    font-size: 190%;
+    font-weight: 900;
+  }
+
+  .Dashboard_TopBox{
+    width: 85%;
+    height: 20%;
+    top: 10%;
+    left: 15%;
+  }
+
+  .ApprovedBox{
+    width: 28%;
+    height: 17%;
+    top: 35%;
+    left: 20%;
+  }
+
+  .ApprovedBoxArrow{
+    position: relative;
+    top: 25%;
+    left: 8%;
+  }
+
+  .ApprovedBoxText2{
+    font-family:  'Poppins', sans-serif;
+    font-size: 100%;
+    font-weight: lighter;
+    color: #32D738;
+    position: relative;
+    top: 13%;
+    left: 18%;
+  }
+
+  .UserBox{
+    width: 38%;
+    height: 22%;
+    top: 35%;
+    left: 55%;
+  }
+
+  .UserChart{
+    width: 100%;
+    position: relative;
+    top: 8%;
+    left: 1%;
+  }
+
+  .Frame1{
+    width: 35%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 65%;
+    left: 20%;
+  }
+
+  .Frame2{
+    width: 35%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 65%;
+    left: 60%;
+  }
+
+  /*Proressreport*/
+
+  .ProgressReport__MenuIcon{
+    position: absolute;
+    top: 2%;
+    left: 6%;
+  }
+
+  .ProgressReport_TopBox{
+    width: 80%;
+    height: 20%;
+    position: absolute;
+    top: 10%;
+    left: 16%;
+  }
+
+  .AchievementsImage{
+    width: 3.5%;
+    height: 4%;
+    position: absolute;
+    top: 35%;
+    left: 16%;
+  }
+
+  .Achievements{
+    position: absolute;
+    top: 35.5%;
+    left: 20%;
+  }
+
+  .AchievementBox1{
+    width: 40%;
+    height: 26%;
+    position: absolute;
+    top: 42%;
+    left: 17%;
+  }
+
+  .AchievementBox2{
+    width: 40%;
+    height: 26%;  
+    position: absolute;
+    top: 42%;
+    left: 58%;
+  }
+
+  .AchievementBox3{
+    width: 40%;
+    height: 26%;
+    position: absolute;
+    top: 70%;
+    left: 40%;
+  }
+
+  .AchievementBox1_Topic{
+    position: absolute;
+    top: 42%;
+    left: 27%;
+  }
+
+  .AchievementBox2_Topic{
+    position: absolute;
+    top: 42%;
+    left: 66%;
+  }
+
+  .AchievementBox3_Topic{
+    position: absolute;
+    top: 70%;
+    left: 53%;
+  }
+
+  .ContentDivider{
+    width: 80%;
+    border-color: #D0D0D0;
+    position: absolute;
+    top: 97.5%;
+    left: 18%;
+  }
+
+  .AnalyticsIcon{
+    width: 3.5%;
+    height: 4%;
+    position: absolute;
+    top: 100%;
+    left: 18%;
+  }
+
+  .Analytics{
+    font-family:  'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 125%;
+    position: absolute;
+    top: 100.5%;
+    left: 22%;
+  }
+
+  .AnalyticsBox1{
+    width: 65%;
+    height: 24%;
+    position: absolute;
+    top: 110%;
+    left: 35%;
+  }
+
+  .AnalyticsBox2{
+    width: 80%;
+    height: 29%;
+    position: absolute;
+    top: 147%;
+    left: 20%;
+  }
+
+  .AnalyticsBox1_Topic{
+    position: absolute;
+    top: 107%;
+    left: 49%;
+  }
+
+  .DepressionLabel_box{
+    position: absolute;
+    top: 115%;
+    left: 15%;
+  }
+}
+
+@media (max-height: 750px) and (max-width: 768px) {
+  .Dashboard_TopUserIcon{
+    position: absolute;
+    top: 3%;
+    left: 86%;
+  }
+
+  .Dashboard_TopUserContent1{
+    font-family:  'Poppins', sans-serif;
+    position: absolute;
+    top: 4.5%;
+    left: 94%;
+  }
+
+  .Dashboard_Topic{
+    position: absolute;
+    top: 2%;
+    left: 15%;
+    font-size: 190%;
+    font-weight: 900;
+  }
+
+  .Dashboard_TopBox{
+    width: 85%;
+    height: 20%;
+    top: 10%;
+    left: 15%;
+  }
+
+  .ApprovedBox{
+    width: 28%;
+    height: 17%;
+    top: 35%;
+    left: 20%;
+  }
+
+  .ApprovedBoxArrow{
+    position: relative;
+    top: 25%;
+    left: 8%;
+  }
+
+  .ApprovedBoxText2{
+    font-family:  'Poppins', sans-serif;
+    font-size: 100%;
+    font-weight: lighter;
+    color: #32D738;
+    position: relative;
+    top: 13%;
+    left: 18%;
+  }
+
+  .UserBox{
+    width: 38%;
+    height: 22%;
+    top: 35%;
+    left: 55%;
+  }
+
+  .UserChart{
+    width: 100%;
+    position: relative;
+    top: 8%;
+    left: 1%;
+  }
+
+  .Frame1{
+    width: 35%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 65%;
+    left: 20%;
+  }
+
+  .Frame2{
+    width: 35%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 65%;
+    left: 60%;
+  }
+
+  /*Proressreport*/
+
+  .ProgressReport__MenuIcon{
+    position: absolute;
+    top: 2%;
+    left: 6%;
+  }
+
+  .ProgressReport_TopBox{
+    width: 80%;
+    height: 20%;
+    position: absolute;
+    top: 10%;
+    left: 16%;
+  }
+
+  .AchievementsImage{
+    width: 3.5%;
+    height: 4%;
+    position: absolute;
+    top: 35%;
+    left: 16%;
+  }
+
+  .Achievements{
+    position: absolute;
+    top: 35.5%;
+    left: 20%;
+  }
+
+  .AchievementBox1{
+    width: 40%;
+    height: 32%;
+    position: absolute;
+    top: 42%;
+    left: 17%;
+  }
+
+  .AchievementBox2{
+    width: 40%;
+    height: 32%;  
+    position: absolute;
+    top: 42%;
+    left: 58%;
+  }
+
+  .AchievementBox3{
+    width: 40%;
+    height: 32%;
+    position: absolute;
+    top: 77%;
+    left: 40%;
+  }
+
+  .AchievementBox1_Topic{
+    position: absolute;
+    top: 42%;
+    left: 27%;
+  }
+
+  .AchievementBox2_Topic{
+    position: absolute;
+    top: 42%;
+    left: 66%;
+  }
+
+  .AchievementBox3_Topic{
+    position: absolute;
+    top: 77%;
+    left: 53%;
+  }
+
+  .ContentDivider{
+    width: 80%;
+    border-color: #D0D0D0;
+    position: absolute;
+    top: 110.5%;
+    left: 18%;
+  }
+
+  .AnalyticsIcon{
+    width: 3.5%;
+    height: 4%;
+    position: absolute;
+    top: 113%;
+    left: 18%;
+  }
+
+  .Analytics{
+    font-family:  'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 125%;
+    position: absolute;
+    top: 113.5%;
+    left: 22%;
+  }
+
+  .AnalyticsBox1{
+    width: 65%;
+    height: 24%;
+    position: absolute;
+    top: 130%;
+    left: 35%;
+  }
+
+  .AnalyticsBox2{
+    width: 80%;
+    height: 35%;
+    position: absolute;
+    top: 170%;
+    left: 20%;
+  }
+
+  .AnalyticsBox1_Topic{
+    position: absolute;
+    top: 123%;
+    left: 49%;
+  }
+
+  .DepressionLabel_box{
+    position: absolute;
+    top: 133%;
+    left: 15%;
+  }
+}
+
+@media (max-height: 636px) and (max-width: 768px) {
+  .Dashboard_TopUserIcon{
+    position: absolute;
+    top: 3%;
+    left: 86%;
+  }
+
+  .Dashboard_TopUserContent1{
+    font-family:  'Poppins', sans-serif;
+    position: absolute;
+    top: 4.5%;
+    left: 94%;
+  }
+
+  .Dashboard_Topic{
+    position: absolute;
+    top: 2%;
+    left: 15%;
+    font-size: 190%;
+    font-weight: 900;
+  }
+
+  .Dashboard_TopBox{
+    width: 85%;
+    height: 20%;
+    top: 10%;
+    left: 15%;
+  }
+
+  .ApprovedBox{
+    width: 28%;
+    height: 17%;
+    top: 35%;
+    left: 20%;
+  }
+
+  .ApprovedBoxArrow{
+    position: relative;
+    top: 25%;
+    left: 8%;
+  }
+
+  .ApprovedBoxText2{
+    font-family:  'Poppins', sans-serif;
+    font-size: 100%;
+    font-weight: lighter;
+    color: #32D738;
+    position: relative;
+    top: 13%;
+    left: 18%;
+  }
+
+  .UserBox{
+    width: 38%;
+    height: 22%;
+    top: 35%;
+    left: 55%;
+  }
+
+  .UserChart{
+    width: 100%;
+    position: relative;
+    top: 8%;
+    left: 1%;
+  }
+
+  .Frame1{
+    width: 35%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 65%;
+    left: 20%;
+  }
+
+  .Frame2{
+    width: 35%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 65%;
+    left: 60%;
+  }
+
+  /*Proressreport*/
+
+  .ProgressReport__MenuIcon{
+    position: absolute;
+    top: 1%;
+    left: 6%;
+  }
+
+  .ProgressReport_TopBox{
+    width: 80%;
+    height: 24%;
+    position: absolute;
+    top: 10%;
+    left: 16%;
+  }
+
+  .AchievementsImage{
+    width: 3.5%;
+    height: 4%;
+    position: absolute;
+    top: 35%;
+    left: 16%;
+  }
+
+  .Achievements{
+    position: absolute;
+    top: 35.5%;
+    left: 20%;
+  }
+
+  .AchievementBox1{
+    width: 40%;
+    height: 37%;
+    position: absolute;
+    top: 42%;
+    left: 17%;
+  }
+
+  .AchievementBox2{
+    width: 40%;
+    height: 37%;  
+    position: absolute;
+    top: 42%;
+    left: 58%;
+  }
+
+  .AchievementBox3{
+    width: 40%;
+    height: 37%;
+    position: absolute;
+    top: 82%;
+    left: 40%;
+  }
+
+  .AchievementBox1_Topic{
+    position: absolute;
+    top: 42%;
+    left: 27%;
+  }
+
+  .AchievementBox2_Topic{
+    position: absolute;
+    top: 42%;
+    left: 66%;
+  }
+
+  .AchievementBox3_Topic{
+    position: absolute;
+    top: 82%;
+    left: 53%;
+  }
+
+  .ContentDivider{
+    width: 80%;
+    border-color: #D0D0D0;
+    position: absolute;
+    top: 120.5%;
+    left: 18%;
+  }
+
+  .AnalyticsIcon{
+    width: 3.5%;
+    height: 4%;
+    position: absolute;
+    top: 123%;
+    left: 18%;
+  }
+
+  .Analytics{
+    font-family:  'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 125%;
+    position: absolute;
+    top: 123.5%;
+    left: 22%;
+  }
+
+  .AnalyticsBox1{
+    width: 65%;
+    height: 24%;
+    position: absolute;
+    top: 140%;
+    left: 35%;
+  }
+
+  .AnalyticsBox2{
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    top: 185%;
+    left: 20%;
+  }
+
+  .AnalyticsBox1_Topic{
+    position: absolute;
+    top: 130%;
+    left: 49%;
+  }
+
+  .DepressionLabel_box{
+    position: absolute;
+    top: 140%;
+    left: 15%;
+  }
+}
+  
+//425 heights
+
+@media (max-height: 830px) and (max-width: 425px) {
+  .Dashboard_TopUserIcon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 2%;
     left: 78%;
+  }
+
+  .Dashboard_TopUserContent1{
+    font-family:  'Poppins', sans-serif;
+    position: absolute;
+    top: 2.5%;
+    left: 86%;
+    font-size: 90%;
+  }
+
+  .Dashboard_Topic{
+    position: absolute;
+    top: 2%;
+    left: 25%;
+    font-size: 100%;
+    font-weight: 900;
+  }
+
+  .Dashboard_TopBox{
+    width: 78%;
+    height: 15%;
+    top: 10%;
+    left: 22%;
+  }
+
+  .Dashboard_Date{
+    position: relative;
+    top: -80.5%;
+    left: 4.5%;
+    font-size: 70%;
+  }
+
+  .Dashboard_Welcome_Text{
+    position: relative;
+    top: -59%;
+    left: 4.2%;
+    font-size: 70%;
+  }
+
+  .Dashboard_Welcome_Text2{
+    top: -60%;
+    left: 4.5%;
+    font-size: 50%;
+  }
+
+
+  .ApprovedBox{
+    width: 44%;
+    height: 17%;
+    top: 30%;
+    left: 38%;
+  }
+
+  .ApprovedBoxArrow{
+    position: relative;
+    top: 25%;
+    left: 8%;
+  }
+
+  .UserBox{
+    width: 68%;
+    height: 22%;
+    top: 50%;
+    left: 27%;
+  }
+
+  .UserChart{
+    position: relative;
+    top: 6%;
+    left: 1%;
+  }
+
+  .Frame1{
+    width: 70%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 110%;
+    left: 28%;
+  }
+
+  .Frame2{
+    width: 70%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 75%;
+    left: 28%;
+  }
+
+  /*Proressreport*/
+
+  .ProgressReport__MenuIcon{
+    position: absolute;
+    top: 2%;
+    left: -65%;
+  }
+
+  .ProgressReport_TopBox{
+    width: 75%;
+    height: 20%;
+    position: absolute;
+    top: 10%;
+    left: 23%;
+  }
+
+  .ProgressReport_Date{
+    font-family:  'Poppins', sans-serif;
+    font-weight: bolder;
+    position: relative;
+    top: -80.5%;
+    left: 4.5%;
+    color: black;
+  }
+
+  .ProgressReport_Welcome_Text{
+    font-family:  'Poppins', sans-serif;
+    font-size: 160%;
+    font-weight: bolder;
+    position: relative;
+    top: -60%;
+    left: 4.2%;
+    color: black;
+  }
+
+  .ProgressReport_Welcome_Text2{
+    font-family:  'Poppins', sans-serif;
+    position: relative;
+    top: -62%;
+    left: 4.5%;
+    color: black;
+  }
+
+  .AchievementsImage{
+    width: 6.5%;
+    height: 4%;
+    position: absolute;
+    top: 35%;
+    left: 23%;
+  }
+
+  .Achievements{
+    position: absolute;
+    top: 35.5%;
+    left: 30%;
+  }
+
+  .AchievementBox1{
+    width: 70%;
+    height: 32%;
+    position: absolute;
+    top: 42%;
+    left: 25%;
+  }
+
+  .AchievementBox2{
+    width: 70%;
+    height: 32%;  
+    position: absolute;
+    top: 78%;
+    left: 25%;
+  }
+
+  .AchievementBox3{
+    width: 70%;
+    height: 32%;
+    position: absolute;
+    top: 114%;
+    left: 25%;
+  }
+
+  .AchievementBox1_Topic{
+    position: absolute;
+    top: 42%;
+    left: 37%;
+  }
+
+  .AchievementBox2_Topic{
+    position: absolute;
+    top: 78%;
+    left: 38%;
+  }
+
+  .AchievementBox3_Topic{
+    position: absolute;
+    top: 114%;
+    left: 44%;
   }
 
   .ContentDivider{
     width: 75%;
     border-color: #D0D0D0;
     position: absolute;
-    top: 77.5%;
-    left: 20%;
+    top: 148%;
+    left: 23%;
   }
 
   .AnalyticsIcon{
-    width: 2.5%;
-    height: 5%;
+    width: 6.5%;
+    height: 4%;
     position: absolute;
-    top: 78%;
-    left: 20%;
+    top: 150%;
+    left: 23%;
   }
-  
+
   .Analytics{
     font-family:  'Poppins', sans-serif;
     font-weight: bolder;
     font-size: 125%;
     position: absolute;
-    top: 78.5%;
-    left: 23%;
+    top: 150.5%;
+    left: 30%;
   }
 
   .AnalyticsBox1{
-    width: 25%;
+    width: 80%;
     height: 24%;
     position: absolute;
-    top: 89%;
-    left: 33%;
+    top: 188%;
+    left: 23%;
   }
 
   .AnalyticsBox2{
-    width: 43%;
-    height: 38%;
+    width: 70%;
+    height: 35%;
     position: absolute;
-    top: 83%;
-    left: 56%;
+    top: 220%;
+    left: 30%;
   }
 
   .AnalyticsBox1_Topic{
     position: absolute;
-    top: 83%;
-    left: 34%;
+    top: 160%;
+    left: 42%;
   }
-  
+
+  .AnalyticsBox2_Topic{
+    font-family:  'Poppins', sans-serif;
+    position: absolute;
+    top: 0%;
+    left: 13%;
+  }
+
   .DepressionLabel_box{
     position: absolute;
-    top: 90%;
-    left: 20%;
+    top: 168%;
+    left: 30%;
   }
-
 }
 
+@media (max-height: 750px) and (max-width: 425px) {
+  .Dashboard_TopUserIcon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 2%;
+    left: 78%;
+  }
+
+  .Dashboard_TopUserContent1{
+    font-family:  'Poppins', sans-serif;
+    position: absolute;
+    top: 2.5%;
+    left: 86%;
+    font-size: 90%;
+  }
+
+  .Dashboard_Topic{
+    position: absolute;
+    top: 2%;
+    left: 25%;
+    font-size: 100%;
+    font-weight: 900;
+  }
+
+  .Dashboard_TopBox{
+    width: 78%;
+    height: 15%;
+    top: 10%;
+    left: 22%;
+  }
+
+  .Dashboard_Date{
+    position: relative;
+    top: -80.5%;
+    left: 4.5%;
+    font-size: 70%;
+  }
+
+  .Dashboard_Welcome_Text{
+    position: relative;
+    top: -59%;
+    left: 4.2%;
+    font-size: 70%;
+  }
+
+  .Dashboard_Welcome_Text2{
+    top: -60%;
+    left: 4.5%;
+    font-size: 50%;
+  }
 
 
-  
-  
-  
+  .ApprovedBox{
+    width: 44%;
+    height: 17%;
+    top: 30%;
+    left: 38%;
+  }
+
+  .ApprovedBoxArrow{
+    position: relative;
+    top: 25%;
+    left: 8%;
+  }
+
+  .UserBox{
+    width: 68%;
+    height: 22%;
+    top: 50%;
+    left: 27%;
+  }
+
+  .UserChart{
+    position: relative;
+    top: 6%;
+    left: 1%;
+  }
+
+  .Frame1{
+    width: 70%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 110%;
+    left: 28%;
+  }
+
+  .Frame2{
+    width: 70%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 75%;
+    left: 28%;
+  }
+
+  /*Proressreport*/
+
+  .ProgressReport__MenuIcon{
+    position: absolute;
+    top: 2%;
+    left: -65%;
+  }
+
+  .ProgressReport_TopBox{
+    width: 75%;
+    height: 20%;
+    position: absolute;
+    top: 10%;
+    left: 23%;
+  }
+
+  .ProgressReport_Date{
+    font-family:  'Poppins', sans-serif;
+    font-weight: bolder;
+    position: relative;
+    top: -80.5%;
+    left: 4.5%;
+    color: black;
+  }
+
+  .ProgressReport_Welcome_Text{
+    font-family:  'Poppins', sans-serif;
+    font-size: 160%;
+    font-weight: bolder;
+    position: relative;
+    top: -60%;
+    left: 4.2%;
+    color: black;
+  }
+
+  .ProgressReport_Welcome_Text2{
+    font-family:  'Poppins', sans-serif;
+    position: relative;
+    top: -62%;
+    left: 4.5%;
+    color: black;
+  }
+
+  .AchievementsImage{
+    width: 6.5%;
+    height: 4%;
+    position: absolute;
+    top: 35%;
+    left: 23%;
+  }
+
+  .Achievements{
+    position: absolute;
+    top: 35.5%;
+    left: 30%;
+  }
+
+  .AchievementBox1{
+    width: 70%;
+    height: 32%;
+    position: absolute;
+    top: 42%;
+    left: 25%;
+  }
+
+  .AchievementBox2{
+    width: 70%;
+    height: 32%;  
+    position: absolute;
+    top: 78%;
+    left: 25%;
+  }
+
+  .AchievementBox3{
+    width: 70%;
+    height: 32%;
+    position: absolute;
+    top: 114%;
+    left: 25%;
+  }
+
+  .AchievementBox1_Topic{
+    position: absolute;
+    top: 42%;
+    left: 37%;
+  }
+
+  .AchievementBox2_Topic{
+    position: absolute;
+    top: 78%;
+    left: 38%;
+  }
+
+  .AchievementBox3_Topic{
+    position: absolute;
+    top: 114%;
+    left: 44%;
+  }
+
+  .ContentDivider{
+    width: 75%;
+    border-color: #D0D0D0;
+    position: absolute;
+    top: 148%;
+    left: 23%;
+  }
+
+  .AnalyticsIcon{
+    width: 6.5%;
+    height: 4%;
+    position: absolute;
+    top: 150%;
+    left: 23%;
+  }
+
+  .Analytics{
+    font-family:  'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 125%;
+    position: absolute;
+    top: 150.5%;
+    left: 30%;
+  }
+
+  .AnalyticsBox1{
+    width: 80%;
+    height: 24%;
+    position: absolute;
+    top: 188%;
+    left: 23%;
+  }
+
+  .AnalyticsBox2{
+    width: 70%;
+    height: 35%;
+    position: absolute;
+    top: 220%;
+    left: 30%;
+  }
+
+  .AnalyticsBox1_Topic{
+    position: absolute;
+    top: 160%;
+    left: 42%;
+  }
+
+  .AnalyticsBox2_Topic{
+    font-family:  'Poppins', sans-serif;
+    position: absolute;
+    top: 0%;
+    left: 13%;
+  }
+
+  .DepressionLabel_box{
+    position: absolute;
+    top: 168%;
+    left: 30%;
+  }
+}
+
+@media (max-height: 636px) and (max-width: 425px) {
+  .Dashboard_TopUserIcon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 2%;
+    left: 78%;
+  }
+
+  .Dashboard_TopUserContent1{
+    font-family:  'Poppins', sans-serif;
+    position: absolute;
+    top: 2.5%;
+    left: 86%;
+    font-size: 90%;
+  }
+
+  .Dashboard_Topic{
+    position: absolute;
+    top: 2%;
+    left: 25%;
+    font-size: 100%;
+    font-weight: 900;
+  }
+
+  .Dashboard_TopBox{
+    width: 78%;
+    height: 15%;
+    top: 10%;
+    left: 22%;
+  }
+
+  .Dashboard_Date{
+    position: relative;
+    top: -80.5%;
+    left: 4.5%;
+    font-size: 70%;
+  }
+
+  .Dashboard_Welcome_Text{
+    position: relative;
+    top: -59%;
+    left: 4.2%;
+    font-size: 70%;
+  }
+
+  .Dashboard_Welcome_Text2{
+    top: -60%;
+    left: 4.5%;
+    font-size: 50%;
+  }
+
+
+  .ApprovedBox{
+    width: 44%;
+    height: 17%;
+    top: 30%;
+    left: 38%;
+  }
+
+  .ApprovedBoxArrow{
+    position: relative;
+    top: 25%;
+    left: 8%;
+  }
+
+  .UserBox{
+    width: 68%;
+    height: 22%;
+    top: 50%;
+    left: 27%;
+  }
+
+  .UserChart{
+    position: relative;
+    top: 6%;
+    left: 1%;
+  }
+
+  .Frame1{
+    width: 70%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 110%;
+    left: 28%;
+  }
+
+  .Frame2{
+    width: 70%;
+    height: 30%;
+    border-radius: 30px;
+    position: absolute;
+    top: 75%;
+    left: 28%;
+  }
+
+  /*Proressreport*/
+
+  .ProgressReport__MenuIcon{
+    position: absolute;
+    top: 1%;
+    left: -65%;
+  }
+
+  .ProgressReport_TopBox{
+    width: 75%;
+    height: 24%;
+    position: absolute;
+    top: 10%;
+    left: 23%;
+  }
+
+  .ProgressReport_Date{
+    font-family:  'Poppins', sans-serif;
+    font-weight: bolder;
+    position: relative;
+    top: -80.5%;
+    left: 4.5%;
+    color: black;
+  }
+
+  .ProgressReport_Welcome_Text{
+    font-family:  'Poppins', sans-serif;
+    font-size: 160%;
+    font-weight: bolder;
+    position: relative;
+    top: -60%;
+    left: 4.2%;
+    color: black;
+  }
+
+  .ProgressReport_Welcome_Text2{
+    font-family:  'Poppins', sans-serif;
+    position: relative;
+    top: -62%;
+    left: 4.5%;
+    color: black;
+  }
+
+  .AchievementsImage{
+    width: 6.5%;
+    height: 4%;
+    position: absolute;
+    top: 37%;
+    left: 23%;
+  }
+
+  .Achievements{
+    position: absolute;
+    top: 37.5%;
+    left: 30%;
+  }
+
+  .AchievementBox1{
+    width: 70%;
+    height: 36%;
+    position: absolute;
+    top: 43%;
+    left: 25%;
+  }
+
+  .AchievementBox2{
+    width: 70%;
+    height: 36%;  
+    position: absolute;
+    top: 83%;
+    left: 25%;
+  }
+
+  .AchievementBox3{
+    width: 70%;
+    height: 36%;
+    position: absolute;
+    top: 125%;
+    left: 25%;
+  }
+
+  .AchievementBox1_Topic{
+    position: absolute;
+    top: 43%;
+    left: 37%;
+  }
+
+  .AchievementBox2_Topic{
+    position: absolute;
+    top: 83%;
+    left: 38%;
+  }
+
+  .AchievementBox3_Topic{
+    position: absolute;
+    top: 125%;
+    left: 44%;
+  }
+
+  .ContentDivider{
+    width: 75%;
+    border-color: #D0D0D0;
+    position: absolute;
+    top: 164%;
+    left: 23%;
+  }
+
+  .AnalyticsIcon{
+    width: 6.5%;
+    height: 4%;
+    position: absolute;
+    top: 167%;
+    left: 23%;
+  }
+
+  .Analytics{
+    font-family:  'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 125%;
+    position: absolute;
+    top: 167.5%;
+    left: 30%;
+  }
+
+  .AnalyticsBox1{
+    width: 80%;
+    height: 24%;
+    position: absolute;
+    top: 208%;
+    left: 23%;
+  }
+
+  .AnalyticsBox2{
+    width: 70%;
+    height: 45%;
+    position: absolute;
+    top: 240%;
+    left: 30%;
+  }
+
+  .AnalyticsBox1_Topic{
+    position: absolute;
+    top: 175%;
+    left: 42%;
+  }
+
+  .AnalyticsBox2_Topic{
+    font-family:  'Poppins', sans-serif;
+    position: absolute;
+    top: 0%;
+    left: 13%;
+  }
+
+  .DepressionLabel_box{
+    position: absolute;
+    top: 185%;
+    left: 30%;
+  }
+}
