@@ -6,7 +6,7 @@ import { ref, child, get } from "firebase/database";
 import { database } from "@/app/firebase/config";
 
 const size = {
-  width: 400,
+  width: 300,
   height: 200,
 };
 
@@ -27,7 +27,6 @@ function Chart() {
     const dbRef = ref(database);
     get(child(dbRef, `users/${userId}/Progress/Weekly_Engagement`)).then((snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
         const newValue = snapshot.val();
         setData([{ value: newValue }, { value: 168 - newValue }]); // Update both values
       } else {

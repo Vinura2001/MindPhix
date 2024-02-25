@@ -5,45 +5,6 @@ import { ref, child, get } from "firebase/database";
 import { database } from "@/app/firebase/config";
 
 
-
-const chartSetting = {
-  xAxis: [
-    {
-      label: 'Activities',
-    },
-  ],
-  width: 500,
-  height: 250,
-};
-
-
-const dataset = [
-  {
-    CompleateActivity_Count: 28,
-    Activity_Type: 'Sports/Games',
-  },
-  {
-    CompleateActivity_Count: 10,
-    Activity_Type: 'Movies/Dramas',
-  },
-  {
-    CompleateActivity_Count: 14,
-    Activity_Type: 'Music Therapy',
-  },
-  {
-    CompleateActivity_Count: 12,
-    Activity_Type: 'Exercises',
-  },
-  {
-    CompleateActivity_Count: 9,
-    Activity_Type: 'Meditation',
-  },
-  {
-    CompleateActivity_Count: 14,
-    Activity_Type: 'Therapy',
-  },
-];
-
 const valueFormatter = (value: number) => `${value}`;
 
 export default function RecomendationChart() {
@@ -56,7 +17,7 @@ export default function RecomendationChart() {
         label: 'Activities',
       },
     ],
-    width: 500,
+    width: 260,
     height: 250,
   };
   
@@ -64,15 +25,15 @@ export default function RecomendationChart() {
   const [dataset, setData] = useState([
     {
       CompleateActivity_Count: 0,
-      Activity_Type: 'Sports/Games',
+      Activity_Type: 'Sports',
     },
     {
       CompleateActivity_Count: 0,
-      Activity_Type: 'Movies/Dramas',
+      Activity_Type: 'Movies',
     },
     {
       CompleateActivity_Count: 0,
-      Activity_Type: 'Music Therapy',
+      Activity_Type: 'Music',
     },
     {
       CompleateActivity_Count: 0,
