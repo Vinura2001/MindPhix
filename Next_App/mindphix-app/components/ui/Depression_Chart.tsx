@@ -9,7 +9,7 @@ import { database } from "@/app/firebase/config";
 export default function DepressionChart() {
 
   const [Data, setData] = useState([0, 0, 0, 0, 0, 0, 0]);
-  const xLabels = ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'PWeek 6', 'Week 7'];
+  const xLabels = ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7'];
   const [userId, setUserId] = useState<string>('U001'); 
   const color = '#2E6DE8'; 
 
