@@ -442,7 +442,7 @@
   }
 
   .UserBox{
-    width: 28%;
+    width: 35%;
     height: 22%;
     top: 35%;
     left: 60%;
@@ -450,7 +450,7 @@
 
   .UserChart{
     position: relative;
-    top: 8%;
+    top: 4%;
     left: 1%;
   }
 
@@ -1313,15 +1313,15 @@
   }
 
   .UserBox{
-    width: 28%;
-    height: 22%;
+    width: 35%;
+    height: 25%;
     top: 35%;
     left: 60%;
   }
 
   .UserChart{
     position: relative;
-    top: 8%;
+    top: 4%;
     left: 1%;
   }
 
@@ -1493,14 +1493,14 @@
 
   .Dashboard_TopBox{
     width: 68%;
-    height: 20%;
+    height: 23%;
     top: 10%;
     left: 30%;
   }
 
   .ApprovedBox{
     width: 24%;
-    height: 22%;
+    height: 25%;
     top: 35%;
     left: 30%;
   }
@@ -1512,15 +1512,15 @@
   }
 
   .UserBox{
-    width: 28%;
-    height: 22%;
+    width: 35%;
+    height: 29%;
     top: 35%;
     left: 60%;
   }
 
   .UserChart{
     position: relative;
-    top: 8%;
+    top: 4%;
     left: 1%;
   }
 
@@ -1529,7 +1529,7 @@
     height: 30%;
     border-radius: 30px;
     position: absolute;
-    top: 65%;
+    top: 67%;
     left: 30%;
   }
 
@@ -1538,7 +1538,7 @@
     height: 30%;
     border-radius: 30px;
     position: absolute;
-    top: 65%;
+    top: 67%;
     left: 65%;
   }
 
@@ -1910,7 +1910,7 @@
 
   .ApprovedBox{
     width: 28%;
-    height: 17%;
+    height: 20%;
     top: 35%;
     left: 20%;
   }
@@ -1933,7 +1933,7 @@
 
   .UserBox{
     width: 38%;
-    height: 22%;
+    height: 23%;
     top: 35%;
     left: 55%;
   }
@@ -1941,7 +1941,7 @@
   .UserChart{
     width: 100%;
     position: relative;
-    top: 8%;
+    top: 4%;
     left: 1%;
   }
 
@@ -2113,14 +2113,14 @@
 
   .Dashboard_TopBox{
     width: 85%;
-    height: 20%;
+    height: 23%;
     top: 10%;
     left: 15%;
   }
 
   .ApprovedBox{
     width: 28%;
-    height: 17%;
+    height: 25%;
     top: 35%;
     left: 20%;
   }
@@ -2143,7 +2143,7 @@
 
   .UserBox{
     width: 38%;
-    height: 22%;
+    height: 27%;
     top: 35%;
     left: 55%;
   }
@@ -2151,7 +2151,7 @@
   .UserChart{
     width: 100%;
     position: relative;
-    top: 8%;
+    top: 4%;
     left: 1%;
   }
 
@@ -2613,7 +2613,7 @@
 
   .ApprovedBox{
     width: 44%;
-    height: 17%;
+    height: 19%;
     top: 30%;
     left: 38%;
   }
@@ -2626,8 +2626,8 @@
 
   .UserBox{
     width: 68%;
-    height: 22%;
-    top: 50%;
+    height: 23%;
+    top: 51%;
     left: 27%;
   }
 
@@ -2642,7 +2642,7 @@
     height: 30%;
     border-radius: 30px;
     position: absolute;
-    top: 110%;
+    top: 111%;
     left: 28%;
   }
 
@@ -2651,7 +2651,7 @@
     height: 30%;
     border-radius: 30px;
     position: absolute;
-    top: 75%;
+    top: 76%;
     left: 28%;
   }
 
@@ -2870,7 +2870,7 @@
 
   .ApprovedBox{
     width: 44%;
-    height: 17%;
+    height: 22%;
     top: 30%;
     left: 38%;
   }
@@ -2883,8 +2883,8 @@
 
   .UserBox{
     width: 68%;
-    height: 22%;
-    top: 50%;
+    height: 28%;
+    top: 54%;
     left: 27%;
   }
 
@@ -2899,7 +2899,7 @@
     height: 30%;
     border-radius: 30px;
     position: absolute;
-    top: 110%;
+    top: 118%;
     left: 28%;
   }
 
@@ -2908,7 +2908,7 @@
     height: 30%;
     border-radius: 30px;
     position: absolute;
-    top: 75%;
+    top: 85%;
     left: 28%;
   }
 
