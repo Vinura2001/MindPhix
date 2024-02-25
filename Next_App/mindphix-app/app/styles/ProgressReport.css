@@ -3,6 +3,12 @@
 
 /*Content Start*/
 
+.ProgressReport__MenuIcon{
+  position: absolute;
+  top: 2%;
+  left: 60%;
+}
+
 .ProgressReport_Topic{
   position: absolute;
   top: 2%;
@@ -249,8 +255,6 @@
 .AnalyticsBox2{
   width: 35%;
   height: 24%;
-  background-color: rgba(247.20, 247.20, 247.20, 0.12);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: absolute;
   top: 73%;
   left: 60%;
@@ -266,40 +270,16 @@
   left: 29%;
 }
 
-.NoLable{
+.AnalyticsBox1_Topic{
   position: absolute;
-  top: 85%;
-  left: 0%;
+  top: 70%;
+  left: 38%;
 }
 
-.MinimalLable{
+.DepressionLabel_box{
   position: absolute;
-  top: 73%;
-  left: -8%;
-}
-
-.MildLable{
-  position: absolute;
-  top: 59%;
-  left: -3%;
-}
-
-.ModerateLable{
-  position: absolute;
-  top: 42%;
-  left: -11%;
-}
-
-.Moderately_SevereLable{
-  position: absolute;
-  top: 25%;
-  left: -25%;
-}
-
-.SevereLable{
-  position: absolute;
-  top: 10%;
-  left: -8%;
+  top: 80%;
+  left: 25%;
 }
 
 

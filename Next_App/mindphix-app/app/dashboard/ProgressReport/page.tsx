@@ -12,7 +12,9 @@ export default function ProgressReport() {
   return(
     <BaseLayout>
       <div>
-      <Logout/>
+        <div className="ProgressReport__MenuIcon">
+          <Logout/>
+        </div>
 
       <div className="ProgressReport_TopBox">
         <img className="ProgressReport_TopBox_Image" src="/Figures/TopBox_Image.png" alt="TopBox_Image" />
@@ -63,18 +65,21 @@ export default function ProgressReport() {
       <img className="AnalyticsIcon" src="/Figures/AnalyticsIcon.png" alt="AnalyticsIcon" />
       <div className="Analytics">Analytics</div>
 
-      {/* Replace the following divs with your Chart.js logic */}
+        <div className="DepressionLabel_box">
+          <ul>
+            <li className="UlMinimalLable">1-4 Minimal</li>
+            <li className="UlMildLable">5-9 Mild</li>
+            <li className="UlModerateLable">10-14 Moderate</li>
+            <li className="UlModerately_SevereLable">15-19 Moderately Severe</li>
+            <li className="UlSevereLable">20-27 Severe</li>
+          </ul>
+        </div>
+      
+        <div className="AnalyticsBox1_Topic">Deepression Analytics</div>
         <div className="AnalyticsBox1">
-          <div className="NoLable">No</div>
-          <div className="MinimalLable">Minimal</div>
-          <div className="MildLable">Mild</div>
-          <div className="ModerateLable">Moderate</div>
-          <div className="Moderately_SevereLable">Moderately Severe</div>
-          <div className="SevereLable">Severe</div>
-
           
           <DepressionChart />
-      </div>
+        </div>
       
       <div className="AnalyticsBox2">
         <div className="AnalyticsBox2_Topic">Recommendations Analytics</div>
