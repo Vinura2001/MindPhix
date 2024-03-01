@@ -1,0 +1,115 @@
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .top-container {
+    margin-left: -180px;
+    width: 110%;
+    padding-bottom: 30px;
+  }
+
+  .form-container {
+    margin-left: -180px;
+    top: 250px;
+    width: 110%;
+  }
+
+  .fields {
+    grid-template-rows: repeat(12, auto);
+    margin-left: 20px;
+  }
+
+  .cover-photo {
+    width: full;
+    height: 130px;
+  }
+
+  .image-container {
+    margin-top: -30px;
+    margin-left: 15px;
+  }
+  .cover-btn {
+    margin-top: -40px;
+    padding: 5px;
+  }
+
+  .username {
+    margin-left: 120px;
+    bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1023px) {
+  .top-container {
+    margin-left: 5px;
+  }
+
+  .form-container {
+    margin-left: 5px;
+    top: 250px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+  .fields {
+    grid-template-rows: repeat(6, auto);
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1220px) {
+  .top-container {
+    margin-left: 5px;
+  }
+  .form-container {
+    margin-left: 5px;
+    top: 250px;
+  }
+}
+
+@media screen and (min-width: 1220px) and (max-width: 1340px) {
+  .top-container {
+    margin-left: 5px;
+  }
+  .form-container {
+    margin-left: 5px;
+    top: 260px;
+  }
+}
+
+@media screen and (min-width: 1340px) and (max-width: 1400px) {
+  .top-container {
+    margin-left: 5px;
+  }
+  .form-container {
+    margin-left: 5px;
+    top: 270px;
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1440px) {
+  .top-container {
+    margin-left: 5px;
+  }
+  .form-container {
+    margin-left: 5px;
+    top: 280px;
+  }
+}
+
+@media screen and (min-width: 1250px) and (max-width: 2560px) {
+  .top-container {
+    margin-left: 5px;
+  }
+  .form-container {
+    margin-left: 5px;
+    top: 285px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .top-container {
+    margin-left: 5px;
+  }
+  .form-container {
+    margin-left: 5px;
+    top: 470px;
+  }
+}
