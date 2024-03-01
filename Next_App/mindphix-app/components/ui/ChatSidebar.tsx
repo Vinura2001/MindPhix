@@ -31,16 +31,10 @@ const sidebarItems = [
 
 export default function ChatSidebar(){
 
-  let CollapsState;
   
-  if (window.innerWidth <= 768) {
-    CollapsState =true;
-  } else {
-    CollapsState =false;
-  }
   
 
-  const [isCollapsedSidebar,setIsCollapsedSidebar] = useState <Boolean>(CollapsState);
+  const [isCollapsedSidebar,setIsCollapsedSidebar] = useState <Boolean>(false);
 
   const toggleSidebarCollapseHandler = () =>{
     setIsCollapsedSidebar((prev) => !prev)
