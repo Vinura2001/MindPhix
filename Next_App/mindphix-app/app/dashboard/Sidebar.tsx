@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { MdDashboard } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
