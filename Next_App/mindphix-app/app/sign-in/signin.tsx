@@ -8,13 +8,16 @@ import { FcGoogle } from 'react-icons/fc';
 import { MdLockOutline } from "react-icons/md";
 import Link from "next/link";
 import { useState, ChangeEvent } from "react";
-import { auth } from "@/app/firebase/config";
+import { auth, database } from "@/app/firebase/config";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import React from "react";
 import { useRouter } from "next/navigation";
+import { useEffect}  from "react";
+import { onValue, ref} from "firebase/database";
+
 
 export default function Signin() {
   const router = useRouter();
@@ -24,20 +27,42 @@ export default function Signin() {
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [userNotFound, setUserNotFound] = useState(false); // State for user not found message
 
 /* Sign in with Email & Password */ 
 const handleSignInWithEmailAndPassword = async () => {
   try {
+
+    setEmailError("");
+    setPasswordError("");
+    setUserNotFound(false);
+    
     if (!email || !password) {
       setEmailError("Email is required.");
       setPasswordError("Password is required.");
+
       return;
     }
 
     const res = await signInWithEmailAndPassword(email, password);
 
     if (res) {
-      router.push("/dashboard/Dashboard");
+      // Check if the user exists in the Realtime Database
+      const userRef = ref(database, `users/${res.user.uid}`);
+      onValue(userRef, (snapshot) => {
+        const userData = snapshot.val();
+        if (userData) {
+          // User exists in the database
+          console.log("User exists:", userData);
+          router.push("/dashboard/Dashboard");
+        } else {
+          // User does not exist in the database
+          console.log("User does not exist");
+          
+          setUserNotFound(true);// Set state to display user not found message
+        }
+      });  
+      
     }
   } catch (error) {
     console.error("Error signing in:", error);
@@ -94,6 +119,14 @@ const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
               <p className="font-semibold text-gray-400 my-3">
                 or use your email account
               </p>
+
+              {/* User not found message */}
+            {userNotFound && (
+              <p className="text-red-500 text-sm font-semibold">
+                User does not exist. Please sign up first.
+              </p>
+            )}
+
               <div className="flex flex-col items-center">
                 <div className="bg-gray-100 w-full sm:w-64 p-2 flex items-center mb-3">
                   <FaRegEnvelope className="text-gray-400 mr-2" />
