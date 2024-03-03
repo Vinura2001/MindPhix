@@ -7,7 +7,10 @@ import { FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaBlogger } from "react-icons/fa";
 import { useState } from "react";
-import { NextResponse } from "next/server";
+import axios from "axios"; // Import Axios for making HTTP requests
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { FcOk } from "react-icons/fc";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -20,6 +23,7 @@ export default function Contact() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [alertVisible, setAlertVisible] = useState(false);
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -60,6 +64,19 @@ export default function Contact() {
     }
     setSubmitted(true);
     if (isValid) {
+      // Submit the form if valid
+      try {
+        await axios.post("https://getform.io/f/rbegwomb", formData);
+        // Reset form fields upon successful submission
+        setFormData({ name: "", email: "", message: "" });
+        setAlertVisible(true);
+        // Hide the success alert after 3 seconds
+        setTimeout(() => {
+          setAlertVisible(false);
+        }, 3000);
+      } catch (error) {
+        console.error("Error submitting form:", error);
+      }
     } else {
       setErrors(newErrors);
     }
@@ -200,6 +217,16 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      {submitted && alertVisible && (
+        <div className="relative ml-[920px] w-[325px] -top-[100px] z-10">
+          <Alert className="bg-blue-100">
+            <FcOk className="h-4 w-4" />
+            <AlertDescription>
+              Your form submission has been received.
+            </AlertDescription>
+          </Alert>
+        </div>
+      )}
     </div>
   );
 }
