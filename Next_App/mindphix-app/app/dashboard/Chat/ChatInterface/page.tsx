@@ -1,30 +1,103 @@
 "use client";
-import React, { useEffect } from 'react';
-import ChatLayout from '../../ChatLayout';
+import React, { useState } from 'react';
 
-const BotComponent = () => {
-  useEffect(() => {
-    // Check if the bot script is already loaded
-    if (!document.getElementById('botcopy-script')) {
-      const script = document.createElement('script');
-      script.id = 'botcopy-script';
-      script.type = 'text/javascript';
-      script.async = true;
-      script.src = 'https://widget.botcopy.com/js/injection.js';
+function Index() {
+  const [recommendation, setRecommendation] = useState('');
+  const [link, setLink] = useState('');
+  const [formData, setFormData] = useState({
+    depression_level: '',
+    mood_level: '',
+    gender: '',
+    age: '',
+    category: '',
+  });
 
-      document.body.appendChild(script);
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://127.0.0.1:8080/predict', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      const data = await response.json();
+      const [recommendationText, linkText] = data.recommendation.split(' - ');
+      setRecommendation(recommendationText);
+      setLink(linkText);
+    } catch (error) {
+      console.error('Error:', error);
     }
-
-   
-  }, []);
+  };
 
   return (
-    <ChatLayout>
-      <div id="botcopy-embedder-d7lcfheammjct" className="botcopy-embedder-d7lcfheammjct" data-botId="65d8ceb3fbfad10008b063fd">
-        
-      </div>
-    </ChatLayout>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Depression Level:
+          <input
+            type="text"
+            name="depression_level"
+            value={formData.depression_level}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Mood Level:
+          <input
+            type="text"
+            name="mood_level"
+            value={formData.mood_level}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Gender:
+          <input
+            type="text"
+            name="gender"
+            value={formData.gender}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Age:
+          <input
+            type="number"
+            name="age"
+            value={formData.age}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Category:
+          <input
+            type="text"
+            name="category"
+            value={formData.category}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <button type="submit">Get Recommendation</button>
+      </form>
+      <p>Recommendation: {recommendation}</p>
+      <p>
+        Link: <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
+      </p>
+    </div>
   );
-};
+}
 
-export default BotComponent;
+export default Index;
