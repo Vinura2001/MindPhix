@@ -3,11 +3,11 @@ import Image from "next/image";
 import { MdDashboard } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { GiProgression } from "react-icons/gi";
-import { BsChatLeftDots } from "react-icons/bs";
 import { RxExit } from "react-icons/rx";
 import Link from "next/link";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useState, useEffect } from "react";
+import { MdOutlineQuiz } from "react-icons/md";
 
 const sidebarItems = [
   {
@@ -26,9 +26,9 @@ const sidebarItems = [
     icon: GiProgression,
   },
   {
-    name: "Chat",
-    href: "/dashboard/Chat",
-    icon: BsChatLeftDots,
+    name: "Quiz",
+    href: "/dashboard/Quiz",
+    icon: MdOutlineQuiz,
   },
 ];
 
