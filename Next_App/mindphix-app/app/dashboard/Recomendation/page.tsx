@@ -46,7 +46,7 @@ function Index() {
   return (
     <BaseLayout>
       <div className='form_container'>
-        <form onSubmit={handleSubmit}>
+        <form className='Recomendation_form' onSubmit={handleSubmit}>
           <label>
             Depression Level:
             <select
@@ -123,9 +123,9 @@ function Index() {
           <br />
           <button className='RecomendationButtion' type="submit">Get Recommendation</button>
         </form>
-        <p>Recommendation: {recommendation}</p>
-        <p>
-          Link: <a href={link} target="_blank" rel="noopener noreferrer">{link}</a>
+        <p className='recomendation_label'>Recommendation: {recommendation}</p>
+        <p className='link_label'>
+          Link: <a className='link' href={link} target="_blank" rel="noopener noreferrer">{link}</a>
         </p>
       </div>
     </BaseLayout>

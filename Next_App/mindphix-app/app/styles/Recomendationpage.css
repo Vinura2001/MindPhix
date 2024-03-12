@@ -5,12 +5,10 @@
     box-sizing: border-box;
 }
   
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-}
+
   
 .form_container {
+    
     background-color: #fff;
     padding: 90px;
     border-radius: 10px;
@@ -19,20 +17,20 @@ body {
     width: 100%;
     margin: 80px auto;
     position: relative;
-    left: 800px;
+    left: 150px;
 }
   
-form {
+.Recomendation_form {
     display: flex;
     flex-direction: column;
 }
   
-label {
+.Recomendation_form label {
     margin-bottom: 10px;
     font-weight: bold;
 }
   
-input {
+.Recomendation_form input {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -50,12 +48,18 @@ input {
     align-self: center;
 }
   
-p {
-    margin-top: 20px;
+.recomendation_label {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.link_label  {
+    margin-top: 10px;
     text-align: center;
 }
   
-a {
+.link {
     color: #4CAF50;
     text-decoration: none;
 }
@@ -74,5 +78,5 @@ a {
 .form_container  select{
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    margin-left: 10px;
+    margin-left: 25px;
 }
