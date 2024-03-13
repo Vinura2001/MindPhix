@@ -6,6 +6,7 @@ import { GiProgression } from "react-icons/gi";
 import { AiFillAlert } from "react-icons/ai";
 import { RxExit } from "react-icons/rx";
 import { MdQuiz } from "react-icons/md";
+import { CiChat1 } from "react-icons/ci";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -35,6 +36,11 @@ const sidebarItems = [
     name: "Get recomendation",
     href: "/dashboard/Recomendation",
     icon: AiFillAlert,
+  },
+  {
+    name: "Chat",
+    href: "/dashboard/Chat",
+    icon: CiChat1,
   },
 ];
 

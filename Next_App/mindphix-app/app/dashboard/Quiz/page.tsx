@@ -1,8 +1,23 @@
 "use client";
 import { ChangeEvent, useState } from 'react';
 import BaseLayout from '../BaseLayout';
+import { ref, push, update } from 'firebase/database';
+import { database } from "@/app/firebase/config";
+
+const getStoredWeek = () => {
+  const storedWeek = localStorage.getItem('currentWeek');
+  return storedWeek ? parseInt(storedWeek) : 1; // Default to week 1 if no stored value
+};
+
+const setStoredWeek = (week: number, currentWeek: number) => {
+  if (week !== currentWeek) {
+    localStorage.setItem('currentWeek', week.toString());
+  }
+};
 
 const QuizPage = () => {
+  const [UserId, setUserId] = useState<string>('U001');
+
   const [answers, setAnswers] = useState({
     q1: null,
     q2: null,
@@ -14,7 +29,8 @@ const QuizPage = () => {
     q8: null,
     q9: null,
   });
-  const [result, setResult] = useState(''); // Initialize with an empty string
+  const [result, setResult] = useState('');
+  const [currentWeek, setCurrentWeek] = useState(getStoredWeek());
 
   const handleAnswerChange = (e: ChangeEvent<HTMLSelectElement>, questionNumber: number) => {
     setAnswers((prevAnswers) => ({
@@ -23,7 +39,7 @@ const QuizPage = () => {
     }));
   };
 
-  const calculateScore = () => {
+  const calculateScore = async () => {
     const totalScore = Object.values(answers).reduce((acc, val) => acc + (val || 0), 0);
     let depressionLevel;
 
@@ -39,7 +55,25 @@ const QuizPage = () => {
       depressionLevel = 'Severe depression';
     }
 
-    setResult(depressionLevel || ''); // Set an empty string if depressionLevel is falsy
+    setResult(depressionLevel || '');
+
+    try {
+      const userId = UserId;
+      const newDepressionLevelRef = ref(database, `users/${userId}/Progress/Depression_Level/`);
+      const depressionLevelData = {
+        [`Week${currentWeek}`]: totalScore
+      };
+
+      await update(newDepressionLevelRef, depressionLevelData);
+      console.log('Depression level saved successfully');
+
+      // Increment the current week after successful save and update localStorage
+      const newWeek = currentWeek === 7 ? 1 : currentWeek + 1;
+      setStoredWeek(newWeek, currentWeek);
+      setCurrentWeek(newWeek);
+    } catch (error) {
+      console.error('Error saving depression level:', error);
+    }
   };
 
   const handleSubmit = (e: { preventDefault: () => void; }) => {
@@ -48,115 +82,105 @@ const QuizPage = () => {
   };
 
   return (
-    <BaseLayout>
+    /*<BaseLayout>*/
+    <div>
+      <h1>Depression Quiz</h1>
+      <form onSubmit={handleSubmit}>
         <div>
-        <h1>Depression Quiz</h1>
-        <form onSubmit={handleSubmit}>
-
-            <div>
-            <label>1. Little interest or pleasure in doing things</label>
-            <select value={answers.q1 || ''} onChange={(e) => handleAnswerChange(e, 1)}>
-                
-                <option value="0">Not at all</option>
-                <option value="1">Several days</option>
-                <option value="2">More than half the days</option>
-                <option value="3">Nearly every day</option>
-            </select>
-            </div>
-
-            <div>
-            <label>2. Feeling down, depressed, or hopeless</label>
-            <select value={answers.q2 || ''} onChange={(e) => handleAnswerChange(e, 2)}>
-                
-                <option value="0">Not at all</option>
-                <option value="1">Several days</option>
-                <option value="2">More than half the days</option>
-                <option value="3">Nearly every day</option>
-            </select>
-            </div>
-
-            <div>
-            <label>3. Trouble falling or staying asleep, or sleeping too much</label>
-            <select value={answers.q3 || ''} onChange={(e) => handleAnswerChange(e, 3)}>
-                
-                <option value="0">Not at all</option>
-                <option value="1">Several days</option>
-                <option value="2">More than half the days</option>
-                <option value="3">Nearly every day</option>
-            </select>
-            </div>
-
-            <div>
-            <label>4. Feeling tired or having little energy</label>
-            <select value={answers.q4 || ''} onChange={(e) => handleAnswerChange(e, 4)}>
-                
-                <option value="0">Not at all</option>
-                <option value="1">Several days</option>
-                <option value="2">More than half the days</option>
-                <option value="3">Nearly every day</option>
-            </select>
-            </div>
-
-            <div>
-            <label>5. Poor appetite or overeating</label>
-            <select value={answers.q5 || ''} onChange={(e) => handleAnswerChange(e, 5)}>
-                
-                <option value="0">Not at all</option>
-                <option value="1">Several days</option>
-                <option value="2">More than half the days</option>
-                <option value="3">Nearly every day</option>
-            </select>
-            </div>
-
-            <div>
-            <label>6. Feeling bad about yourself or that you are a failure or have let yourself or your family down</label>
-            <select value={answers.q6 || ''} onChange={(e) => handleAnswerChange(e, 6)}>
-                
-                <option value="0">Not at all</option>
-                <option value="1">Several days</option>
-                <option value="2">More than half the days</option>
-                <option value="3">Nearly every day</option>
-            </select>
-            </div>
-
-            <div>
-            <label>7. Trouble concentrating on things, such as reading the newspaper or watching television</label>
-            <select value={answers.q7 || ''} onChange={(e) => handleAnswerChange(e, 7)}>
-                
-                <option value="0">Not at all</option>
-                <option value="1">Several days</option>
-                <option value="2">More than half the days</option>
-                <option value="3">Nearly every day</option>
-            </select>
-            </div>
-
-            <div>
-            <label>8. Moving or speaking so slowly that other people could have noticed. Or the opposite being so figety or restless that you have been moving around a lot more than usual</label>
-            <select value={answers.q8 || ''} onChange={(e) => handleAnswerChange(e, 8)}>
-                
-                <option value="0">Not at all</option>
-                <option value="1">Several days</option>
-                <option value="2">More than half the days</option>
-                <option value="3">Nearly every day</option>
-            </select>
-            </div>
-
-            <div>
-            <label>9. Thoughts that you would be better off dead, or of hurting yourself</label>
-            <select value={answers.q9 || ''} onChange={(e) => handleAnswerChange(e, 9)}>
-                
-                <option value="0">Not at all</option>
-                <option value="1">Several days</option>
-                <option value="2">More than half the days</option>
-                <option value="3">Nearly every day</option>
-            </select>
-            </div>
-
-            <button type="submit">Submit</button>
-        </form>
-        {result && <p>Your depression level: {result}</p>}
+          <label>1. Little interest or pleasure in doing things</label>
+          <select value={answers.q1 || ''} onChange={(e) => handleAnswerChange(e, 1)}>
+            <option value="0">Not at all</option>
+            <option value="1">Several days</option>
+            <option value="2">More than half the days</option>
+            <option value="3">Nearly every day</option>
+          </select>
         </div>
-    </BaseLayout>
+
+        <div>
+          <label>2. Feeling down, depressed, or hopeless</label>
+          <select value={answers.q2 || ''} onChange={(e) => handleAnswerChange(e, 2)}>
+            <option value="0">Not at all</option>
+            <option value="1">Several days</option>
+            <option value="2">More than half the days</option>
+            <option value="3">Nearly every day</option>
+          </select>
+        </div>
+
+        <div>
+          <label>3. Trouble falling or staying asleep, or sleeping too much</label>
+          <select value={answers.q3 || ''} onChange={(e) => handleAnswerChange(e, 3)}>
+            <option value="0">Not at all</option>
+            <option value="1">Several days</option>
+            <option value="2">More than half the days</option>
+            <option value="3">Nearly every day</option>
+          </select>
+        </div>
+
+        <div>
+          <label>4. Feeling tired or having little energy</label>
+          <select value={answers.q4 || ''} onChange={(e) => handleAnswerChange(e, 4)}>
+            <option value="0">Not at all</option>
+            <option value="1">Several days</option>
+            <option value="2">More than half the days</option>
+            <option value="3">Nearly every day</option>
+          </select>
+        </div>
+
+        <div>
+          <label>5. Poor appetite or overeating</label>
+          <select value={answers.q5 || ''} onChange={(e) => handleAnswerChange(e, 5)}>
+            <option value="0">Not at all</option>
+            <option value="1">Several days</option>
+            <option value="2">More than half the days</option>
+            <option value="3">Nearly every day</option>
+          </select>
+        </div>
+
+        <div>
+          <label>6. Feeling bad about yourself or that you are a failure or have let yourself or your family down</label>
+          <select value={answers.q6 || ''} onChange={(e) => handleAnswerChange(e, 6)}>
+            <option value="0">Not at all</option>
+            <option value="1">Several days</option>
+            <option value="2">More than half the days</option>
+            <option value="3">Nearly every day</option>
+          </select>
+        </div>
+
+        <div>
+          <label>7. Trouble concentrating on things, such as reading the newspaper or watching television</label>
+          <select value={answers.q7 || ''} onChange={(e) => handleAnswerChange(e, 7)}>
+            <option value="0">Not at all</option>
+            <option value="1">Several days</option>
+            <option value="2">More than half the days</option>
+            <option value="3">Nearly every day</option>
+          </select>
+        </div>
+
+        <div>
+          <label>8. Moving or speaking so slowly that other people could have noticed. Or the opposite being so figety or restless that you have been moving around a lot more than usual</label>
+          <select value={answers.q8 || ''} onChange={(e) => handleAnswerChange(e, 8)}>
+            <option value="0">Not at all</option>
+            <option value="1">Several days</option>
+            <option value="2">More than half the days</option>
+            <option value="3">Nearly every day</option>
+          </select>
+        </div>
+
+        <div>
+          <label>9. Thoughts that you would be better off dead, or of hurting yourself</label>
+          <select value={answers.q9 || ''} onChange={(e) => handleAnswerChange(e, 9)}>
+            <option value="0">Not at all</option>
+            <option value="1">Several days</option>
+            <option value="2">More than half the days</option>
+            <option value="3">Nearly every day</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+      {result && <p>Your depression level: {result}</p>}
+    </div>
+    /*</BaseLayout>*/
   );
 };
 
