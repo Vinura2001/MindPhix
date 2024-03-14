@@ -1,10 +1,9 @@
 "use client";
 import Link from "next/link";
 import BaseLayout from "../BaseLayout";
-
-import { get, ref } from "firebase/database";
+import { ref, get } from "firebase/database";
 import { useState, useEffect } from "react";
-import { database } from "@/app/firebase/config";
+import { auth, database } from "@/app/firebase/config";
 import { Button } from "@/components/ui/button";
 import Logout from "../Dashboard/logout";
 
@@ -21,43 +20,44 @@ interface User {
 }
 
 export default function Profile() {
-  const [userId, setUserId] = useState<string>("U002"); // Default user ID
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const fetchUserData = async () => {
+    const currentUser = auth.currentUser;
+
+    if (currentUser) {
+      const userId = currentUser.uid;
       const usersRef = ref(database, `users/${userId}`);
-      try {
-        const snapshot = await get(usersRef);
-        if (snapshot.exists()) {
-          const userData = snapshot.val();
-          setUser({
-            id: userId,
-            ...userData,
-          });
-        } else {
-          console.log("No user data available");
+      
+      const fetchUserData = async () => {
+        try {
+          const snapshot = await get(usersRef);
+          if (snapshot.exists()) {
+            const userData = snapshot.val();
+            setUser({
+              id: userId,
+              ...userData,
+            });
+          } else {
+            console.log("No user data available");
+          }
+        } catch (error) {
+          console.error("Error fetching user data:", error);
         }
-      } catch (error) {
-        console.error("Error fetching user data:", error);
-      }
-    };
+      };
 
-    fetchUserData();
-  }, [userId]);
-
-  // Function to handle changing the user
-  const handleChangeUser = (newUserId: string) => {
-    setUserId(newUserId);
-  };
+      fetchUserData();
+    } else {
+      console.warn('User is not authenticated.');
+    }
+  }, []);
 
   return (
     <BaseLayout>
       {user && (
         <div>
-          {/* User Profile content Start */}
           <div className="Profile_MenuIcon">
-          <Logout />
+            <Logout />
           </div>
           
           <div className="UserProfile_TopBox bg-white">

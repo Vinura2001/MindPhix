@@ -2,9 +2,9 @@
 import User_DoughnutChat from "@/components/ui/User_DoughnutChart";
 import BaseLayout from "../BaseLayout";
 
-import {get, ref,} from 'firebase/database';
+import {get, ref} from 'firebase/database';
 import { useState, useEffect } from 'react';
-import { database } from "@/app/firebase/config";
+import { auth, database } from "@/app/firebase/config";
 
 
 interface User {
@@ -20,52 +20,50 @@ interface User {
 }
 
 export default function Dashboard() {
-  const [userId, setUserId] = useState<string>('U001'); // Default user ID
   const [user, setUser] = useState<User | null>(null);
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  //User Data
   useEffect(() => {
-    const fetchUserData = async () => {
+    const currentUser = auth.currentUser;
+    if (currentUser) {
+      const userId = currentUser.uid;
       const usersRef = ref(database, `users/${userId}`);
-      try {
-        const snapshot = await get(usersRef);
-        if (snapshot.exists()) {
-          const userData = snapshot.val();
-          setUser({
-            id: userId,
-            ...userData,
-          });
-        } else {
-          console.log('No user data available');
+
+      const fetchUserData = async () => {
+        try {
+          const snapshot = await get(usersRef);
+          if (snapshot.exists()) {
+            const userData = snapshot.val();
+            setUser({
+              id: userId,
+              ...userData,
+            });
+          } else {
+            console.log('No user data available');
+          }
+        } catch (error) {
+          console.error('Error fetching user data:', error);
         }
-      } catch (error) {
-        console.error('Error fetching user data:', error);
-      }
-    };
+      };
 
-    fetchUserData();
+      fetchUserData();
+    } else {
+      console.warn('User is not authenticated.');
+    }
 
-    //Date
+    // Date
     const intervalId = setInterval(() => {
       setCurrentDate(new Date());
-    }, 1000); 
+    }, 1000);
 
     return () => clearInterval(intervalId);
-
-
-  }, [userId]);
+  }, []);
 
   const formattedDate = currentDate.toLocaleDateString('en-US', {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
   });
-
-  // Function to handle changing the user
-  const handleChangeUser = (newUserId: string) => {
-    setUserId(newUserId);
-  };
 
   return(
     <BaseLayout>
