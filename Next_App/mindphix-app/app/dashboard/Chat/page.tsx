@@ -1,16 +1,16 @@
 "use client";
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 const BotComponent = () => {
   useEffect(() => {
     const injectBotScript = () => {
-      const existingScript = document.getElementById('botcopy-script');
+      const existingScript = document.getElementById("botcopy-script");
       if (!existingScript) {
-        const script = document.createElement('script');
-        script.id = 'botcopy-script';
-        script.type = 'text/javascript';
+        const script = document.createElement("script");
+        script.id = "botcopy-script";
+        script.type = "text/javascript";
         script.async = true;
-        script.src = 'https://widget.botcopy.com/js/injection.js';
+        script.src = "https://widget.botcopy.com/js/injection.js";
         document.body.appendChild(script);
       }
     };
@@ -28,4 +28,3 @@ const BotComponent = () => {
 };
 
 export default BotComponent;
-

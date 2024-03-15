@@ -1,22 +1,34 @@
 "use client";
-import { ChangeEvent, useState } from 'react';
-import BaseLayout from '../BaseLayout';
-import { ref, push, update } from 'firebase/database';
+import { ChangeEvent, useState } from "react";
+import BaseLayout from "../BaseLayout";
+import { ref, push, update } from "firebase/database";
 import { database } from "@/app/firebase/config";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import Link from "next/link";
 
 const getStoredWeek = () => {
-  const storedWeek = localStorage.getItem('currentWeek');
+  const storedWeek = localStorage.getItem("currentWeek");
   return storedWeek ? parseInt(storedWeek) : 1; // Default to week 1 if no stored value
 };
 
 const setStoredWeek = (week: number, currentWeek: number) => {
   if (week !== currentWeek) {
-    localStorage.setItem('currentWeek', week.toString());
+    localStorage.setItem("currentWeek", week.toString());
   }
 };
 
 const QuizPage = () => {
-  const [UserId, setUserId] = useState<string>('U001');
+  const [UserId, setUserId] = useState<string>("U001");
 
   const [answers, setAnswers] = useState({
     q1: null,
@@ -29,10 +41,13 @@ const QuizPage = () => {
     q8: null,
     q9: null,
   });
-  const [result, setResult] = useState('');
+  const [result, setResult] = useState("");
   const [currentWeek, setCurrentWeek] = useState(getStoredWeek());
 
-  const handleAnswerChange = (e: ChangeEvent<HTMLSelectElement>, questionNumber: number) => {
+  const handleAnswerChange = (
+    e: ChangeEvent<HTMLSelectElement>,
+    questionNumber: number
+  ) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
       [`q${questionNumber}`]: parseInt(e.target.value),
@@ -40,147 +55,244 @@ const QuizPage = () => {
   };
 
   const calculateScore = async () => {
-    const totalScore = Object.values(answers).reduce((acc, val) => acc + (val || 0), 0);
+    const totalScore = Object.values(answers).reduce(
+      (acc, val) => acc + (val || 0),
+      0
+    );
     let depressionLevel;
 
     if (totalScore >= 1 && totalScore <= 4) {
-      depressionLevel = 'Minimal depression';
+      depressionLevel = "Minimal Depression";
     } else if (totalScore >= 5 && totalScore <= 9) {
-      depressionLevel = 'Mild depression';
+      depressionLevel = "Mild Depression";
     } else if (totalScore >= 10 && totalScore <= 14) {
-      depressionLevel = 'Moderate depression';
+      depressionLevel = "Moderate Depression";
     } else if (totalScore >= 15 && totalScore <= 19) {
-      depressionLevel = 'Moderately severe depression';
+      depressionLevel = "Moderately Severe Depression";
     } else if (totalScore >= 20 && totalScore <= 27) {
-      depressionLevel = 'Severe depression';
+      depressionLevel = "Severe Depression";
     }
 
-    setResult(depressionLevel || '');
+    setResult(depressionLevel || "");
 
     try {
       const userId = UserId;
-      const newDepressionLevelRef = ref(database, `users/${userId}/Progress/Depression_Level/`);
+      const newDepressionLevelRef = ref(
+        database,
+        `users/${userId}/Progress/Depression_Level/`
+      );
       const depressionLevelData = {
-        [`Week${currentWeek}`]: totalScore
+        [`Week${currentWeek}`]: totalScore,
       };
 
       await update(newDepressionLevelRef, depressionLevelData);
-      console.log('Depression level saved successfully');
+      console.log("Depression level saved successfully");
 
       // Increment the current week after successful save and update localStorage
       const newWeek = currentWeek === 7 ? 1 : currentWeek + 1;
       setStoredWeek(newWeek, currentWeek);
       setCurrentWeek(newWeek);
     } catch (error) {
-      console.error('Error saving depression level:', error);
+      console.error("Error saving depression level:", error);
     }
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     calculateScore();
   };
 
   return (
-    /*<BaseLayout>*/
-    <div>
-      <h1>Depression Quiz</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>1. Little interest or pleasure in doing things</label>
-          <select value={answers.q1 || ''} onChange={(e) => handleAnswerChange(e, 1)}>
-            <option value="0">Not at all</option>
-            <option value="1">Several days</option>
-            <option value="2">More than half the days</option>
-            <option value="3">Nearly every day</option>
-          </select>
-        </div>
+    <BaseLayout>
+      <div className="ml-96 justify-center lg:ml-72 md:ml-16 md:mr-3 xl:ml-96">
+        <h1 className="text-2xl font-bold mb-6 mt-10 text-center">
+          Depression Quiz
+        </h1>
+        <div className="bg-white rounded-lg shadow-md p-8">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label className="block font-medium">
+                1. Have you felt a lack of interest or pleasure in activities
+                lately?
+              </label>
+              <select
+                value={answers.q1 || ""}
+                onChange={(e) => handleAnswerChange(e, 1)}
+                className="mt-2 ml-5 block w-1/3 bg-gray-200 rounded px-2 py-1"
+              >
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+              </select>
+            </div>
 
-        <div>
-          <label>2. Feeling down, depressed, or hopeless</label>
-          <select value={answers.q2 || ''} onChange={(e) => handleAnswerChange(e, 2)}>
-            <option value="0">Not at all</option>
-            <option value="1">Several days</option>
-            <option value="2">More than half the days</option>
-            <option value="3">Nearly every day</option>
-          </select>
-        </div>
+            <div>
+              <label className="block font-medium">
+                2. Have you been feeling down, depressed, or hopeless recently?
+              </label>
+              <select
+                value={answers.q2 || ""}
+                onChange={(e) => handleAnswerChange(e, 2)}
+                className="mt-2 ml-5 block w-1/3 bg-gray-200 rounded px-2 py-1"
+              >
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+              </select>
+            </div>
 
-        <div>
-          <label>3. Trouble falling or staying asleep, or sleeping too much</label>
-          <select value={answers.q3 || ''} onChange={(e) => handleAnswerChange(e, 3)}>
-            <option value="0">Not at all</option>
-            <option value="1">Several days</option>
-            <option value="2">More than half the days</option>
-            <option value="3">Nearly every day</option>
-          </select>
-        </div>
+            <div>
+              <label className="block font-medium">
+                3. Have you had trouble sleeping or been sleeping too much?
+              </label>
+              <select
+                value={answers.q3 || ""}
+                onChange={(e) => handleAnswerChange(e, 3)}
+                className="mt-2 ml-5 block w-1/3 bg-gray-200 rounded px-2 py-1"
+              >
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+              </select>
+            </div>
 
-        <div>
-          <label>4. Feeling tired or having little energy</label>
-          <select value={answers.q4 || ''} onChange={(e) => handleAnswerChange(e, 4)}>
-            <option value="0">Not at all</option>
-            <option value="1">Several days</option>
-            <option value="2">More than half the days</option>
-            <option value="3">Nearly every day</option>
-          </select>
-        </div>
+            <div>
+              <label className="block font-medium">
+                4. Have you felt unusually tired or low on energy?
+              </label>
+              <select
+                value={answers.q4 || ""}
+                onChange={(e) => handleAnswerChange(e, 4)}
+                className="mt-2 ml-5 block w-1/3 bg-gray-200 rounded px-2 py-1"
+              >
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+              </select>
+            </div>
 
-        <div>
-          <label>5. Poor appetite or overeating</label>
-          <select value={answers.q5 || ''} onChange={(e) => handleAnswerChange(e, 5)}>
-            <option value="0">Not at all</option>
-            <option value="1">Several days</option>
-            <option value="2">More than half the days</option>
-            <option value="3">Nearly every day</option>
-          </select>
-        </div>
+            <div>
+              <label className="block font-medium">
+                5. Have you had a poor appetite or been overeating?
+              </label>
+              <select
+                value={answers.q5 || ""}
+                onChange={(e) => handleAnswerChange(e, 5)}
+                className="mt-2 ml-5 block w-1/3 bg-gray-200 rounded px-2 py-1"
+              >
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+              </select>
+            </div>
 
-        <div>
-          <label>6. Feeling bad about yourself or that you are a failure or have let yourself or your family down</label>
-          <select value={answers.q6 || ''} onChange={(e) => handleAnswerChange(e, 6)}>
-            <option value="0">Not at all</option>
-            <option value="1">Several days</option>
-            <option value="2">More than half the days</option>
-            <option value="3">Nearly every day</option>
-          </select>
-        </div>
+            <div>
+              <label className="block font-medium">
+                6. Have you been feeling bad about yourself or like you've let
+                yourself down?
+              </label>
+              <select
+                value={answers.q6 || ""}
+                onChange={(e) => handleAnswerChange(e, 6)}
+                className="mt-2 ml-5 block w-1/3 bg-gray-200 rounded px-2 py-1"
+              >
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+              </select>
+            </div>
 
-        <div>
-          <label>7. Trouble concentrating on things, such as reading the newspaper or watching television</label>
-          <select value={answers.q7 || ''} onChange={(e) => handleAnswerChange(e, 7)}>
-            <option value="0">Not at all</option>
-            <option value="1">Several days</option>
-            <option value="2">More than half the days</option>
-            <option value="3">Nearly every day</option>
-          </select>
-        </div>
+            <div>
+              <label className="block font-medium">
+                7. Have you had trouble concentrating on tasks?
+              </label>
+              <select
+                value={answers.q7 || ""}
+                onChange={(e) => handleAnswerChange(e, 7)}
+                className="mt-2 ml-5 block w-1/3 bg-gray-200 rounded px-2 py-1"
+              >
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+              </select>
+            </div>
 
-        <div>
-          <label>8. Moving or speaking so slowly that other people could have noticed. Or the opposite being so figety or restless that you have been moving around a lot more than usual</label>
-          <select value={answers.q8 || ''} onChange={(e) => handleAnswerChange(e, 8)}>
-            <option value="0">Not at all</option>
-            <option value="1">Several days</option>
-            <option value="2">More than half the days</option>
-            <option value="3">Nearly every day</option>
-          </select>
-        </div>
+            <div>
+              <label className="block font-medium">
+                8. Have you been noticeably slower or more agitated in your
+                movements lately?
+              </label>
+              <select
+                value={answers.q8 || ""}
+                onChange={(e) => handleAnswerChange(e, 8)}
+                className="mt-2 ml-5 block w-1/3 bg-gray-200 rounded px-2 py-1"
+              >
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+              </select>
+            </div>
 
-        <div>
-          <label>9. Thoughts that you would be better off dead, or of hurting yourself</label>
-          <select value={answers.q9 || ''} onChange={(e) => handleAnswerChange(e, 9)}>
-            <option value="0">Not at all</option>
-            <option value="1">Several days</option>
-            <option value="2">More than half the days</option>
-            <option value="3">Nearly every day</option>
-          </select>
+            <div>
+              <label className="block font-medium">
+                9. Have you had thoughts of self-harm or feeling that you would
+                be better off dead?
+              </label>
+              <select
+                value={answers.q9 || ""}
+                onChange={(e) => handleAnswerChange(e, 9)}
+                className="mt-2 ml-5 block w-1/3 bg-gray-200 rounded px-2 py-1"
+              >
+                <option value="0">Not at all</option>
+                <option value="1">Several days</option>
+                <option value="2">More than half the days</option>
+                <option value="3">Nearly every day</option>
+              </select>
+            </div>
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <button
+                  type="submit"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md ml-72 md:ml-64 md:top-4"
+                >
+                  Submit
+                </button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle className="text-lg">
+                    Depression Level
+                  </AlertDialogTitle>
+                  <AlertDialogDescription>
+                    {result && (
+                      <p className="mt-2 text-sm text-red-800">{result}</p>
+                    )}
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <Link href="/dashboard/Recomendation">
+                    <AlertDialogAction className="bg-blue-500 hover:bg-blue-700">
+                      Get Recommendation
+                    </AlertDialogAction>{" "}
+                    <Link href="/dashboard/Quiz">
+                      <AlertDialogCancel>Exit</AlertDialogCancel>
+                    </Link>
+                  </Link>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+          </form>
         </div>
-
-        <button type="submit">Submit</button>
-      </form>
-      {result && <p>Your depression level: {result}</p>}
-    </div>
-    /*</BaseLayout>*/
+      </div>
+    </BaseLayout>
   );
 };
 
