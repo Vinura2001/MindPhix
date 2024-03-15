@@ -9,56 +9,57 @@ import { FcGoogle } from 'react-icons/fc';
 import Link from "next/link";
 import { useState, ChangeEvent } from "react";
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { auth } from "@/app/firebase/config";
+import { auth, database } from "@/app/firebase/config";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { database } from "@/app/firebase/config";
 import { push, ref, set } from "firebase/database";
 
 export default function Signup() {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const router = useRouter();
-  const [emailError, setEmailError] = React.useState("");
-  const [passwordError, setPasswordError] = React.useState("");
-  const [confirmPasswordError, setConfirmPasswordError] = React.useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [confirmPasswordError, setConfirmPasswordError] = useState("");
+  const [usernameError, setUsernameError] = useState("");
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
 
+  // Function to handle sign-up
   const handleSignUp = async () => {
     try {
-      if (!email || !password || !confirmPassword) {
+      // Validate input fields
+      if (!username || !email || !password || !confirmPassword) {
         setEmailError("Please enter your user details to proceed.");
         return;
       }
 
       if (password !== confirmPassword) {
-        setConfirmPasswordError("Passwords don't match with each.");
+        setConfirmPasswordError("Passwords don't match.");
         return;
       }
 
+      // Create user with email and password
       const res = await createUserWithEmailAndPassword(email, password);
 
       if (res) {
-        const userRef = ref(database, 'users');
-        const newDataref = push(userRef);
+        const user = res.user;
 
-        set(newDataref, {
-          email: email,
-          password: password,
+        // Store user details in the Realtime Database
+        const userRef = ref(database, `users/${user.uid}`);
+        await set(userRef, {
+          User_Name: username,
+          Email_Address: email,
         });
 
-        setEmail("");
-        setPassword("");
-
-        alert('Data added successfully!!');
-
+        alert('Data added successfully!');
+        // Redirect user to the dashboard
         router.push("/dashboard/Dashboard");
       }
     } catch (error) {
       console.error("Error signing up:", error);
-      console.error("Firebase Error:", error);
     }
   };
 
@@ -69,6 +70,11 @@ export default function Signup() {
     } catch (error) {
       console.error("Error signing in with Google:", error);
     }
+  };
+
+  const handleUsernameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.target.value);
+    setUsernameError("");
   };
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -105,11 +111,11 @@ export default function Signup() {
 
               {/* Signup with Google account */}
               <div className="flex justify-center my-2">
-                <button
+                <button 
                   className="border-2 border-gray-200 text-sm font-semibold text-gray-400 rounded-full px-12 py-2 inline-flex items-center hover:bg-gray-200 hover:text-black mb-2"
                   onClick={handleSignInWithGoogle}
                 >
-                  <FcGoogle className="mr-2" />
+                  <FcGoogle className="mr-2"/>
                   <span>Sign up via your Google Account</span>
                 </button>
               </div>
@@ -120,7 +126,19 @@ export default function Signup() {
 
               {/* Signup with email account */}
               <div className="flex flex-col items-center">
-                {emailError && <p className="text-red-500 text-xs font-semibold mb-3">{emailError}</p>}
+                {usernameError && <p className="text-red-500 text-xs font-semibold mb-3">{usernameError}</p>}
+                <div className="bg-gray-100 w-full sm:w-64 p-2 flex items-center mb-3">
+                  <FaRegEnvelope className="text-gray-400 mr-2" />
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    className="bg-gray-100 outline-none text-sm flex-1"
+                    onChange={handleUsernameChange}
+                    value={username}
+                  />
+                </div>
+                {emailError && <p className="text-red-500 text-xs font-semibold mb-3">{emailError}</p>}  
                 <div className="bg-gray-100 w-full sm:w-64 p-2 flex items-center mb-3">
                   <FaRegEnvelope className="text-gray-400 mr-2" />
                   <input
@@ -178,7 +196,7 @@ export default function Signup() {
               layout="fill"
               objectFit="cover"
             />
-          </div>
+          </div>  
           {/*Image section*/}
 
         </div>
