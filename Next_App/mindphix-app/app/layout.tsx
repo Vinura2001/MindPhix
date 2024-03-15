@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
 import "./styles/Home.css";
-import './styles/SideMenu.css';
-import './styles/Dashboard.css';
-import './styles/chat_interface.css';
-import './styles/ProgressReport.css';
-import './styles/UserProfile.css';
-import './styles/ChatBot.css';
-import './styles/Recomendationpage.css'
-import '@/app/styles/Responsive.css';
-
+import "./styles/SideMenu.css";
+import "./styles/Dashboard.css";
+import "./styles/ProgressReport.css";
+import "./styles/UserProfile.css";
+import "./styles/ChatBot.css";
+import "@/app/styles/Responsive.css";
 
 export const metadata: Metadata = {
-  title: "MindPhix"
+  title: "MindPhix",
 };
 
 export default function RootLayout({
