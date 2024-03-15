@@ -36,12 +36,7 @@ const sidebarItems = [
     name: "Get recomendation",
     href: "/dashboard/Recomendation",
     icon: AiFillAlert,
-  },
-  {
-    name: "Chat",
-    href: "/dashboard/Chat",
-    icon: CiChat1,
-  },
+  }
 ];
 
 export default function Sidebar() {

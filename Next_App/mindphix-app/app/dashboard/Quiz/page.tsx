@@ -1,7 +1,7 @@
 "use client";
-import { ChangeEvent, useState } from "react";
-import BaseLayout from "../BaseLayout";
-import { ref, push, update } from "firebase/database";
+import { ChangeEvent, useState } from 'react';
+import BaseLayout from '../BaseLayout';
+import { ref, push, update } from 'firebase/database';
 import { database } from "@/app/firebase/config";
 import {
   AlertDialog,
@@ -17,18 +17,34 @@ import {
 import Link from "next/link";
 
 const getStoredWeek = () => {
-  const storedWeek = localStorage.getItem("currentWeek");
+  const storedWeek = localStorage.getItem('currentWeek');
   return storedWeek ? parseInt(storedWeek) : 1; // Default to week 1 if no stored value
 };
 
 const setStoredWeek = (week: number, currentWeek: number) => {
   if (week !== currentWeek) {
-    localStorage.setItem("currentWeek", week.toString());
+    localStorage.setItem('currentWeek', week.toString());
   }
 };
 
+const getLastSubmissionDate = () => {
+  const storedDate = localStorage.getItem('lastSubmissionDate');
+  return storedDate ? new Date(storedDate) : null;
+};
+
+const setLastSubmissionDate = (date: Date) => {
+  localStorage.setItem('lastSubmissionDate', date.toISOString());
+};
+
+const hasOneWeekPassed = (lastSubmissionDate: Date) => {
+  const currentDate = new Date();
+  const oneWeekInMilliseconds = 7 * 24 * 60 * 60 * 1000;
+  const timeDifference = currentDate.getTime() - lastSubmissionDate.getTime();
+  return timeDifference >= oneWeekInMilliseconds;
+};
+
 const QuizPage = () => {
-  const [UserId, setUserId] = useState<string>("U001");
+  const [UserId, setUserId] = useState<string>('U001');
 
   const [answers, setAnswers] = useState({
     q1: null,
@@ -41,13 +57,10 @@ const QuizPage = () => {
     q8: null,
     q9: null,
   });
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState('');
   const [currentWeek, setCurrentWeek] = useState(getStoredWeek());
 
-  const handleAnswerChange = (
-    e: ChangeEvent<HTMLSelectElement>,
-    questionNumber: number
-  ) => {
+  const handleAnswerChange = (e: ChangeEvent<HTMLSelectElement>, questionNumber: number) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
       [`q${questionNumber}`]: parseInt(e.target.value),
@@ -55,49 +68,50 @@ const QuizPage = () => {
   };
 
   const calculateScore = async () => {
-    const totalScore = Object.values(answers).reduce(
-      (acc, val) => acc + (val || 0),
-      0
-    );
+    const totalScore = Object.values(answers).reduce((acc, val) => acc + (val || 0), 0);
     let depressionLevel;
 
     if (totalScore >= 1 && totalScore <= 4) {
-      depressionLevel = "Minimal Depression";
+      depressionLevel = 'Minimal depression';
     } else if (totalScore >= 5 && totalScore <= 9) {
-      depressionLevel = "Mild Depression";
+      depressionLevel = 'Mild depression';
     } else if (totalScore >= 10 && totalScore <= 14) {
-      depressionLevel = "Moderate Depression";
+      depressionLevel = 'Moderate depression';
     } else if (totalScore >= 15 && totalScore <= 19) {
-      depressionLevel = "Moderately Severe Depression";
+      depressionLevel = 'Moderately severe depression';
     } else if (totalScore >= 20 && totalScore <= 27) {
-      depressionLevel = "Severe Depression";
+      depressionLevel = 'Severe depression';
     }
 
-    setResult(depressionLevel || "");
+    setResult(depressionLevel || '');
 
     try {
       const userId = UserId;
-      const newDepressionLevelRef = ref(
-        database,
-        `users/${userId}/Progress/Depression_Level/`
-      );
+      const newDepressionLevelRef = ref(database, `users/${userId}/Progress/Depression_Level/`);
       const depressionLevelData = {
-        [`Week${currentWeek}`]: totalScore,
+        [`Week${currentWeek}`]: totalScore
       };
 
       await update(newDepressionLevelRef, depressionLevelData);
-      console.log("Depression level saved successfully");
+      console.log('Depression level saved successfully');
 
-      // Increment the current week after successful save and update localStorage
-      const newWeek = currentWeek === 7 ? 1 : currentWeek + 1;
-      setStoredWeek(newWeek, currentWeek);
-      setCurrentWeek(newWeek);
+      // Check if one week has passed since the last submission date
+      const lastSubmissionDate = getLastSubmissionDate();
+      const shouldIncrementWeek = !lastSubmissionDate || hasOneWeekPassed(lastSubmissionDate);
+
+      // Update the current week and last submission date
+      setCurrentWeek((prevWeek) => {
+        const newWeek = shouldIncrementWeek ? (prevWeek === 7 ? 1 : prevWeek + 1) : prevWeek;
+        setStoredWeek(newWeek, prevWeek);
+        setLastSubmissionDate(new Date());
+        return newWeek;
+      });
     } catch (error) {
-      console.error("Error saving depression level:", error);
+      console.error('Error saving depression level:', error);
     }
   };
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     calculateScore();
   };
