@@ -110,12 +110,13 @@ export default function ProgressReport() {
         <div className="AchievementBox3_Topic">Positive Mood Shift</div>
         <div className="AchievementBox3">
 
-          <img id="happy_face" src="/Figures/1_happy_face.png" alt="happy_face" />
-          <img id="smile_face" src="/Figures/2_smile_face.png" alt="smile_face" />
-          <img id="neutral_face" src="/Figures/3_neutral_face.png" alt="neutral_face" />
-          <img id="injured_face" src="/Figures/4_injured_face.png" alt="injured_face" />
-          <img id="sceptic_face" src="/Figures/5_sceptic_face.png" alt="sceptic_face" />
-          <img id="sad_face" src="/Figures/6_sad_face.png" alt="sad_face" />
+          <img id="face1" src="/Figures/Happy.png" alt="injured_face" />
+          <img id="face2" src="/Figures/Clam.png" alt="smile_face" />
+          <img id="face3" src="/Figures/Nutral.png" alt="sceptic_face" />
+          <img id="face4" src="/Figures/Confused.png" alt="neutral_face" />
+          <img id="face5" src="/Figures/Scared.png" alt="sad_face" />
+          <img id="face6" src="/Figures/Anxious.png" alt="Anxious_face" />
+          <img id="face7" src="/Figures/Sad.png" alt="sad_face" />
           
           <MoodChart />
           

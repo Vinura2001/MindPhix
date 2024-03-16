@@ -2,8 +2,55 @@
 import React, { useState } from "react";
 import BaseLayout from "../BaseLayout";
 import "../../styles/recommendations.css";
+import { ref, set, get, child, update } from "firebase/database";
+import { database } from "@/app/firebase/config";
+
+const getStoredWeek = () => {
+  const storedWeek = localStorage.getItem('currentWeek');
+  return storedWeek ? parseInt(storedWeek) : 1; // Default to week 1 if no stored value
+};
+
+const setStoredWeek = (week: number, currentWeek: number) => {
+  if (week !== currentWeek) {
+    localStorage.setItem('currentWeek', week.toString());
+  }
+};
+
+const getLastSubmissionDate = () => {
+  const storedDate = localStorage.getItem('lastSubmissionDate');
+  return storedDate ? new Date(storedDate) : null;
+};
+
+const setLastSubmissionDate = (date: Date) => {
+  localStorage.setItem('lastSubmissionDate', date.toISOString());
+};
+
+const hasOneWeekPassed = (lastSubmissionDate: Date) => {
+  const currentDate = new Date();
+  const oneWeekInMilliseconds = 7 * 24 * 60 * 60 * 1000;
+  const timeDifference = currentDate.getTime() - lastSubmissionDate.getTime();
+  return timeDifference >= oneWeekInMilliseconds;
+};
+
+const resetCategoryCounts = async (userId: string, categories: string[]) => {
+  const categoryRefs = categories.map((category) =>
+    ref(database, `users/${userId}/Progress/Recomendation_Analytics/${category}/Count`)
+  );
+
+  const updates = Object.fromEntries(categoryRefs.map((ref) => [ref.toString(), 0]));
+
+  try {
+    await update(ref(database), updates);
+    console.log('Category counts reset successfully');
+  } catch (error) {
+    console.error('Error resetting category counts:', error);
+  }
+};
 
 function Index() {
+  const [UserId, setUserId] = useState<string>('U001');
+  const [Category, setCategory] = useState<string>('Category_1');
+  const [currentWeek, setCurrentWeek] = useState(getStoredWeek());
   const [recommendation, setRecommendation] = useState("");
   const [link, setLink] = useState("");
   const [formData, setFormData] = useState({
@@ -49,6 +96,72 @@ function Index() {
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
+    const { mood_level, gender, age, category } = formData;
+    var mood_score;
+
+    var category_1 = 0;
+    var category_2 = 0;
+    var category_3 = 0;
+    var category_4 = 0;
+    var category_5 = 0;
+    var category_6 = 0;
+    var category_7 = 0;
+    var category_8 = 0;
+
+    var RecomendationCategory;
+
+    //chech the mood level
+    if (mood_level == 'Anxious') {
+      mood_score = 1;
+    } else if (mood_level == 'Clam') {
+      mood_score = 5;
+    } else if (mood_level == 'Confused') {
+      mood_score = 3;
+    } else if (mood_level == 'Happy') {
+      mood_score = 6;
+    } else if (mood_level == 'Netural') {
+      mood_score = 4;
+    } else if (mood_level == 'Sad') {
+      mood_score = 0;
+    } else if (mood_level == 'Scared') {
+      mood_score = 2;
+    }
+
+    //check the category
+    if (category == 'Expressive Arts Therapy') {
+      category_1++;
+      RecomendationCategory = category_1;
+      setCategory('Category_1')
+    } else if (category == 'Mindfulness and Relaxation Techniques') {
+      category_2++;
+      RecomendationCategory = category_2;
+      setCategory('Category_2')
+    } else if (category == 'Motivational Videos') {
+      category_3++;
+      RecomendationCategory = category_3;
+      setCategory('Category_3')
+    } else if (category == 'Movies and Drama') {
+      category_4++;
+      RecomendationCategory = category_4;
+      setCategory('Category_4')
+    } else if (category == 'Physical Health Resource') {
+      category_5++;
+      RecomendationCategory = category_5;
+      setCategory('Category_5')
+    } else if (category == 'Podcasts') {
+      category_6++;
+      RecomendationCategory = category_6;
+      setCategory('Category_6')
+    } else if (category == 'Professional Help') {
+      category_7++;
+      RecomendationCategory = category_7;
+      setCategory('Category_7')
+    } else if (category == 'Social Connection Strategies') {
+      category_8++;
+      RecomendationCategory = category_8;
+      setCategory('Category_8')
+    }
+
     try {
       const response = await fetch("http://127.0.0.1:8080/predict", {
         method: "POST",
@@ -64,6 +177,55 @@ function Index() {
       setLink(linkText);
     } catch (error) {
       console.error("Error:", error);
+    }
+
+    // save the mood level to the database
+    try {
+      const userId = UserId;
+      const category = Category;
+      const newMoodLevelRef = ref(database, `users/${userId}/Progress/Mood_Shift/`);
+      const moodLevelData = {
+        [`Week${currentWeek}`]: mood_score
+      };
+
+      await update(newMoodLevelRef, moodLevelData);
+      console.log('Mood level saved successfully');
+
+      const newCategoryRef = ref(database, `users/${userId}/Progress/Recomendation_Analytics/${category}/`);
+      const existingCategoryRef = ref(database, `users/${userId}/Progress/Recomendation_Analytics/${category}/Count`);
+      let existingCount = (await get(existingCategoryRef)).val() || 0;
+
+      // Reset the count if the current week is 1
+      if (currentWeek === 1) {
+        existingCount = 0;
+      }
+
+      const categoryData = {
+        Count: existingCount + RecomendationCategory
+      };
+
+      await update(newCategoryRef, categoryData);
+      console.log('Category count updated successfully');
+
+      // Check if one week has passed since the last submission date
+      const lastSubmissionDate = getLastSubmissionDate();
+      const shouldIncrementWeek = !lastSubmissionDate || hasOneWeekPassed(lastSubmissionDate);
+
+      // Update the current week and last submission date
+      setCurrentWeek((prevWeek) => {
+        const newWeek = shouldIncrementWeek ? (prevWeek === 7 ? 1 : prevWeek + 1) : prevWeek;
+
+        // Reset the category counts if the new week is 1
+        if (newWeek === 1) {
+          resetCategoryCounts(userId, categories);
+        }
+
+        setStoredWeek(newWeek, prevWeek);
+        setLastSubmissionDate(new Date());
+        return newWeek;
+      });
+    } catch (error) {
+      console.error('Error saving mood level:', error);
     }
   };
 

@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+import BaseLayout from "../BaseLayout";
 
 const BotComponent = () => {
   useEffect(() => {
@@ -19,11 +20,13 @@ const BotComponent = () => {
   }, []);
 
   return (
-    <div
-      id="botcopy-embedder-d7lcfheammjct"
-      className="botcopy-embedder-d7lcfheammjct"
-      data-botId="65f1b50fa179a000095ac437"
-    />
+    <BaseLayout>
+      <div
+        id="botcopy-embedder-d7lcfheammjct"
+        className="botcopy-embedder-d7lcfheammjct"
+        data-botId="65f1b50fa179a000095ac437"
+      />
+    </BaseLayout>
   );
 };
 

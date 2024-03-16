@@ -174,40 +174,59 @@
 
 /*Graph line chart start*/
 
-#happy_face{
-  position: absolute;
-  top: 21%;
-  left: 5%;
+#face1, #face2, #face3, #face4, #face5, #face6, #face7{
+  width: 16px;
+  height:16px;
 }
 
-#smile_face{
+#face1{
   position: absolute;
-  top: 34%;
-  left: 5%;
+  top: 14%;
+  left: 4%;
 }
 
-#neutral_face{
+#face2{
   position: absolute;
-  top: 46%;
-  left: 5%;
+  top: 24%;
+  left: 4%;
 }
 
-#injured_face{
+#face3{
   position: absolute;
-  top: 56%;
-  left: 5%;
+  top: 33%;
+  left: 2.5%;
+  width: 25px;
+  height:23px;
 }
 
-#sceptic_face{
+#face4{
   position: absolute;
-  top: 67%;
-  left: 5%;
+  top: 40%;
+  left: 2%;
+  width: 30px;
+  height:40px;
 }
 
-#sad_face{
+#face5{
   position: absolute;
-  top: 77.6%;
-  left: 5%;
+  top: 55%;
+  left: 3%;
+  width: 20px;
+  height:20px;
+}
+
+#face6{
+  position: absolute;
+  top: 65%;
+  left: 4%;
+}
+
+#face7{
+  position: absolute;
+  top: 71%;
+  left: 2.5%;
+  width: 25px;
+  height:35px;
 }
 
 /*Graph line chart end*/
