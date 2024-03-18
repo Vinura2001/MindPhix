@@ -163,14 +163,14 @@ function Index() {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:8080/predict", {
+      const response = await fetch("https://mindphix-deploy.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
         body: new URLSearchParams(formData).toString(),
       });
-
+    
       const data = await response.json();
       const [recommendationText, linkText] = data.recommendation.split(" - ");
       setRecommendation(recommendationText);

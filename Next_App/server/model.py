@@ -2,35 +2,12 @@
 import pandas as pd
 from sklearn.preprocessing import OrdinalEncoder
 from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 
+
 # Loading the dataset
-df = pd.read_csv('MindPhix Sorted Dataset New.csv')
-
-#Data Preprocessing 
-
-# Ordinal Encoding - Depression Level and Age Range
-depression_level = ['Minimal', 'Mild', 'Moderate', 'Moderately Severe', 'Severe']
-enc = OrdinalEncoder(categories=[depression_level])
-encoded_levels = enc.fit_transform(df[['Depression level']])
-df['Depression level'] = encoded_levels
-
-age_ranges = ['15-19', '20-24', '25-34', '35-44', '45-54', '55-65']
-enc2 = OrdinalEncoder(categories=[age_ranges])
-encoded_ages = enc2.fit_transform(df[['Age Range']])
-df['Age Range'] = encoded_ages
-
-# Label Encoding 
-# List of categorical columns to encode
-categorical_cols = ['Mood Level', 'Gender', 'Category']
-
-# Initialize LabelEncoder
-label_encoder = LabelEncoder()
-
-# Iterate over the categorical columns and apply label encoding
-for col in categorical_cols:
-    df[col] = label_encoder.fit_transform(df[col])
+df = pd.read_csv('encode.csv')
 
 # Combine 'Recommendation' and 'Link' columns into a single target variable
 df['Target'] = df['Recommendation'] + ' - ' + df['Link']
@@ -45,7 +22,7 @@ x_train, x_test, y_train, y_test = train_test_split(df[feature_columns], df[targ
 #Training the dataset using Random Forest Classifier Algorithm
 
 # Train a decision tree classifier
-model = RandomForestClassifier().fit(x_train, y_train)
+model = DecisionTreeClassifier().fit(x_train, y_train)
 
 #Mapping
 
