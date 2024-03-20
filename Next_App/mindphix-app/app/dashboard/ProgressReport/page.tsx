@@ -6,9 +6,10 @@ import MoodChart from "@/components/ui/MoodChart";
 import DepressionChart from "@/components/ui/Depression_Chart";
 import RecomendationChart from "@/components/ui/RecomondationChart";
 import Logout from "../Dashboard/logout";
-import {get, ref,} from 'firebase/database';
+import {get, ref, remove} from 'firebase/database';
 import { useState, useEffect } from 'react';
 import { database } from "@/app/firebase/config";
+import { Button } from "@/components/ui/button";
 
 interface User {
   id: string;
@@ -24,7 +25,7 @@ interface User {
 
 export default function ProgressReport() {
 
-  const [userId, setUserId] = useState<string>('U001'); // Default user ID
+  const [userId, setUserId] = useState<string>('U002'); // Default user ID
   const [user, setUser] = useState<User | null>(null);
   const [currentDate, setCurrentDate] = useState(new Date());
 
@@ -71,6 +72,17 @@ export default function ProgressReport() {
     setUserId(newUserId);
   };
 
+  const handleDeleteProgress = async () => {
+    try {
+      const userRef = ref(database, `users/${userId}/Progress`);
+      await remove(userRef);
+      console.log("User data deleted successfully");
+    } catch (error) {
+      console.error("Error deleting user data:", error);
+      // You can also display an error message to the user here
+    }
+  };
+
   return(
     <BaseLayout>
       {user && (
@@ -84,6 +96,13 @@ export default function ProgressReport() {
           <div className="ProgressReport_Date">{formattedDate}</div>
           <div className="ProgressReport_Welcome_Text">Welcome back, {user.First_Name}!</div>
           <div className="ProgressReport_Welcome_Text2">We keep track of your progress</div>
+          <Button
+            type="button"
+            onClick={handleDeleteProgress}
+            className="ProgressDelete_Button text-sm text-white bg-red-800 h-6 p-4 rounded-sm hover:bg-blue-900"
+          >
+            Delete Progress
+          </Button>
         </div>
 
         {/* Achievements start */}

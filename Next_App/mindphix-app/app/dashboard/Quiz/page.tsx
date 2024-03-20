@@ -1,5 +1,5 @@
 "use client";
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useState, useEffect } from 'react';
 import BaseLayout from '../BaseLayout';
 import { ref, push, update } from 'firebase/database';
 import { database } from "@/app/firebase/config";
@@ -58,7 +58,12 @@ const QuizPage = () => {
     q9: null,
   });
   const [result, setResult] = useState('');
-  const [currentWeek, setCurrentWeek] = useState(getStoredWeek());
+  const [currentWeek, setCurrentWeek] = useState(1); // Default to week 1
+
+  useEffect(() => {
+    const storedWeek = getStoredWeek();
+    setCurrentWeek(storedWeek);
+  }, []);
 
   const handleAnswerChange = (e: ChangeEvent<HTMLSelectElement>, questionNumber: number) => {
     setAnswers((prevAnswers) => ({
@@ -207,8 +212,8 @@ const QuizPage = () => {
 
             <div>
               <label className="block font-medium">
-                6. Have you been feeling bad about yourself or like you've let
-                yourself down?
+                6. Have you been feeling bad about yourself or like you&apos;ve let
+                    yourself down?
               </label>
               <select
                 value={answers.q6 || ""}

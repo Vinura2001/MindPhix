@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BaseLayout from "../BaseLayout";
 import "../../styles/recommendations.css";
 import { ref, set, get, child, update } from "firebase/database";
@@ -50,7 +50,7 @@ const resetCategoryCounts = async (userId: string, categories: string[]) => {
 function Index() {
   const [UserId, setUserId] = useState<string>('U001');
   const [Category, setCategory] = useState<string>('Category_1');
-  const [currentWeek, setCurrentWeek] = useState(getStoredWeek());
+  const [currentWeek, setCurrentWeek] = useState(1); // Default to week 1
   const [recommendation, setRecommendation] = useState("");
   const [link, setLink] = useState("");
   const [formData, setFormData] = useState({
@@ -88,6 +88,11 @@ function Index() {
     "Professional Help",
     "Social Connection Strategies",
   ];
+
+  useEffect(() => {
+    const storedWeek = getStoredWeek();
+    setCurrentWeek(storedWeek);
+  }, []);
 
   const handleChange = (e: { target: { name: any; value: any } }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -170,7 +175,7 @@ function Index() {
         },
         body: new URLSearchParams(formData).toString(),
       });
-    
+
       const data = await response.json();
       const [recommendationText, linkText] = data.recommendation.split(" - ");
       setRecommendation(recommendationText);
@@ -228,6 +233,7 @@ function Index() {
       console.error('Error saving mood level:', error);
     }
   };
+
 
   return (
     <BaseLayout>

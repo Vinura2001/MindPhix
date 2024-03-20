@@ -41,10 +41,10 @@ function AboutUs() {
                         Vinura Imesh
                       </HoverCardTrigger>
                       <HoverCardContent className="text-xs text-gray-500">
-                        Hey👋 I'm Vinura, a sophomore majoring in Software
-                        Engineering.
+                      Hey&nbsp;👋&nbsp;I&apos;m Vinura, a sophomore majoring in Software
+                      Engineering.
                         <br />
-                        Let's connect and explore how we can collaborate to
+                        Let&apos;s connect and explore how we can collaborate to
                         bring innovative ideas to life!
                       </HoverCardContent>
                     </HoverCard>
@@ -91,9 +91,9 @@ function AboutUs() {
                         Janeesha Fernando
                       </HoverCardTrigger>
                       <HoverCardContent className="text-xs text-gray-500">
-                        Hello! 👋 I'm Janeesha, a second-year undergraduate
+                        Hello!&nbsp;👋&nbsp;I&apos;m Janeesha, a second-year undergraduate
                         majoring in Software Engineering. Feel free to reach
-                        out, and let's create something extraordinary! 🌟
+                        out, and let&apos;s create something extraordinary!&nbsp;🌟
                       </HoverCardContent>
                     </HoverCard>
                   </h1>
@@ -139,9 +139,9 @@ function AboutUs() {
                         Dileesha Gamage
                       </HoverCardTrigger>
                       <HoverCardContent className="text-xs text-gray-500">
-                        Howdy! 👋 I'm Dileesha, a second-year Software
-                        Engineering enthusiast. Let's connect and create
-                        something extraordinary together! 💻✨
+                        Howdy!&nbsp;👋&nbsp;I&apos;m Dileesha, a second-year Software
+                        Engineering enthusiast. Let&apos;s connect and create
+                        something extraordinary together!&nbsp;💻✨
                       </HoverCardContent>
                     </HoverCard>
                   </h1>
@@ -187,9 +187,9 @@ function AboutUs() {
                         Hansith Fonseka
                       </HoverCardTrigger>
                       <HoverCardContent className="text-xs text-gray-500">
-                        Hi! 👋 I'm Hansith, a second-year Software Engineering
-                        student. Ready to collaborate? Let's create something
-                        extraordinary together! 💻✨
+                        Hi!&nbsp;👋&nbsp;I&apos;m Hansith, a second-year Software Engineering
+                        student. Ready to collaborate? Let&apos;s create something
+                        extraordinary together!&nbsp;💻✨
                       </HoverCardContent>
                     </HoverCard>
                   </h1>

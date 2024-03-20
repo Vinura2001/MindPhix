@@ -50,6 +50,12 @@
   left: 0%;
 }
 
+.ProgressDelete_Button{
+  position: absolute;
+  top: 65%;
+  left: 84%;
+}
+
 .ProgressReport_Date{
   font-family:  'Poppins', sans-serif;
   font-weight: bolder;

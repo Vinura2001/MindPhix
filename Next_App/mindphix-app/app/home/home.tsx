@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 export default function Home() {
   return (
     <div className="md:px-12 p-4 max-w-screen-2xl mx-auto mt-24" id="home">
@@ -38,7 +39,9 @@ export default function Home() {
             </p>
             <div>
               <Button className="py-2 px-6 bg-blue-600 font-semibold text-white hover:bg-blue-700 transition-all duration-300">
+                <Link href="/sign-in">
                 Get Started
+                </Link>
               </Button>
             </div>
           </motion.div>
