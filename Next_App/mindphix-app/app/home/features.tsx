@@ -16,7 +16,7 @@ function Features() {
       />
       <Feature
         title="Personalised Reccomendations"
-        description="Experience a tailored path to well-being with our Personalized Recommendations feature. Our intelligent chatbot goes beyond generic advice, understanding your unique journey and needs. Through comprehensive analysis of your interactions, the chatbot provides personalized recommendations for coping with depression and enhancing overall mental health."
+        description="Embark on a journey to well-being with our Personalized Recommendations feature. Tailored to your unique preferences, simply provide your personal information, and unlock customized recommendations designed specifically for you. Experience a holistic approach to enhancing your well-being with personalized guidance at your fingertips."
         imageUrl="/home-assets/blog-assets/reccomendations.jpg"
         isImageOnRight={true} // Change this prop to control the layout
         imageHeight={400}
