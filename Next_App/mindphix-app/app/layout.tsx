@@ -6,6 +6,7 @@ import "./styles/Dashboard.css";
 import "./styles/ProgressReport.css";
 import "./styles/UserProfile.css";
 import "./styles/ChatBot.css";
+import './styles/chat-home.css';
 import "@/app/styles/Responsive.css";
 
 export const metadata: Metadata = {

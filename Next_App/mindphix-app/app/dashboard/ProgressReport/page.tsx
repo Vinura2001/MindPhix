@@ -87,9 +87,6 @@ export default function ProgressReport() {
     <BaseLayout>
       {user && (
         <div>
-          <div className="ProgressReport__MenuIcon">
-            <Logout/>
-          </div>
 
         <div className="ProgressReport_TopBox">
           <img className="ProgressReport_TopBox_Image" src="/Figures/TopBox_Image.png" alt="TopBox_Image" />

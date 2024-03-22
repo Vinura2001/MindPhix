@@ -72,10 +72,7 @@ export default function Dashboard() {
       {user && (
         <div className="Dashboard_Container">
           {/* Dashboard content Start */}
-          <h1 className="Dashboard_Topic">Dashboard</h1>
 
-          <img className="Dashboard_TopUserIcon" src="/Figures/TopUserIcon.png" alt="TopUserIcon" />
-          <div className="Dashboard_TopUserContent1">{user.First_Name}</div>
 
           <div className="Dashboard_TopBox">
             <img className="Dashboard_TopBox_Image" src="/Figures/DashBoard_TopBoxImage.png" alt="TopBox_Image" />

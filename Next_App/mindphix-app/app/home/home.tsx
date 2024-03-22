@@ -40,7 +40,7 @@ export default function Home() {
             <div>
               <Button className="py-2 px-6 bg-blue-600 font-semibold text-white hover:bg-blue-700 transition-all duration-300">
                 <Link href="/sign-in">
-                Get Started
+                  Get Started
                 </Link>
               </Button>
             </div>
