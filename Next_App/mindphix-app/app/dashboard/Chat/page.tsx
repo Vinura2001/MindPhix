@@ -1,7 +1,6 @@
 import React from "react";
 import BaseLayout from "../BaseLayout";
 import Image from "next/image";
-import "../../styles/chat-home.css";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
