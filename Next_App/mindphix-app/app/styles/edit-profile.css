@@ -12,7 +12,6 @@
   }
 
   .fields {
-    grid-template-rows: repeat(6, auto);
     margin-left: 20px;
     width: 200px;
   }
