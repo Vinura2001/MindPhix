@@ -24,7 +24,7 @@ function Features() {
       />
       <Feature
         title="Weekly Progress Report"
-        description="Introducing the Personalized Progress Report feature, our chatbot goes beyond immediate support by allowing users to track their own journey and gain deeper insights into their mental health over time. Delve into comprehensive reports highlighting mood scores, depression level trends, identified patterns, and personalized recommendations."
+        description="Introducing the Personalized Progress Report feature, our applciation goes beyond immediate support by allowing users to track their own journey and gain deeper insights into their mental health over time. Delve into comprehensive reports highlighting mood scores, depression level trends, identified patterns, and personalized recommendations."
         imageUrl="/home-assets/blog-assets/progress-report.jpg"
         isImageOnRight={true} // Change this prop to control the layout
         imageHeight={400}
