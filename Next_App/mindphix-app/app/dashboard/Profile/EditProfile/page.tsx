@@ -119,6 +119,7 @@ export default function EditProfile() {
               className="w-full cover-photo"
             ></Image>
             <div className="font-poppins text-xl font-bold relative mt-2 ml-20 username">
+              {/*Read user data from the realtime database.*/}
               {user.First_Name} {user.Last_Name}
             </div>
           </div>
@@ -140,6 +141,7 @@ export default function EditProfile() {
                             placeholder="First Name"
                             type="text"
                             {...field}
+                            //Read data from the realtime database.
                             defaultValue={user.First_Name}
                           />
                         </FormControl>
