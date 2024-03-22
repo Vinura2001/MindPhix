@@ -24,7 +24,7 @@ function Chat() {
           Make Your Mental Health A Priority
         </h1>
         <p className="title3 text-gray-600 font-poppins mt-5 ml-10 font-medium lg:text-sm xl:text-base xl:mt-10">
-          Mental health support that's right for you.
+          Mental health support that&apos;s right for you.
         </p>
         <Link href="/dashboard/Chat/ChatInterface" target="__blank">
           <Button className="mt-5 ml-7 hover:bg-blue-400 bg-blue-500 xl:mt-10 xl:p-5 start-btn">
