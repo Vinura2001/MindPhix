@@ -33,7 +33,7 @@ function Chat() {
         </Link>
       </div>
 
-      <div className="bottom-container rounded-lg bg-white rounder-lg pb-10 mt-[320px] absolute lg:w-[710px] shadow-xl max-h-fit left-72 md:-ml-48 md:w-[740px] md:h-[300px] lg:ml-2 xl:mt-[450px] xl:w-[1120px] xl:h-[380px]">
+      <div className="bottom-container rounded-lg bg-white rounder-lg pb-10 mt-[320px] absolute lg:w-[710px] shadow-xl max-h-fit left-72 md:-ml-48 md:w-[740px] md:h-[300px] lg:ml-2 xl:mt-[400px] xl:w-[1120px] xl:h-[380px]">
         <h1 className="lg:mt-10 lg:ml-10 text-base font-bold md:mt-10 md:ml-10 xl:text-2xl title4">
           Spreading Depression Awareness
         </h1>
