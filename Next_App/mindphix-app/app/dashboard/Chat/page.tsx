@@ -27,7 +27,7 @@ function Chat() {
           Mental health support that's right for you.
         </p>
         <Link href="/dashboard/Chat/ChatInterface" target="__blank">
-          <Button className="mt-5 ml-7 hover:bg-blue-400 bg-blue-500 xl:mt-10 xl:p-5">
+          <Button className="mt-5 ml-7 hover:bg-blue-400 bg-blue-500 xl:mt-10 xl:p-5 start-btn">
             Start Conversation
           </Button>
         </Link>
