@@ -1,4 +1,3 @@
-
 "use client";
 import BaseLayout from "@/app/dashboard/BaseLayout";
 import Image from "next/image";
@@ -14,6 +13,7 @@ import { FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { FormControl, FormLabel } from "@mui/material";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import "../../../styles/edit-profile.css";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -76,7 +76,6 @@ export default function EditProfile() {
     fetchUserData();
   }, [userId]);
 
-
   const handleDeleteProfile = async () => {
     try {
       const userRef = ref(database, `users/${userId}`);
@@ -111,29 +110,20 @@ export default function EditProfile() {
     <BaseLayout>
       {user && (
         <div>
-          <div className="bg-white rounder-lg pb-5 mt-5 absolute w-3/4 shadow-xl max-h-fit left-72">
+          <div className="bg-white rounder-lg pb-5 mt-5 absolute w-[620px] shadow-xl max-h-fit left-72 md:left-32 lg:left-72 lg:w-[700px] xl:w-[1100px] xl:left-80 top-container">
             <Image
               src="/Figures/UserProfileTopBoxImage.png"
               alt="banner"
               width={1000}
               height={50}
-              className="w-full"
+              className="w-full cover-photo"
             ></Image>
-            <Button className="text-sm text-white  bg-blue-800 h-6 p-4 rounded-sm hover:bg-blue-900 -mt-12 absolute right-0 mr-4">
-              Edit Cover Photo
-            </Button>
-            <div className="w-24 h-23 ml-10 -mt-10 rounded-full bg-amber-500 relative top-[-100%] left-7%">
-              <img
-                className="UserImage_TopBox"
-                src="/Figures/UserImage_TopBox.png"
-                alt="UserImage"
-              />
-            </div>
-            <div className="font-poppins text-xl font-bold relative -mt-10 ml-36">
+            <div className="font-poppins text-xl font-bold relative mt-2 ml-20 username">
+              {/*Read user data from the realtime database.*/}
               {user.First_Name} {user.Last_Name}
             </div>
           </div>
-          <div className="bg-white shadow-xl absolute pt-5 w-3/4 overflow-hidden top-72 left-72">
+          <div className="bg-white shadow-xl absolute pt-5 w-[620px] overflow-hidden top-60 left-72 md:left-32 md:top-48 lg:left-72 lg:w-[700px] lg:top-52 xl:w-[1100px] xl:top-72 xl:left-80 xl:pt-10 form-container ">
             <FormProvider {...form}>
               <form onSubmit={form.handleSubmit(handleSubmit)}>
                 <div className="grid grid-rows-3 grid-flow-col gap-5">
@@ -142,7 +132,7 @@ export default function EditProfile() {
                     control={form.control}
                     name="firstName"
                     render={({ field }) => (
-                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px]">
+                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px] fields">
                         <FormLabel className="text-blue-700">
                           First Name
                         </FormLabel>
@@ -151,6 +141,7 @@ export default function EditProfile() {
                             placeholder="First Name"
                             type="text"
                             {...field}
+                            //Read data from the realtime database.
                             defaultValue={user.First_Name}
                           />
                         </FormControl>
@@ -163,7 +154,7 @@ export default function EditProfile() {
                     control={form.control}
                     name="userName"
                     render={({ field }) => (
-                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px]">
+                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px] fields">
                         <FormLabel className="text-black">Username</FormLabel>
                         <FormControl>
                           <Input
@@ -182,7 +173,7 @@ export default function EditProfile() {
                     control={form.control}
                     name="gender"
                     render={({ field }) => (
-                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px]">
+                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px] fields">
                         <FormLabel className="text-black">Gender</FormLabel>
                         <Select {...field} defaultValue={user.Gender}>
                           <FormControl>
@@ -205,7 +196,7 @@ export default function EditProfile() {
                     control={form.control}
                     name="lastName"
                     render={({ field }) => (
-                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px]">
+                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px] fields">
                         <FormLabel className="text-black">Last Name</FormLabel>
                         <FormControl>
                           <Input
@@ -224,7 +215,7 @@ export default function EditProfile() {
                     control={form.control}
                     name="dateOfBirth"
                     render={({ field }) => (
-                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px]">
+                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px] fields">
                         <FormLabel className="text-black">
                           Date of Birth
                         </FormLabel>
@@ -245,7 +236,7 @@ export default function EditProfile() {
                     control={form.control}
                     name="email"
                     render={({ field }) => (
-                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px]">
+                      <FormItem className="flex flex-col ml-10 mt-5 w-[240px] fields">
                         <FormLabel className="text-black">
                           Email Address
                         </FormLabel>
@@ -263,7 +254,7 @@ export default function EditProfile() {
                   />
                 </div>
                 {/* Submit Buttons */}
-                <div className="flex flex-row justify-end gap-4 m-5">
+                <div className="flex flex-row justify-end gap-4 m-5 md:pt-5 xl:pt-10 btn-primary">
                   <Button
                     type="button"
                     onClick={handleDeleteProfile}
@@ -312,5 +303,3 @@ export default function EditProfile() {
     </BaseLayout>
   );
 }
-
-

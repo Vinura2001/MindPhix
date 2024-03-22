@@ -1,0 +1,178 @@
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .top-container {
+    margin-left: -190px;
+    margin-right: 20px;
+  }
+
+  .title1 {
+    font-size: 12px;
+  }
+
+  .title2 {
+    font-size: 12px;
+  }
+
+  .title3 {
+    font-size: 12px;
+    padding-right: -10px;
+  }
+
+  .start-btn {
+    font-size: 12px;
+    margin-left: 35px;
+  }
+  .bottom-container {
+    top: 130px;
+    margin-left: -190px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+
+  .title4 {
+    padding-top: 20px;
+    font-size: 13px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .feature-container {
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+  .circle-image {
+    width: 30px;
+  }
+  .feature {
+    font-size: 12px;
+    margin-left: 40px;
+    margin-top: -25px;
+  }
+  .chat-image {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .top-container {
+    margin-left: -190px;
+    margin-right: 10px;
+  }
+
+  .title1 {
+    font-size: 12px;
+    margin-left: 30px;
+  }
+
+  .title2 {
+    font-size: 12px;
+    margin-left: 30px;
+  }
+
+  .title3 {
+    font-size: 12px;
+    padding-right: -10px;
+    margin-left: 30px;
+  }
+
+  .start-btn {
+    font-size: 12px;
+    margin-left: 30px;
+  }
+  .bottom-container {
+    top: 100px;
+    margin-left: -190px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+
+  .title4 {
+    padding-top: 20px;
+    font-size: 13px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .feature-container {
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+  .circle-image {
+    width: 28px;
+  }
+  .feature {
+    font-size: 12px;
+    margin-left: 40px;
+    margin-top: -25px;
+  }
+  .chat-image {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .top-container {
+    margin-left: -190px;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+
+  .title1 {
+    font-size: 11px;
+    margin-left: 28px;
+  }
+
+  .title2 {
+    font-size: 11px;
+    margin-left: 28px;
+  }
+
+  .title3 {
+    font-size: 11px;
+    padding-right: -10px;
+    margin-left: 28px;
+  }
+
+  .start-btn {
+    font-size: 12px;
+    margin-left: 28px;
+  }
+  .bottom-container {
+    top: 80px;
+    margin-left: -190px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+
+  .title4 {
+    padding-top: 20px;
+    font-size: 10px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .feature-container {
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+  .circle-image {
+    width: 25px;
+  }
+  .feature {
+    padding-top: 5px;
+    font-size: 10px;
+    margin-left: 40px;
+    margin-top: -25px;
+  }
+  .chat-image {
+    width: 300px;
+  }
+}

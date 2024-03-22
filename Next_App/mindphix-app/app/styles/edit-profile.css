@@ -1,19 +1,19 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .top-container {
-    margin-left: -180px;
+    margin-left: -185px;
     width: 110%;
     padding-bottom: 30px;
   }
 
   .form-container {
-    margin-left: -180px;
+    margin-left: -185px;
     top: 250px;
     width: 110%;
   }
 
   .fields {
-    grid-template-rows: repeat(12, auto);
     margin-left: 20px;
+    width: 200px;
   }
 
   .cover-photo {
@@ -21,18 +21,13 @@
     height: 130px;
   }
 
-  .image-container {
-    margin-top: -30px;
-    margin-left: 15px;
-  }
-  .cover-btn {
-    margin-top: -40px;
-    padding: 5px;
+  .username {
+    margin-left: 60px;
+    bottom: -5px;
   }
 
-  .username {
-    margin-left: 120px;
-    bottom: 5px;
+  .btn-primary {
+    margin-top: 50px;
   }
 }
 
@@ -43,7 +38,7 @@
 
   .form-container {
     margin-left: 5px;
-    top: 250px;
+    top: 200px;
   }
 }
 
@@ -56,11 +51,13 @@
 
 @media screen and (min-width: 1023px) and (max-width: 1220px) {
   .top-container {
-    margin-left: 5px;
+    margin-left: 180px;
+    width: 900px;
   }
   .form-container {
-    margin-left: 5px;
+    margin-left: 180px;
     top: 250px;
+    width: 900px;
   }
 }
 
@@ -97,19 +94,11 @@
 @media screen and (min-width: 1250px) and (max-width: 2560px) {
   .top-container {
     margin-left: 5px;
+    width: 900px;
   }
   .form-container {
     margin-left: 5px;
-    top: 285px;
-  }
-}
-
-@media screen and (min-width: 2560px) {
-  .top-container {
-    margin-left: 5px;
-  }
-  .form-container {
-    margin-left: 5px;
-    top: 470px;
+    width: 900px;
+    top: 250px;
   }
 }
