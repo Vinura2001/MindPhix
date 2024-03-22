@@ -8,8 +8,8 @@ function Features() {
       </h1>
       <Feature
         title="Depression Assessment"
-        description="Introducing our groundbreaking depression assessment feature, driven by a MindPhix AI chatbot crafted by our expert team. Seamlessly incorporating the PHQ-9 questionnaire, this intelligent chatbot transcends conventional methods. It dynamically adjusts its queries based on user responses, intuitively extracting additional relevant parameters to ensure a thorough and personalized assessment of depression levels. "
-        imageUrl="/home-assets/blog-assets/assessment.jpg"
+        description="Introducing our revolutionary Depression Assessment Feature.By leveraging the renowned PHQ-9 questionnaire, our feature offers a personalized quiz experience designed to gauge your level of depression. Gain insights into your mental health journey and take proactive steps towards well-being with our user-friendly assessment tool."
+        imageUrl="/home-assets/blog-assets/quiz.jpg"
         isImageOnRight={true} // Change this prop to control the layout
         imageHeight={400}
         imageWidth={400}
