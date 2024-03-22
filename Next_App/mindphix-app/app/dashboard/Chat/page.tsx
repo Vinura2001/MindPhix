@@ -3,6 +3,7 @@ import BaseLayout from "../BaseLayout";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import "../../styles/ChatHome.css";
 
 function Chat() {
   return (
@@ -32,11 +33,9 @@ function Chat() {
         </Link>
       </div>
 
-      <div className=" top-bar rounded-lg bg-white rounder-lg pb-5 mt-[310px] absolute lg:w-[710px] shadow-xl max-h-fit left-72 md:-ml-48 md:w-[740px] lg:ml-2 lg:mb-2 xl:mt-[400px] xl:w-[1120px]" />
-
-      <div className="bottom-container rounded-lg bg-white rounder-lg pb-10 mt-[350px] absolute lg:w-[710px] shadow-xl max-h-fit left-72 md:-ml-48 md:w-[740px] md:h-[300px] lg:ml-2 xl:mt-[450px] xl:w-[1120px] xl:h-[380px]">
+      <div className="bottom-container rounded-lg bg-white rounder-lg pb-10 mt-[320px] absolute lg:w-[710px] shadow-xl max-h-fit left-72 md:-ml-48 md:w-[740px] md:h-[300px] lg:ml-2 xl:mt-[450px] xl:w-[1120px] xl:h-[380px]">
         <h1 className="lg:mt-10 lg:ml-10 text-base font-bold md:mt-10 md:ml-10 xl:text-2xl title4">
-        Spreading Depression Awareness
+          Spreading Depression Awareness
         </h1>
         <div className="bg-blue-100 lg:mt-8 lg:ml-7 lg:w-[320px] text-black rounded-2xl shadow-lg md:mt-8 md:ml-7 md:w-[320px] xl:mt-8 feature-container">
           <Image
@@ -47,7 +46,7 @@ function Chat() {
             className="circle-image"
           ></Image>
           <p className="lg:ml-14 lg:-mt-[30px] lg:pb-2 md:ml-14 md:-mt-[30px] md:pb-2 md:text-sm xl:text-base xl:pb-3 feature">
-          Break Stigma
+            Break Stigma
           </p>
         </div>
         <div className="bg-blue-100 lg:mt-8 lg:ml-7 lg:w-[320px] text-black rounded-2xl shadow-lg md:mt-8 md:ml-7 md:w-[320px] xl:mt-8 feature-container">
@@ -59,7 +58,7 @@ function Chat() {
             className="circle-image"
           ></Image>
           <p className="lg:ml-14 lg:-mt-[30px] lg:pb-2 md:ml-14 md:-mt-[30px] md:pb-2 md:text-sm xl:text-base xl:pb-3 feature">
-          Early Intervention
+            Early Intervention
           </p>
         </div>
         <div className="bg-blue-100 lg:mt-8 lg:ml-7 lg:w-[320px] text-black rounded-2xl shadow-lg md:mt-8 md:ml-7 md:w-[320px] xl:mt-8 feature-container">
@@ -71,7 +70,7 @@ function Chat() {
             className="circle-image"
           ></Image>
           <p className="lg:ml-14 lg:-mt-[30px] lg:pb-2 md:ml-14 md:-mt-[30px] md:pb-2 md:text-sm xl:text-base xl:pb-3 feature">
-          Support Networks
+            Support Networks
           </p>
         </div>
         <Image
