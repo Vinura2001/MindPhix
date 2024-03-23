@@ -21,7 +21,7 @@ interface User {
 }
 
 export default function Profile() {
-  const [userId, setUserId] = useState<string>("U002"); // Default user ID
+  const [userId, setUserId] = useState<string>("U001"); // Default user ID
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
