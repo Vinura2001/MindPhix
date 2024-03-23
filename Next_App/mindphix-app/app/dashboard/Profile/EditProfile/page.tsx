@@ -41,7 +41,6 @@ interface User {
   Gender: string;
   Email_Address: string;
 }
-
 const formSchema = z.object({
   firstName: z.string(),
   lastName: z.string(),
@@ -50,7 +49,6 @@ const formSchema = z.object({
   gender: z.string(),
   email: z.string().email(),
 });
-
 export default function EditProfile() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -76,31 +74,8 @@ export default function EditProfile() {
         console.error("Error fetching user data:", error);
       }
     };
-
     fetchUserData();
   }, [userId]);
-
-  useEffect(() => {
-    if (user) {
-      const updateUserData = async () => {
-        try {
-          // Update user data in the real-time database
-          await set(ref(database, `users/${userId}`), {
-            First_Name: user.First_Name,
-            Last_Name: user.Last_Name,
-            User_Name: user.User_Name,
-            Date_of_Birth: user.Date_of_Birth,
-            Gender: user.Gender,
-            Email_Address: user.Email_Address,
-          });
-        } catch (error) {
-          console.error("Error updating user data:", error);
-        }
-      };
-
-      updateUserData();
-    }
-  }, [user, userId]);
 
   const handleDeleteProfile = async () => {
     try {
@@ -114,17 +89,20 @@ export default function EditProfile() {
   };
 
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
-    setUser({
-      ...user,
-      First_Name: values.firstName,
-      Last_Name: values.lastName,
-      User_Name: values.userName,
-      Date_of_Birth: values.dateOfBirth,
-      Gender: values.gender,
-      Email_Address: values.email,
-    });
+    try {
+      // Update user data in the real-time database
+      await set(ref(database, `users/${userId}`), {
+        First_Name: values.firstName,
+        Last_Name: values.lastName,
+        User_Name: values.userName,
+        Date_of_Birth: values.dateOfBirth,
+        Gender: values.gender,
+        Email_Address: values.email,
+      });
+    } catch (error) {
+      console.error("Error updating user data:", error);
+    }
   };
-
   return (
     <BaseLayout>
       {user && (
