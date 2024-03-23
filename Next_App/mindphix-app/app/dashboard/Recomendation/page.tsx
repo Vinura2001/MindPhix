@@ -168,7 +168,7 @@ function Index() {
     }
 
     try {
-      const response = await fetch("https://mindphix-deploy.onrender.com", {
+      const response = await fetch("https://mindphix-deploy-57y8.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
