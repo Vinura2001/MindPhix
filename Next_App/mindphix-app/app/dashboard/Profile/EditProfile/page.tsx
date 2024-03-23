@@ -55,6 +55,7 @@ export default function EditProfile() {
   });
   const [userId, setUserId] = useState<string>("U004"); // Default user ID
   const [user, setUser] = useState<User | null>(null);
+
   useEffect(() => {
     const fetchUserData = async () => {
       const usersRef = ref(database, `users/${userId}`);
@@ -81,8 +82,6 @@ export default function EditProfile() {
       const userRef = ref(database, `users/${userId}`);
       await remove(userRef);
       console.log("User data deleted successfully");
-      // Optionally, redirect the user to a desired page after deletion
-      router.push("/dashboard");
     } catch (error) {
       console.error("Error deleting user data:", error);
       // You can also display an error message to the user here
@@ -100,8 +99,6 @@ export default function EditProfile() {
         Gender: values.gender,
         Email_Address: values.email,
       });
-      // Redirect the user to the profile page
-      router.push("/dashboard/Profile");
     } catch (error) {
       console.error("Error updating user data:", error);
     }
@@ -255,19 +252,45 @@ export default function EditProfile() {
                 </div>
                 {/* Submit Buttons */}
                 <div className="flex flex-row justify-end gap-4 m-5 md:pt-5 xl:pt-10 btn-primary">
-                  <Button
-                    type="button"
-                    onClick={handleDeleteProfile}
-                    className="text-sm text-white bg-red-800 h-6 p-4 rounded-sm hover:bg-blue-900"
-                  >
-                    Delete Profile
-                  </Button>
-                  <Button
-                    type="submit"
-                    className="text-sm text-white bg-blue-800 h-6 p-4 rounded-sm hover:bg-blue-900"
-                  >
-                    Save Changes
-                  </Button>
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button
+                        type="button"
+                        className="text-sm text-white bg-red-800 h-6 p-4 rounded-sm hover:bg-red-700"
+                      >
+                        Delete Profile
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>
+                          Are you absolutely sure?
+                        </AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Your profile will be permanently deleted.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <Link href="/">
+                          <AlertDialogAction
+                            onClick={handleDeleteProfile}
+                            className="bg-red-900  hover:bg-red-800"
+                          >
+                            Continue
+                          </AlertDialogAction>
+                        </Link>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+                  <Link href="/dashboard/Profile">
+                    <Button
+                      type="submit"
+                      className="text-sm text-white bg-blue-800 h-6 p-4 rounded-sm hover:bg-blue-900"
+                    >
+                      Save Changes
+                    </Button>
+                  </Link>
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button className="bg-white text-gray-700 border border-gray-500 hover:bg-white hover:text-blue-700 h-6 p-4 ml-2 rounded-sm">
@@ -287,9 +310,9 @@ export default function EditProfile() {
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
                         <Link href="/dashboard/Profile">
-                          <AlertDialogAction className="bg-blue-800">
+                          <AlertDialogAction className="bg-blue-800  hover:bg-blue-900">
                             Continue
-                          </AlertDialogAction>{" "}
+                          </AlertDialogAction>
                         </Link>
                       </AlertDialogFooter>
                     </AlertDialogContent>
