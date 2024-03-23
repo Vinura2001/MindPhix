@@ -41,6 +41,7 @@ interface User {
   Gender: string;
   Email_Address: string;
 }
+
 const formSchema = z.object({
   firstName: z.string(),
   lastName: z.string(),
@@ -49,12 +50,14 @@ const formSchema = z.object({
   gender: z.string(),
   email: z.string().email(),
 });
+
 export default function EditProfile() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
   const [userId, setUserId] = useState<string>("U004"); // Default user ID
   const [user, setUser] = useState<User | null>(null);
+
   useEffect(() => {
     const fetchUserData = async () => {
       const usersRef = ref(database, `users/${userId}`);
@@ -73,16 +76,37 @@ export default function EditProfile() {
         console.error("Error fetching user data:", error);
       }
     };
+
     fetchUserData();
   }, [userId]);
+
+  useEffect(() => {
+    if (user) {
+      const updateUserData = async () => {
+        try {
+          // Update user data in the real-time database
+          await set(ref(database, `users/${userId}`), {
+            First_Name: user.First_Name,
+            Last_Name: user.Last_Name,
+            User_Name: user.User_Name,
+            Date_of_Birth: user.Date_of_Birth,
+            Gender: user.Gender,
+            Email_Address: user.Email_Address,
+          });
+        } catch (error) {
+          console.error("Error updating user data:", error);
+        }
+      };
+
+      updateUserData();
+    }
+  }, [user, userId]);
 
   const handleDeleteProfile = async () => {
     try {
       const userRef = ref(database, `users/${userId}`);
       await remove(userRef);
       console.log("User data deleted successfully");
-      // Optionally, redirect the user to a desired page after deletion
-      router.push("/dashboard");
     } catch (error) {
       console.error("Error deleting user data:", error);
       // You can also display an error message to the user here
@@ -90,22 +114,17 @@ export default function EditProfile() {
   };
 
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
-    try {
-      // Update user data in the real-time database
-      await set(ref(database, `users/${userId}`), {
-        First_Name: values.firstName,
-        Last_Name: values.lastName,
-        User_Name: values.userName,
-        Date_of_Birth: values.dateOfBirth,
-        Gender: values.gender,
-        Email_Address: values.email,
-      });
-      // Redirect the user to the profile page
-      router.push("/dashboard/Profile");
-    } catch (error) {
-      console.error("Error updating user data:", error);
-    }
+    setUser({
+      ...user,
+      First_Name: values.firstName,
+      Last_Name: values.lastName,
+      User_Name: values.userName,
+      Date_of_Birth: values.dateOfBirth,
+      Gender: values.gender,
+      Email_Address: values.email,
+    });
   };
+
   return (
     <BaseLayout>
       {user && (
@@ -255,19 +274,45 @@ export default function EditProfile() {
                 </div>
                 {/* Submit Buttons */}
                 <div className="flex flex-row justify-end gap-4 m-5 md:pt-5 xl:pt-10 btn-primary">
-                  <Button
-                    type="button"
-                    onClick={handleDeleteProfile}
-                    className="text-sm text-white bg-red-800 h-6 p-4 rounded-sm hover:bg-blue-900"
-                  >
-                    Delete Profile
-                  </Button>
-                  <Button
-                    type="submit"
-                    className="text-sm text-white bg-blue-800 h-6 p-4 rounded-sm hover:bg-blue-900"
-                  >
-                    Save Changes
-                  </Button>
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button
+                        type="button"
+                        className="text-sm text-white bg-red-800 h-6 p-4 rounded-sm hover:bg-red-700"
+                      >
+                        Delete Profile
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>
+                          Are you absolutely sure?
+                        </AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Your profile will be permanently deleted.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <Link href="/">
+                          <AlertDialogAction
+                            onClick={handleDeleteProfile}
+                            className="bg-red-900  hover:bg-red-800"
+                          >
+                            Continue
+                          </AlertDialogAction>
+                        </Link>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+                  <Link href="/dashboard/Profile">
+                    <Button
+                      type="submit"
+                      className="text-sm text-white bg-blue-800 h-6 p-4 rounded-sm hover:bg-blue-900"
+                    >
+                      Save Changes
+                    </Button>
+                  </Link>
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button className="bg-white text-gray-700 border border-gray-500 hover:bg-white hover:text-blue-700 h-6 p-4 ml-2 rounded-sm">
@@ -287,9 +332,9 @@ export default function EditProfile() {
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
                         <Link href="/dashboard/Profile">
-                          <AlertDialogAction className="bg-blue-800">
+                          <AlertDialogAction className="bg-blue-800  hover:bg-blue-900">
                             Continue
-                          </AlertDialogAction>{" "}
+                          </AlertDialogAction>
                         </Link>
                       </AlertDialogFooter>
                     </AlertDialogContent>
